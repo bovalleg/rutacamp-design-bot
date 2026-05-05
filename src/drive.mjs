@@ -56,11 +56,22 @@ export async function uploadFile(filePath, name, parentFolderId, mimeType = 'ima
   const drive = google.drive({ version: 'v3', auth: await authClient().getClient() });
   const fileBuffer = await fs.readFile(filePath);
   const { Readable } = await import('node:stream');
-  const { data } = await drive.files.create({
-    requestBody: { name, parents: [parentFolderId] },
-    media: { mimeType, body: Readable.from(fileBuffer) },
-    fields: 'id, name, webViewLink',
-    supportsAllDrives: true,
-  });
-  return data;
+  try {
+    const { data } = await drive.files.create({
+      requestBody: { name, parents: [parentFolderId] },
+      media: { mimeType, body: Readable.from(fileBuffer) },
+      fields: 'id, name, webViewLink',
+      supportsAllDrives: true,
+    });
+    return data;
+  } catch (err) {
+    const reason = err?.errors?.[0]?.reason;
+    if (reason === 'storageQuotaExceeded') {
+      console.warn('[drive] Service account has no storage quota — skipping upload to personal Drive.');
+      console.warn('[drive] PNG sigue disponible como artifact del workflow (gh run download).');
+      console.warn('[drive] Para upload automatico: usar Workspace Shared Drive o OAuth delegation.');
+      return null;
+    }
+    throw err;
+  }
 }

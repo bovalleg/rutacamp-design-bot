@@ -50,7 +50,11 @@ async function main() {
   if (OUTPUT_DRIVE_FOLDER) {
     console.log('[5/5] Uploading to Drive folder', OUTPUT_DRIVE_FOLDER);
     const uploaded = await uploadFile(outPng, path.basename(outPng), OUTPUT_DRIVE_FOLDER);
-    console.log('[5/5] Drive link:', uploaded.webViewLink);
+    if (uploaded) {
+      console.log('[5/5] Drive link:', uploaded.webViewLink);
+    } else {
+      console.log('[5/5] Upload skipped (see warning above). PNG available as workflow artifact.');
+    }
   } else {
     console.log('[5/5] OUTPUT_DRIVE_FOLDER_ID not set — skipping upload');
   }
