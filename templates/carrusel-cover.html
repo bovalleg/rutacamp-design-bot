@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<title>Ruta Camp carrusel cover</title>
+<link rel="stylesheet" href="../brand/colors_and_type.css">
+<style>
+  html, body { margin:0; padding:0; background:transparent; }
+  body { display:grid; place-items:center; }
+  .ig-frame { width:1080px; height:1080px; position:relative; overflow:hidden; font-family:var(--font-body); color:var(--rc-cream); }
+  .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
+  .ig-title { font-family:var(--font-display); font-weight:800; line-height:1.0; letter-spacing:-.012em; font-style:italic; }
+  .ig-hand { font-family:var(--font-hand); font-weight:700; line-height:1; }
+  .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:center; filter:saturate(1.05) contrast(1.02); }
+  .ink-fill { position:absolute; inset:0; background:var(--rc-ink); }
+  .protect { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.55) 0%, rgba(30,28,24,.15) 35%, rgba(30,28,24,.85) 100%); pointer-events:none; }
+  .topbar { position:absolute; top:60px; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; z-index:3; }
+  .topbar img { height:90px; filter:brightness(0) invert(1); }
+  .topbar .eyebrow { font-size:22px; color:var(--rc-amber); }
+  .center { position:absolute; left:60px; right:60px; top:50%; transform:translateY(-50%); z-index:3; text-align:left; }
+  .center h1 { font-size:{{TITLE_SIZE}}px; margin:0; color:var(--rc-cream); }
+  .center .sub { font-size:24px; color:var(--rc-amber); margin-top:24px; display:inline-block; }
+  .swipe { position:absolute; right:60px; bottom:60px; z-index:3; display:flex; align-items:center; gap:16px; }
+  .swipe .arrow { width:40px; height:1px; background:var(--rc-amber); position:relative; }
+  .swipe .arrow::after { content:''; position:absolute; right:0; top:-5px; width:10px; height:10px; border-top:1px solid var(--rc-amber); border-right:1px solid var(--rc-amber); transform:rotate(45deg); }
+  .swipe span { font-family:var(--font-eyebrow); font-size:18px; letter-spacing:.22em; text-transform:uppercase; color:var(--rc-amber); }
+</style>
+</head>
+<body>
+<div class="ig-frame" id="frame">
+  {{PHOTO_OR_INK}}
+  <div class="protect"></div>
+  <div class="topbar">
+    <img src="../brand/assets/logo-light.png" alt="Ruta Camp">
+    <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
+  </div>
+  <div class="center">
+    <h1 class="ig-title">{{TITLE}}</h1>
+    <div><span class="ig-eyebrow sub">{{SUBTITLE}}</span></div>
+  </div>
+  <div class="swipe">
+    <div class="arrow"></div>
+    <span>Desliza</span>
+  </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<title>Ruta Camp carrusel content</title>
+<link rel="stylesheet" href="../brand/colors_and_type.css">
+<style>
+  html, body { margin:0; padding:0; background:transparent; }
+  body { display:grid; place-items:center; }
+  .ig-frame { width:1080px; height:1080px; position:relative; overflow:hidden; background:var(--rc-cream); color:var(--rc-ink); font-family:var(--font-body); }
+  .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
+  .ig-title { font-family:var(--font-display); font-weight:700; line-height:1.05; letter-spacing:-.01em; font-style:italic; }
+  .ig-body { font-family:var(--font-body); font-weight:400; line-height:1.5; }
+  .corner-rule { position:absolute; left:60px; right:60px; height:1px; background:var(--rc-ink); opacity:.6; }
+  .corner-rule.top { top:60px; }
+  .corner-rule.bottom { bottom:60px; }
+  .index { position:absolute; top:78px; left:60px; font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.3em; text-transform:uppercase; color:var(--rc-ink-mute); }
+  .index .num { color:var(--rc-ember); }
+  .top-eyebrow { position:absolute; top:78px; right:60px; font-size:18px; color:var(--rc-ember); }
+  .inner { position:absolute; inset:240px 90px 200px; display:flex; flex-direction:column; justify-content:center; }
+  .inner h1 { font-size:{{TITLE_SIZE}}px; margin:0 0 36px; color:var(--rc-ink); }
+  .inner .rule { width:90px; height:1px; background:var(--rc-ink); margin:0 0 32px; }
+  .inner p { font-size:30px; max-width:880px; color:var(--rc-ink-soft); }
+  .footer { position:absolute; bottom:80px; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; }
+  .footer .handle { font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.28em; text-transform:uppercase; color:var(--rc-ink-mute); }
+  .footer .next { font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.28em; text-transform:uppercase; color:var(--rc-ember); }
+</style>
+</head>
+<body>
+<div class="ig-frame" id="frame">
+  <div class="corner-rule top"></div>
+  <div class="corner-rule bottom"></div>
+  <span class="index"><span class="num">{{SLIDE_INDEX}}</span> · {{SLIDE_TOTAL}}</span>
+  <span class="ig-eyebrow top-eyebrow">{{EYEBROW}}</span>
+  <div class="inner">
+    <h1 class="ig-title">{{TITLE}}</h1>
+    <div class="rule"></div>
+    <p class="ig-body">{{BODY}}</p>
+  </div>
+  <div class="footer">
+    <span class="handle">{{HANDLE}}</span>
+    <span class="next">Sigue →</span>
+  </div>
+</div>
+</body>
+</html>

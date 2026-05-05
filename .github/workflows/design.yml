@@ -7,8 +7,18 @@ on:
         description: 'Brief en español, ej: "post para Puerto Fuy mood golden hour, abrimos reservas verano"'
         required: true
         type: string
+      format:
+        description: 'Formato (auto = Claude decide segun el brief)'
+        required: false
+        type: choice
+        default: auto
+        options:
+          - auto
+          - post
+          - story
+          - carrusel
       upload_to_drive:
-        description: 'Subir el PNG al Drive folder de outputs'
+        description: 'Subir el PNG a la carpeta Drive de outputs'
         required: false
         type: boolean
         default: true
@@ -16,7 +26,7 @@ on:
 jobs:
   design:
     runs-on: ubuntu-latest
-    timeout-minutes: 10
+    timeout-minutes: 12
     steps:
       - uses: actions/checkout@v4
 
@@ -34,6 +44,7 @@ jobs:
       - name: Generate design
         env:
           BRIEF: ${{ inputs.brief }}
+          FORMAT: ${{ inputs.format }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           OUTPUT_DRIVE_FOLDER_ID: ${{ inputs.upload_to_drive && secrets.OUTPUT_DRIVE_FOLDER_ID || '' }}

@@ -1,5 +1,7 @@
 node_modules/
 out/
+downloads/
+test-out/
 .render-tmp.html
 .env
 *.local
