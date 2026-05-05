@@ -1,0 +1,6 @@
+node_modules/
+out/
+.render-tmp.html
+.env
+*.local
+.DS_Store

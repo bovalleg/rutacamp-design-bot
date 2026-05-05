@@ -1,0 +1,51 @@
+name: Design
+
+on:
+  workflow_dispatch:
+    inputs:
+      brief:
+        description: 'Brief en español, ej: "post para Puerto Fuy mood golden hour, abrimos reservas verano"'
+        required: true
+        type: string
+      upload_to_drive:
+        description: 'Subir el PNG al Drive folder de outputs'
+        required: false
+        type: boolean
+        default: true
+
+jobs:
+  design:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+
+      - name: Install deps
+        run: npm ci || npm install
+
+      - name: Install Playwright Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Generate design
+        env:
+          BRIEF: ${{ inputs.brief }}
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
+          OUTPUT_DRIVE_FOLDER_ID: ${{ inputs.upload_to_drive && secrets.OUTPUT_DRIVE_FOLDER_ID || '' }}
+        run: npm run design
+
+      - name: Upload PNG artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: rutacamp-design
+          path: |
+            out/*.png
+            out/*.caption.txt
+          if-no-files-found: warn
+          retention-days: 30

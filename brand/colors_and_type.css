@@ -1,0 +1,251 @@
+/* ==========================================================================
+   RUTA CAMP — Colors & Type
+   Foundations for the Ruta Camp brand. Use these tokens everywhere.
+   ========================================================================== */
+
+/* ---------- Fonts ---------- */
+/*
+   Logo typography uses a classic wedge-serif (think Trajan / Copperplate-adjacent).
+   For the system we pair:
+     - Display / titles:  a slab-ish serif with a vintage outdoor feel   → IM Fell DW Pica, Playfair Display fallback
+     - Subtitles / eyebrows: a condensed, all-caps sans with wide tracking → Oswald
+     - Body:               a warm humanist sans                          → Nunito Sans
+     - Accents / hand:     a friendly script for callouts                → Caveat
+   NOTE: The original logo was set in a custom wedge serif; Playfair Display is the
+   closest Google Fonts match used here. Flag any custom brand files to swap in.
+*/
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600;700;800;900&family=IM+Fell+DW+Pica:ital@0;1&family=Oswald:wght@400;500;600;700&family=Nunito+Sans:wght@300;400;600;700;900&family=Caveat:wght@500;700&display=swap');
+
+:root {
+  /* =========================================================
+     COLOR — Brand palette
+     Drawn from the Chilean Patagonia / Araucanía vibe:
+     volcanic charcoal, forest moss, lake/sky teal, warm ember,
+     canvas cream and birch paper.
+     ========================================================= */
+
+  /* Core ink — logo & primary copy */
+  --rc-ink:            #1E1C18;   /* near-black, warm */
+  --rc-ink-soft:       #2F2A24;
+  --rc-ink-mute:       #5A5146;
+
+  /* Canvas / paper */
+  --rc-cream:          #F3ECDD;   /* primary light background, tent canvas */
+  --rc-cream-2:        #EADFC7;
+  --rc-birch:          #FAF6EC;   /* lightest paper */
+  --rc-sand:           #D9C7A2;
+
+  /* Forest / moss — growth, nature */
+  --rc-forest:         #2E4A34;   /* primary green */
+  --rc-forest-deep:    #1C2F22;
+  --rc-moss:           #5A6E3A;
+  --rc-sage:           #9AA886;
+
+  /* Lake & sky — Patagonian water */
+  --rc-lake:           #2B5E6B;
+  --rc-lake-deep:      #133742;
+  --rc-sky:            #A8C5CC;
+
+  /* Ember / fire — campfire, sunset */
+  --rc-ember:          #C35A2A;   /* signature accent */
+  --rc-ember-deep:     #8E3E1C;
+  --rc-amber:          #E0A94C;   /* warm highlight */
+
+  /* Earth / volcano */
+  --rc-clay:           #8C5A3C;
+  --rc-stone:          #7A7366;
+  --rc-volcano:        #3A2A22;   /* deep volcanic brown-black */
+
+  /* ---------------- SEMANTIC TOKENS ----------------
+     Use these names in components, not the raw brand tokens above.
+     Light (cream) theme is the default social/marketing skin.
+  */
+  --bg:                var(--rc-cream);
+  --bg-2:              var(--rc-birch);
+  --bg-elev:           #FFFFFF;
+  --bg-inverse:        var(--rc-ink);
+
+  --fg:                var(--rc-ink);
+  --fg-1:              var(--rc-ink);
+  --fg-2:              var(--rc-ink-soft);
+  --fg-3:              var(--rc-ink-mute);
+  --fg-on-dark:        var(--rc-cream);
+
+  --primary:           var(--rc-forest);
+  --primary-ink:       var(--rc-cream);
+  --accent:            var(--rc-ember);
+  --accent-ink:        var(--rc-cream);
+  --highlight:         var(--rc-amber);
+
+  --border:            rgba(30, 28, 24, 0.18);
+  --border-strong:     var(--rc-ink);
+  --divider:           rgba(30, 28, 24, 0.12);
+
+  /* =========================================================
+     TYPE — family tokens
+     ========================================================= */
+  --font-display:      'Playfair Display', 'IM Fell DW Pica', Georgia, serif;
+  --font-serif:        'IM Fell DW Pica', 'Playfair Display', Georgia, serif;
+  --font-eyebrow:      'Oswald', 'Bebas Neue', Impact, sans-serif;
+  --font-body:         'Nunito Sans', 'Helvetica Neue', Arial, sans-serif;
+  --font-hand:         'Caveat', 'Brush Script MT', cursive;
+
+  /* Scale (modular, 1.25 ratio) */
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --fs-56: 3.5rem;
+  --fs-72: 4.5rem;
+  --fs-96: 6rem;
+
+  --lh-tight: 1.05;
+  --lh-snug:  1.2;
+  --lh-body:  1.5;
+  --lh-loose: 1.7;
+
+  --tracking-eyebrow: 0.22em;
+  --tracking-wide:    0.08em;
+  --tracking-tight:   -0.01em;
+
+  /* =========================================================
+     SPACING & radii & elevation
+     ========================================================= */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 24px;
+  --sp-6: 32px;
+  --sp-7: 48px;
+  --sp-8: 64px;
+  --sp-9: 96px;
+
+  --r-none:  0px;
+  --r-sm:    4px;
+  --r-md:    8px;
+  --r-lg:    14px;
+  --r-xl:    22px;
+  --r-pill:  999px;
+
+  /* Shadows — soft, warm, vintage. Avoid crisp black drop-shadows. */
+  --shadow-sm:  0 1px 2px rgba(30, 28, 24, 0.10);
+  --shadow-md:  0 6px 18px rgba(30, 28, 24, 0.14);
+  --shadow-lg:  0 18px 40px rgba(30, 28, 24, 0.18);
+  --shadow-ember: 0 10px 32px rgba(195, 90, 42, 0.32);
+
+  /* Grain / paper-style inner texture (use with filter: contrast) */
+  --paper-grain: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='160' height='160'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0.22 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>");
+}
+
+/* =========================================================
+   SEMANTIC ELEMENTS — use these to style raw HTML quickly
+   ========================================================= */
+
+html, body {
+  background: var(--bg);
+  color: var(--fg);
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-body);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display titles — editorial, serif, occasionally italic */
+h1, .h1 {
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: clamp(var(--fs-40), 6vw, var(--fs-96));
+  line-height: var(--lh-tight);
+  letter-spacing: var(--tracking-tight);
+  color: var(--fg-1);
+  margin: 0 0 var(--sp-5);
+}
+h2, .h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(var(--fs-32), 4vw, var(--fs-56));
+  line-height: var(--lh-snug);
+  letter-spacing: var(--tracking-tight);
+  margin: 0 0 var(--sp-4);
+}
+h3, .h3 {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: var(--fs-24);
+  line-height: var(--lh-snug);
+  margin: 0 0 var(--sp-3);
+}
+
+/* Eyebrows / kicker labels — all caps oswald with tracking */
+.eyebrow {
+  font-family: var(--font-eyebrow);
+  font-weight: 500;
+  font-size: var(--fs-14);
+  letter-spacing: var(--tracking-eyebrow);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+/* Body copy */
+p, .body {
+  font-family: var(--font-body);
+  font-size: var(--fs-16);
+  line-height: var(--lh-body);
+  color: var(--fg-2);
+  text-wrap: pretty;
+  margin: 0 0 var(--sp-4);
+}
+
+.lead {
+  font-size: var(--fs-20);
+  line-height: var(--lh-loose);
+  color: var(--fg-2);
+}
+
+.small, small {
+  font-size: var(--fs-14);
+  color: var(--fg-3);
+}
+
+/* Script / hand accent — for callouts like "¡Vive la aventura!" */
+.hand {
+  font-family: var(--font-hand);
+  font-weight: 700;
+  font-size: var(--fs-32);
+  color: var(--accent);
+  line-height: 1;
+}
+
+/* Tagline treatment — centered, tracked, caps, with rules */
+.tagline {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-style: italic;
+  font-size: var(--fs-18);
+  letter-spacing: var(--tracking-wide);
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+/* Links */
+a {
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+  transition: color .2s ease, opacity .2s ease;
+}
+a:hover { color: var(--rc-ember-deep); }
+
+/* Utility: on-dark variant */
+.on-dark {
+  background: var(--rc-ink);
+  color: var(--fg-on-dark);
+}
+.on-dark p, .on-dark .body { color: rgba(243, 236, 221, 0.82); }
+.on-dark .eyebrow { color: var(--rc-amber); }

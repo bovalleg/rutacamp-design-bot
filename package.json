@@ -1,0 +1,16 @@
+{
+  "name": "rutacamp-design-bot",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Bot que diseña posts de Instagram para Ruta Camp con Claude API + Playwright + Google Drive.",
+  "scripts": {
+    "design": "node src/index.mjs",
+    "install-browser": "playwright install chromium"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.32.1",
+    "googleapis": "^144.0.0",
+    "playwright": "^1.48.0"
+  }
+}
