@@ -97,8 +97,8 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
   try {
     const result = await visionPickPhoto(brief, usable, { template, alreadyChosen });
     if (result.chosen_index === -1 || result.chosen_index === '-1') {
-      console.log(`[vision] ⚠️  Vision says NONE of the candidates fit: "${result.rationale}"`);
-      return null; // Caller should fall back to no-photo template
+      console.log(`[vision] ⚠️  Vision dijo -1 ("${result.rationale}") — fallback a metadata pick para no quedarnos sin foto`);
+      return pickPhoto(folderId, keywords, { excludeIds });
     }
     const idx = Math.max(0, Math.min(usable.length - 1, Number(result.chosen_index) || 0));
     const chosen = usable[idx];
@@ -106,7 +106,7 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
     return {
       ...chosen.file,
       focal_point: result.focal_point || null,
-      _visionBuffer: chosen, // keep buffer for diversity context in subsequent calls
+      _visionBuffer: chosen,
       _rationale: result.rationale,
     };
   } catch (err) {

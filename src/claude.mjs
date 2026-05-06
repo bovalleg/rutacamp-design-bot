@@ -199,12 +199,12 @@ export async function visionPickPhoto(brief, candidates, { template, alreadyChos
 
   let intro = `Brief del post: ${brief}\nTemplate destino: ${template}\nÁrea de copy en la pieza: ${copyArea}\n`;
   if (subjectHints.length) {
-    intro += `\n⚠️ El brief implica que el SUJETO IDEAL de la foto es: ${subjectHints.join(' / ')}. Si alguna candidata muestra ese sujeto, ELEGILA aunque haya otras "más bonitas" sin él. Si NINGUNA muestra el sujeto del brief, devolvé chosen_index: -1 con un rationale claro ("ninguna calza con el sujeto X") — el bot caerá a un layout sin foto.\n`;
+    intro += `\n👉 SUJETO IDEAL según el brief: ${subjectHints.join(' / ')}. Si alguna candidata lo muestra claramente, preferila. Si solo lo muestra parcialmente (de fondo, contexto), igual elegila — es mejor que una perfecta-pero-fuera-de-tema.\n`;
   }
   if (alreadyChosen.length) {
-    intro += `\n⚠️ DIVERSIDAD: ya elegiste ${alreadyChosen.length} foto(s) anteriormente en este mismo carrusel. Las muestro al final como referencia. Elegí UNA VISUALMENTE DIFERENTE — distinto ángulo, distinto sujeto, distinta luz, distinto encuadre. NO repitas la misma escena aunque sea "la mejor candidata".\n`;
+    intro += `\n⚠️ DIVERSIDAD: ya elegiste ${alreadyChosen.length} foto(s) anteriormente en este mismo carrusel (las muestro al final). Elegí UNA VISUALMENTE DIFERENTE — distinto ángulo, sujeto, luz o encuadre. NO repitas la misma escena.\n`;
   }
-  intro += `\nMirá las ${candidates.length} fotos numeradas (0 a ${candidates.length - 1}) y devolvé EXCLUSIVAMENTE un JSON:\n{\n  "chosen_index": <0-${candidates.length - 1} | -1 si ninguna calza>,\n  "focal_point": { "x": <0-100>, "y": <0-100> },\n  "rationale": "<una línea explicando el por qué>"\n}\nfocal_point = posición del sujeto principal en la foto elegida (50,50 = centro). Para que el sujeto NO quede tapado por el copy, movelo hacia la zona OPUESTA al área de copy.`;
+  intro += `\nMirá las ${candidates.length} fotos numeradas (0 a ${candidates.length - 1}) y devolvé EXCLUSIVAMENTE un JSON:\n{\n  "chosen_index": <0-${candidates.length - 1}>,\n  "focal_point": { "x": <0-100>, "y": <0-100> },\n  "rationale": "<una línea>"\n}\nReglas:\n- Tu rol es ELEGIR LA MEJOR de las ${candidates.length} fotos. Default: SIEMPRE elegí una (chosen_index entre 0 y ${candidates.length - 1}). Aunque ninguna sea perfecta, hay una "menos mala" — esa es la respuesta.\n- chosen_index: -1 SOLO si las ${candidates.length} fotos son radicalmente off-topic vs el brief (ej: el brief habla de camping en Patagonia y las fotos son de un sitio web, comida o pantallas). NO uses -1 solo porque no encontrás "la foto ideal".\n- focal_point = posición del sujeto principal (50,50 = centro). Para que el sujeto no quede tapado por el copy, movelo a la zona OPUESTA al área de copy.`;
 
   const userBlocks = [{ type: 'text', text: intro }];
   for (let i = 0; i < candidates.length; i++) {
@@ -230,7 +230,7 @@ export async function visionPickPhoto(brief, candidates, { template, alreadyChos
   const msg = await client.messages.create({
     model,
     max_tokens: 500,
-    system: 'Sos director de arte de Ruta Camp, una red chilena de campings para motorhomes y casas rodantes. Tu prioridad cuando elegís fotos: (1) que el SUJETO calce con el brief — si el brief habla de motorhomes, la foto DEBE tener un motorhome visible; si habla del lago, el lago debe ser protagonista. (2) recién después: composición, luz, mood, compatibilidad con el área de copy. Si ninguna foto calza con el sujeto pedido, decilo: chosen_index = -1 es una respuesta válida y preferible a forzar una foto que no muestra lo que el brief pide. Respondés SOLO con un JSON válido sin markdown.',
+    system: 'Sos director de arte de Ruta Camp, una red chilena de campings para motorhomes y casas rodantes. Tu trabajo es ELEGIR LA MEJOR foto del set que te pasen. Casi siempre elegís una (chosen_index 0..N-1). Priorizás (1) que el sujeto calce con el brief, (2) composición, luz, mood y compatibilidad con el área de copy. Si la foto ideal no está pero hay una decente que se acerca, esa es la respuesta — no rechaces todas por perfeccionismo. Solo usás chosen_index = -1 si las fotos del set son radicalmente off-topic (ej: el brief habla del lago y las fotos son de un menú de comida). Respondés SOLO con un JSON válido sin markdown.',
     messages: [{ role: 'user', content: userBlocks }],
   });
 
