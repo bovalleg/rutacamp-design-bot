@@ -24,18 +24,18 @@
     background:linear-gradient(180deg, rgba(30,28,24,.45) 0%, rgba(30,28,24,0) 25%, rgba(30,28,24,0) 75%, rgba(30,28,24,.4) 100%);
     pointer-events:none;
   }
-  /* IG safe area top: 250px reserved for header UI */
-  .top .header { position:absolute; top:280px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; z-index:2; }
-  .top .header img { height:90px; filter:brightness(0) invert(1); }
-  .top .header .destino { font-size:24px; color:var(--rc-amber); }
+  /* IG safe area top: 250px reserved for header UI. Element scale ~1.7x post-split equivalents. */
+  .top .header { position:absolute; top:280px; left:90px; right:90px; display:flex; justify-content:space-between; align-items:center; z-index:2; }
+  .top .header img { height:140px; filter:brightness(0) invert(1); }
+  .top .header .destino { font-size:36px; color:var(--rc-amber); }
 
-  .bottom { background:var(--rc-cream); color:var(--rc-ink); padding:100px 100px 280px; display:flex; flex-direction:column; justify-content:space-between; }
-  .bottom .eyebrow { font-size:28px; color:var(--rc-ember); }
-  .bottom h1 { font-size:{{TITLE_SIZE}}px; margin:36px 0 0; color:var(--rc-ink); }
-  .bottom .rule { width:90px; height:1px; background:var(--rc-ink); margin:36px 0; }
-  .bottom p { font-size:32px; max-width:880px; color:var(--rc-ink-soft); }
-  .bottom .footer { display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rc-ink); padding-top:28px; }
-  .bottom .footer span { font-family:var(--font-eyebrow); font-size:18px; letter-spacing:.24em; text-transform:uppercase; color:var(--rc-ink-mute); }
+  .bottom { background:var(--rc-cream); color:var(--rc-ink); padding:110px 110px 280px; display:flex; flex-direction:column; justify-content:space-between; }
+  .bottom .eyebrow { font-size:40px; color:var(--rc-ember); }
+  .bottom h1 { font-size:{{TITLE_SIZE}}px; margin:48px 0 0; color:var(--rc-ink); }
+  .bottom .rule { width:120px; height:2px; background:var(--rc-ink); margin:48px 0; }
+  .bottom p { font-size:42px; line-height:1.4; max-width:880px; color:var(--rc-ink-soft); }
+  .bottom .footer { display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rc-ink); padding-top:36px; }
+  .bottom .footer span { font-family:var(--font-eyebrow); font-size:26px; letter-spacing:.24em; text-transform:uppercase; color:var(--rc-ink-mute); }
 </style>
 </head>
 <body>

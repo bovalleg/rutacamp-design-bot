@@ -15,19 +15,19 @@
   .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:{{PHOTO_POSITION}}; filter:saturate(1.05) contrast(1.02); }
   .protect-bottom { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,0) 38%, rgba(30,28,24,.82) 100%); pointer-events:none; }
   .protect-top { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.55) 0%, rgba(30,28,24,0) 30%); pointer-events:none; }
-  /* IG safe areas: top 250px (header), bottom 250px (UI) */
-  .topbar { position:absolute; top:300px; left:80px; right:80px; display:flex; flex-direction:column; align-items:flex-start; gap:18px; z-index:3; }
-  .topbar img { height:110px; filter:brightness(0) invert(1); }
-  .topbar .eyebrow { font-size:30px; color:var(--rc-amber); }
-  .content { position:absolute; left:80px; right:80px; bottom:380px; z-index:3; }
+  /* IG safe areas: top 250px (header), bottom 250px (UI). Element scale: ~1.7x post equivalents. */
+  .topbar { position:absolute; top:300px; left:90px; right:90px; display:flex; flex-direction:column; align-items:flex-start; gap:28px; z-index:3; }
+  .topbar img { height:150px; filter:brightness(0) invert(1); }
+  .topbar .eyebrow { font-size:38px; color:var(--rc-amber); }
+  .content { position:absolute; left:90px; right:90px; bottom:380px; z-index:3; }
   .content h1 { font-size:{{TITLE_SIZE}}px; margin:0; color:var(--rc-cream); }
-  .eyebrow-row { display:flex; align-items:center; gap:24px; margin-top:28px; }
-  .rule { width:80px; height:1px; background:var(--rc-amber); }
-  .sub { font-size:30px; color:var(--rc-amber); }
-  .content p { font-size:36px; margin-top:32px; max-width:920px; color:rgba(243,236,221,.92); }
-  .tag { position:absolute; left:80px; bottom:300px; z-index:3; font-family:var(--font-hand); font-size:64px; color:var(--rc-amber); }
-  .footer { position:absolute; left:80px; right:80px; bottom:280px; z-index:3; display:flex; justify-content:flex-end; }
-  .footer .handle { font-size:24px; color:var(--rc-cream); opacity:.85; }
+  .eyebrow-row { display:flex; align-items:center; gap:30px; margin-top:38px; }
+  .rule { width:110px; height:2px; background:var(--rc-amber); }
+  .sub { font-size:38px; color:var(--rc-amber); }
+  .content p { font-size:46px; line-height:1.35; margin-top:42px; max-width:920px; color:rgba(243,236,221,.92); }
+  .tag { position:absolute; left:90px; bottom:300px; z-index:3; font-family:var(--font-hand); font-size:88px; color:var(--rc-amber); }
+  .footer { position:absolute; left:90px; right:90px; bottom:280px; z-index:3; display:flex; justify-content:flex-end; }
+  .footer .handle { font-size:32px; color:var(--rc-cream); opacity:.85; }
 </style>
 </head>
 <body>
