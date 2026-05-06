@@ -1,12 +1,15 @@
+import sharp from 'sharp';
 import { listImagesInFolder, downloadFileBuffer } from './drive.mjs';
 import { visionPickPhoto } from './claude.mjs';
 
 const MIN_SIZE = 200_000;
 const PREFERRED_SIZE = 500_000;
 // How many candidates to actually send to Claude vision (more = better choice but more tokens/$)
-const VISION_CANDIDATE_COUNT = 8;
-// Max bytes per candidate sent to vision (downscale guard — Drive thumbnails are usually smaller, but protect against full-res anyway)
-const VISION_MAX_BYTES = 1_500_000;
+const VISION_CANDIDATE_COUNT = 12;
+// Above this, the candidate gets resized down before sending to vision (the original file is unchanged for the final render).
+const RESIZE_THRESHOLD_BYTES = 1_500_000;
+// Target width for the downscaled preview sent to vision.
+const VISION_PREVIEW_MAX_WIDTH = 1024;
 
 function rankCandidates(files, keywords = [], excludeIds = []) {
   const norm = (s) => (s || '').toLowerCase();
@@ -62,14 +65,21 @@ export async function pickMultiplePhotos(folderId, keywords = [], n = 3) {
 async function downloadCandidates(candidates) {
   const buffers = await Promise.all(candidates.map(async (c) => {
     try {
-      const buf = await downloadFileBuffer(c.id);
-      if (buf.length > VISION_MAX_BYTES) {
-        console.warn(`[vision] Skipping oversize candidate ${c.name} (${buf.length} bytes)`);
-        return null;
+      let buf = await downloadFileBuffer(c.id);
+      let mimeType = c.mimeType || 'image/jpeg';
+      if (buf.length > RESIZE_THRESHOLD_BYTES) {
+        const before = buf.length;
+        buf = await sharp(buf, { failOn: 'none' })
+          .rotate()
+          .resize({ width: VISION_PREVIEW_MAX_WIDTH, withoutEnlargement: true })
+          .jpeg({ quality: 78, mozjpeg: true })
+          .toBuffer();
+        mimeType = 'image/jpeg';
+        console.log(`[vision] Resized ${c.name}: ${(before/1e6).toFixed(1)}MB → ${(buf.length/1e3).toFixed(0)}KB`);
       }
-      return { id: c.id, name: c.name, mimeType: c.mimeType, base64: buf.toString('base64'), file: c };
+      return { id: c.id, name: c.name, mimeType, base64: buf.toString('base64'), file: c };
     } catch (err) {
-      console.warn(`[vision] Failed to download ${c.name}:`, err.message);
+      console.warn(`[vision] Failed to prepare ${c.name}:`, err.message);
       return null;
     }
   }));
