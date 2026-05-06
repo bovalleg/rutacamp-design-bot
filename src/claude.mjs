@@ -85,7 +85,7 @@ Reglas tipográficas (cumplir o el title se corta):
 - "post-cream": title máx 28 chars, title_size 110-140 (puede ser 2 líneas con un \\n explícito si llega a ~14 chars/línea)
 - "post-quote": title = la cita (máx 110 chars), title_size 56-72; subtitle = atribución
 - "post-split": title máx 22 chars, title_size 70-90 (mitad derecha más angosta); subtitle = etiqueta de destino corta (≤14 chars)
-- "story-photo": title máx 18 chars (idealmente 1 línea), title_size 140-180. **AUSTERO**: subtitle máx 30 chars o vacío (string ""). body máx 80 chars (1 línea de hook, NO descripción larga). Si necesitás decir más, usá story-cream o story-split — en story-photo la foto manda.
+- "story-photo": title máx 18 chars (idealmente 1 línea), title_size 110-140 (más chico que en cream porque vive en el tercio inferior y comparte espacio con foto). **AUSTERO**: subtitle máx 30 chars o vacío (string ""). body máx 80 chars (1 línea de hook, NO descripción larga). Si necesitás decir más, usá story-cream o story-split — en story-photo la foto manda.
 - "story-cream": title máx 30 chars, title_size 130-180
 - "story-split": title máx 26 chars, title_size 90-130 (la mitad inferior es más alta que ancha); subtitle = etiqueta destino corta (en la mitad de foto)
 - "carrusel-cover": title máx 20 chars, title_size 120-150
