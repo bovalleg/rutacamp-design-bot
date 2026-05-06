@@ -31,6 +31,7 @@ export const DESTINOS = {
     label: 'Red Ruta Camp',
     region: 'Patagonia · Araucanía',
     drive_folder_id: '1OEpCeITp2DsjlbOjWB2GKeDbZeIWH-qh',
+    skip_in_default_catalog: true,  // duplica las fotos de los destinos individuales — solo se cataloga si se pide explicito
   },
   'aereas': {
     label: 'Aéreas / Dron',

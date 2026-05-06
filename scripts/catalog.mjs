@@ -11,6 +11,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
+import { execSync } from 'node:child_process';
 import sharp from 'sharp';
 import Anthropic from '@anthropic-ai/sdk';
 import { DESTINOS, catalogPathForDestino } from '../src/folders.mjs';
@@ -159,6 +160,24 @@ async function catalogDestino(destinoKey, { full = false } = {}) {
   await fs.mkdir(path.join(ROOT, 'catalog'), { recursive: true });
   await fs.writeFile(path.join(ROOT, catalogPath), JSON.stringify(catalog, null, 2));
   console.log(`[catalog] ${destinoKey}: wrote ${catalogPath} (${photos.length} entries; ${tagged} new tags, ${skipped} cached, ${failed} failed)`);
+
+  // Incremental commit: push this destino's catalog right away, so progress is preserved
+  // even if the workflow times out before all destinos finish.
+  if (process.env.CI && tagged > 0) {
+    try {
+      execSync(`git add ${catalogPath}`, { cwd: ROOT, stdio: 'inherit' });
+      const status = execSync('git status --porcelain', { cwd: ROOT }).toString().trim();
+      if (status) {
+        execSync(`git commit -m "chore(catalog): ${destinoKey} (${tagged} new, ${skipped} cached) [skip ci]"`, { cwd: ROOT, stdio: 'inherit' });
+        execSync('git push', { cwd: ROOT, stdio: 'inherit' });
+        console.log(`[catalog] ${destinoKey}: pushed to remote`);
+      } else {
+        console.log(`[catalog] ${destinoKey}: nothing to commit`);
+      }
+    } catch (err) {
+      console.warn(`[catalog] ${destinoKey}: incremental push failed (${err.message}) — continuing`);
+    }
+  }
   return catalog;
 }
 
@@ -172,9 +191,13 @@ async function main() {
 
   const targets = onlyDestino
     ? [onlyDestino]
-    : Object.keys(DESTINOS).filter(k => DESTINOS[k].drive_folder_id);
+    : Object.keys(DESTINOS).filter(k => DESTINOS[k].drive_folder_id && !DESTINOS[k].skip_in_default_catalog);
 
   console.log(`[catalog] Targets: ${targets.join(', ')} | full=${full}`);
+  if (!onlyDestino) {
+    const skipped = Object.keys(DESTINOS).filter(k => DESTINOS[k].skip_in_default_catalog);
+    if (skipped.length) console.log(`[catalog] Skipped (run with --destino X to include): ${skipped.join(', ')}`);
+  }
 
   for (const t of targets) {
     try {
