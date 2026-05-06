@@ -1,0 +1,549 @@
+{
+  "destino": "aereas",
+  "label": "Aéreas / Dron",
+  "drive_folder_id": "1T_Fe0qnpDyJqK6e77oVo7-BbWr59DL6-",
+  "updated": "2026-05-06T17:09:50.582Z",
+  "photos": [
+    {
+      "id": "122WET6v_kF5zvbZvUVRsFZoy7o1XNybC",
+      "name": "DJI_20260116131305_0252_D.JPG",
+      "modified": "2026-01-16T16:13:05.000Z",
+      "size": 10932224,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "arboles-nativos",
+          "drone-shot",
+          "rio",
+          "sendero"
+        ],
+        "mood": "wild",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Vista aérea cenital de bosque nativo denso con río y orilla arenosa visible en el borde superior izquierdo; sin presencia de campistas ni vehículos, sujeto principal poco definido."
+      },
+      "tagged_at": "2026-05-06T17:08:17.543Z"
+    },
+    {
+      "id": "1hUhA796sIGHnF79cjrev9acZyfqAQdbE",
+      "name": "DJI_20260116131257_0251_D.JPG",
+      "modified": "2026-01-16T16:12:57.000Z",
+      "size": 10870784,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "arboles-nativos",
+          "paisaje",
+          "drone-shot"
+        ],
+        "mood": "wild",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 35
+        },
+        "copy_friendly_zones": [],
+        "quality": 5,
+        "notes": "Toma aérea de un bosque nativo denso y verde tomada con luz de mediodía dura; no hay sujeto claro ni presencia humana o vehicular, imagen saturada de vegetación sin zonas de respiro."
+      },
+      "tagged_at": "2026-05-06T17:08:23.604Z"
+    },
+    {
+      "id": "1DfuVXc8a0STwM68-PWjaooKwA0Czlw0r",
+      "name": "DJI_20260116131243_0250_D.JPG",
+      "modified": "2026-01-16T16:12:43.000Z",
+      "size": 9916416,
+      "tags": {
+        "subjects": [
+          "drone-shot",
+          "camping",
+          "sitio",
+          "bosque",
+          "rio"
+        ],
+        "mood": "editorial",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 7,
+        "notes": "Toma aérea de un camping con domos sobre plataformas de madera rodeado de bosque nativo y un río en primer plano; se distinguen al menos dos sitios con domos y una construcción al fondo."
+      },
+      "tagged_at": "2026-05-06T17:08:28.982Z"
+    },
+    {
+      "id": "11lM3faD5cLBju4k9PFA7baptoe2PEVrK",
+      "name": "DJI_20260116131037_0248_D.JPG",
+      "modified": "2026-01-16T16:10:37.000Z",
+      "size": 6918144,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "bosque",
+          "montaña",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de delta fluvial con arena volcánica negra desembocando en lago turquesa, rodeado de bosque nativo y cordillera al fondo bajo cielo despejado."
+      },
+      "tagged_at": "2026-05-06T17:08:33.997Z"
+    },
+    {
+      "id": "1CrhsVcPeru85sa8vWU53XLmo6XXFFLZk",
+      "name": "DJI_20260116131033_0247_D.JPG",
+      "modified": "2026-01-16T16:10:34.000Z",
+      "size": 6230016,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "cordillera",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de un delta donde un río desemboca en un lago turquesa, rodeado de bosque nativo y cordillera con volcán nevado al fondo en día despejado."
+      },
+      "tagged_at": "2026-05-06T17:08:38.732Z"
+    },
+    {
+      "id": "1EbpgmKsT7TnmHXeHbGi61MVgRHzjNKyx",
+      "name": "DJI_20260116131032_0246_D.JPG",
+      "modified": "2026-01-16T16:10:32.000Z",
+      "size": 6176768,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "cordillera",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de un delta fluvial donde un río desemboca en un lago azul turquesa, rodeado de bosque nativo y cordillera nevada al fondo bajo cielo despejado."
+      },
+      "tagged_at": "2026-05-06T17:08:43.577Z"
+    },
+    {
+      "id": "1DR2sG4JC9iE56C3a70vvEAhP6nX-M4Mm",
+      "name": "DJI_20260116131009_0245_D.JPG",
+      "modified": "2026-01-16T16:10:10.000Z",
+      "size": 7081984,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "bosque",
+          "cordillera",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 8,
+        "notes": "Vista aérea de drone sobre desembocadura de río en lago de aguas turquesas, rodeado de bosque nativo y cordillera nevada al fondo en día despejado."
+      },
+      "tagged_at": "2026-05-06T17:08:48.754Z"
+    },
+    {
+      "id": "1AXrem1nSvN7Fp8fFQvjoYxqeWLYqU8JS",
+      "name": "DJI_20260116130950_0244_D.JPG",
+      "modified": "2026-01-16T16:09:50.000Z",
+      "size": 7098368,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "cordillera",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de un valle patagónico con desembocadura de río en lago azul turquesa, bosque nativo y montañas nevadas al fondo bajo cielo despejado."
+      },
+      "tagged_at": "2026-05-06T17:08:53.630Z"
+    },
+    {
+      "id": "1QMLPj24zJ22aXx1Q51uOdGPI5oIuKIKi",
+      "name": "DJI_20260116130939_0243_D.JPG",
+      "modified": "2026-01-16T16:09:39.000Z",
+      "size": 6234112,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "volcan",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 65,
+          "y": 30
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea amplia de la desembocadura de un río en un lago de agua turquesa, con bosque nativo verde intenso, arena volcánica negra y un volcán nevado dominando el fondo bajo cielo azul despejado."
+      },
+      "tagged_at": "2026-05-06T17:08:59.231Z"
+    },
+    {
+      "id": "1eeDG08hWaZQc5Fze53ucZRUCDGOZfoFQ",
+      "name": "DJI_20260116130929_0242_D.JPG",
+      "modified": "2026-01-16T16:09:29.000Z",
+      "size": 6377472,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "volcan",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 65,
+          "y": 30
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Vista aérea de la desembocadura de un río en un lago azul turquesa con volcán nevado al fondo, probablemente lago Llanquihue y volcán Calbuco en la Región de Los Lagos."
+      },
+      "tagged_at": "2026-05-06T17:09:04.138Z"
+    },
+    {
+      "id": "1owv0T-XWp9icgmkXTKOMvJDwrfXmCE3j",
+      "name": "DJI_20260116130926_0241_D.JPG",
+      "modified": "2026-01-16T16:09:26.000Z",
+      "size": 6414336,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "volcan",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea amplia de la desembocadura de un río en un lago azul turquesa, con volcán nevado al fondo derecho y cordillera al horizonte, en la zona de la Araucanía."
+      },
+      "tagged_at": "2026-05-06T17:09:09.125Z"
+    },
+    {
+      "id": "1l8f_rtPwRcFv7U9IIpCT39eMKt0yKVGj",
+      "name": "DJI_20260116130848_0240_D.JPG",
+      "modified": "2026-01-16T16:08:48.000Z",
+      "size": 7036928,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "bosque",
+          "cordillera",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de drone sobre la desembocadura de un río en un lago de color turquesa intenso, rodeado de bosque nativo y con cordillera nevada al fondo."
+      },
+      "tagged_at": "2026-05-06T17:09:14.403Z"
+    },
+    {
+      "id": "1h4cw_MILRYJ3ar0rdY_uFIFP9MOfik9-",
+      "name": "DJI_20260116130845_0239_D.JPG",
+      "modified": "2026-01-16T16:08:46.000Z",
+      "size": 7086080,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "bosque",
+          "cordillera",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de la desembocadura de un río en lago de color turquesa intenso, rodeado de bosque nativo y cordillera nevada al fondo."
+      },
+      "tagged_at": "2026-05-06T17:09:19.416Z"
+    },
+    {
+      "id": "1FaOXos5UbQi1Hc03XQTitdgBHQVyck5o",
+      "name": "DJI_20260116130840_0238_D.JPG",
+      "modified": "2026-01-16T16:08:40.000Z",
+      "size": 7675904,
+      "tags": {
+        "subjects": [
+          "lago",
+          "rio",
+          "bosque",
+          "cordillera",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de drone que muestra la desembocadura de un río en un lago turquesa, rodeado de bosque nativo y cordillera al fondo, en lo que parece ser la Patagonia chilena."
+      },
+      "tagged_at": "2026-05-06T17:09:24.609Z"
+    },
+    {
+      "id": "1ZArW1Sm0tYDKxdthNxkpODSdER3FUcDw",
+      "name": "DJI_20260116130833_0237_D.JPG",
+      "modified": "2026-01-16T16:08:33.000Z",
+      "size": 7585792,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "bosque",
+          "cordillera",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de drone sobre la desembocadura de un río en un lago de aguas turquesas, con vegetación nativa exuberante y cordillera nevada al fondo."
+      },
+      "tagged_at": "2026-05-06T17:09:29.707Z"
+    },
+    {
+      "id": "14muurGkigcjqaEWqjolFyM0I5_4MdQrX",
+      "name": "DJI_20260116130830_0236_D.JPG",
+      "modified": "2026-01-16T16:08:31.000Z",
+      "size": 7610368,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "bosque",
+          "cordillera",
+          "paisaje"
+        ],
+        "mood": "cinematic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de drone sobre la desembocadura de un río en un lago de aguas turquesas, rodeado de bosque nativo y cordillera al fondo, probablemente Patagonia o Araucanía."
+      },
+      "tagged_at": "2026-05-06T17:09:34.514Z"
+    },
+    {
+      "id": "14__5zBKXrh7qnW37iu8Wiu9j3HqWm6Nm",
+      "name": "DJI_20260116130813_0235_D.JPG",
+      "modified": "2026-01-16T16:08:13.000Z",
+      "size": 8060928,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "bosque",
+          "paisaje",
+          "aerea"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de un delta fluvial con arena volcánica negra donde un río de múltiples brazos desemboca en un lago de agua turquesa, rodeado de bosque nativo verde intenso."
+      },
+      "tagged_at": "2026-05-06T17:09:39.576Z"
+    },
+    {
+      "id": "1NunaJ8x2-5rkU9eUon_EvZz-0X2q-9UY",
+      "name": "DJI_20260116130801_0234_D.JPG",
+      "modified": "2026-01-16T16:08:02.000Z",
+      "size": 8757248,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "aerea"
+        ],
+        "mood": "wild",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de la desembocadura de un río de arenas volcánicas oscuras que se bifurca hacia un lago de agua turquesa, rodeado de bosque nativo denso y verde intenso."
+      },
+      "tagged_at": "2026-05-06T17:09:44.429Z"
+    },
+    {
+      "id": "1QJHJEMbWlW8e_BRIK5iqMeXi5QRgTM7P",
+      "name": "DJI_20260116130753_0233_D.JPG",
+      "modified": "2026-01-16T16:07:53.000Z",
+      "size": 8806400,
+      "tags": {
+        "subjects": [
+          "rio",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Vista aérea de un delta volcánico de arena negra donde un río ramificado desemboca en un lago azul turquesa, rodeado de bosque nativo patagónico denso."
+      },
+      "tagged_at": "2026-05-06T17:09:50.582Z"
+    }
+  ]
+}
