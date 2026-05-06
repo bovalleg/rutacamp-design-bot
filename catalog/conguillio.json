@@ -1,0 +1,1412 @@
+{
+  "destino": "conguillio",
+  "label": "Conguillío (Llaima Domo)",
+  "drive_folder_id": "1WM4XE_0B46dAwuqMjDmhzY6qG6R7CdBw",
+  "updated": "2026-05-06T17:06:21.565Z",
+  "photos": [
+    {
+      "id": "1zUxBEEA9QSe10wIH337JTyBVqM6WT8Yj",
+      "name": "Imagen de WhatsApp 2024-04-14 a las 17.10.32_afd6759d.jpg",
+      "modified": "2024-06-21T15:57:14.000Z",
+      "size": 264046,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "bosque",
+          "arboles-nativos",
+          "niebla",
+          "paisaje"
+        ],
+        "mood": "cinematic",
+        "composition": "portrait-vertical",
+        "lighting": "golden-hour",
+        "focal_point": {
+          "x": 55,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Cartel de acero corten de un ecocamping (Amay Domo) iluminado por luz lateral dorada con niebla atmosférica y árboles nativos de fondo; composición vertical dramática con rocas y pajonales en primer plano."
+      },
+      "tagged_at": "2026-05-06T17:02:02.897Z"
+    },
+    {
+      "id": "1LZj4Ir9qQSaTO0Ws614h9F8u9BlTBuqQ",
+      "name": "IMG-20240621-WA0038.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 207873,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "infraestructura"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "golden-hour",
+        "focal_point": {
+          "x": 45,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Dos vehículos casa-rodante estacionados en sitio de camping con deck de madera nuevo y domo blanco a la izquierda; luz de atardecer lateral pero imagen algo contraluz y sin encuadre limpio."
+      },
+      "tagged_at": "2026-05-06T17:02:08.122Z"
+    },
+    {
+      "id": "15pxQVZ0a-X94a4nfESU_uVqpq2AytjgE",
+      "name": "IMG-20240621-WA0035.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 246099,
+      "tags": {
+        "subjects": [
+          "camping",
+          "motorhome",
+          "casa-rodante",
+          "infraestructura",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "golden-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Vista de un camping con dos casas rodantes estacionadas junto a un domo blanco y una terraza de madera nueva, iluminados por luz rasante de atardecer con destello solar entre los árboles."
+      },
+      "tagged_at": "2026-05-06T17:02:12.374Z"
+    },
+    {
+      "id": "1ORuo559C-78WR-oaCKvGIod81R_SnR2z",
+      "name": "IMG-20240621-WA0031.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 141855,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 40,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Dos vehículos de vida nómade (van roja y motorhome blanco) estacionados en sitio de gravel al atardecer, con personas reunidas entre ellos; primer plano de deck de madera distrae la composición y hay cables eléctricos visibles en el cielo."
+      },
+      "tagged_at": "2026-05-06T17:02:18.202Z"
+    },
+    {
+      "id": "1TvSGUldcQ89zK2u9G1sHe9dBUnd2Gg6W",
+      "name": "IMG-20240621-WA0037.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 181345,
+      "tags": {
+        "subjects": [
+          "vehiculo",
+          "camping",
+          "gente",
+          "sitio",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 60,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Atardecer en sitio de camping con una van roja, una casa rodante al fondo y un grupo de personas reunidas; composición desordenada con tablones en primer plano que cortan la imagen."
+      },
+      "tagged_at": "2026-05-06T17:02:23.194Z"
+    },
+    {
+      "id": "1nsGY_3TScmTAivqKO6H46OUB8wgN_YUg",
+      "name": "IMG-20240621-WA0036.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 119115,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "infraestructura",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 5,
+        "notes": "Vista de camping con deck de madera en primer plano, domo geodésico blanco a la izquierda y dos vehículos tipo motorhome/van estacionados al fondo entre árboles; luz plana de tarde nublada, sin sujeto dominante claro."
+      },
+      "tagged_at": "2026-05-06T17:02:27.686Z"
+    },
+    {
+      "id": "1DqTgmNxuG0z22MauGjAeNa1jX-O4FKaD",
+      "name": "IMG-20240621-WA0034.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 170463,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "domo-geodesico",
+          "deck-madera",
+          "arboles-nativos",
+          "paisaje"
+        ],
+        "mood": "cinematic",
+        "composition": "portrait-vertical",
+        "lighting": "golden-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Domo geodésico blanco sobre deck de madera nueva, rodeado de árboles nativos y cordillera al fondo, bajo un cielo dramático con nubes rosadas al atardecer."
+      },
+      "tagged_at": "2026-05-06T17:02:32.253Z"
+    },
+    {
+      "id": "18LDjxZx38Gxt08hWIeopiIDMjW2uBon7",
+      "name": "IMG-20240621-WA0032.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 107038,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "casa-rodante",
+          "camping",
+          "infraestructura",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Terraza de madera nueva en primer plano con una van camperizada roja y un motorhome blanco estacionados al fondo, domo a la izquierda; luz de atardecer apagada, composición algo desordenada."
+      },
+      "tagged_at": "2026-05-06T17:02:37.592Z"
+    },
+    {
+      "id": "1eDeaRtOBBcyLN5aOoH6Jb3vvuoW7RkwE",
+      "name": "IMG-20240621-WA0033.jpg",
+      "modified": "2024-06-21T15:57:01.000Z",
+      "size": 297469,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 35
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 4,
+        "notes": "Motorhome Chateau Sport blanco estacionado en sitio de camping de tierra con árboles al fondo; foto tomada de mano con mucho suelo vacío en primer plano, luz plana y otro vehículo visible al fondo."
+      },
+      "tagged_at": "2026-05-06T17:02:42.431Z"
+    },
+    {
+      "id": "1y1sd5w_zxm_7D063xdFdFTryAbsqIR80",
+      "name": "IMG-20240621-WA0043.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 359875,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "conexiones",
+          "camping",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 4,
+        "notes": "Dispensador de agua potable con cartel azul y grifo rojo en camping Llaimap Domo; fondo con vegetación nativa y malla metálica, luz dura de mediodía, entorno desordenado."
+      },
+      "tagged_at": "2026-05-06T17:02:47.177Z"
+    },
+    {
+      "id": "1uD8o1kiZ6r9Nrzat-3hDnh2oIk7G94bF",
+      "name": "IMG-20240621-WA0039.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 318981,
+      "tags": {
+        "subjects": [
+          "camping",
+          "sitio",
+          "infraestructura",
+          "arboles-nativos",
+          "paisaje"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 35,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Domo geodésico blanco en sitio de camping con pasto verde, árboles y cielo nublado parcial; imagen vertical con sombras duras y sin sujeto humano ni vehículo."
+      },
+      "tagged_at": "2026-05-06T17:02:51.661Z"
+    },
+    {
+      "id": "1nPigB0FJz0vOjpbfH-Nqx-GNWcLFdbqa",
+      "name": "IMG-20240621-WA0044.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 410386,
+      "tags": {
+        "subjects": [
+          "conexiones",
+          "infraestructura",
+          "sitio",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Toma de conexiones de agua potable y electricidad del camping Llaima Domo, con señalética azul de la marca, vegetación verde y cerco de fondo en día soleado."
+      },
+      "tagged_at": "2026-05-06T17:03:03.327Z"
+    },
+    {
+      "id": "13epJo3qBwCav6jDylvCCK5od_O7OVBJm",
+      "name": "IMG-20240621-WA0041.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 263280,
+      "tags": {
+        "subjects": [
+          "conexiones",
+          "infraestructura",
+          "camping",
+          "sitio"
+        ],
+        "mood": "editorial",
+        "composition": "close-up",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [],
+        "quality": 5,
+        "notes": "Poste azul de electricidad 220V-10A con logo Llaima Domo Ecoglamping Lodge, mojado por lluvia o riego, fondo de vegetación y malla."
+      },
+      "tagged_at": "2026-05-06T17:03:08.858Z"
+    },
+    {
+      "id": "180gj9aHRCb_DQ1EXDDZk_B9u8AwedtaS",
+      "name": "IMG-20240621-WA0040.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 391824,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "conexiones",
+          "sitio",
+          "camping",
+          "domo"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 40
+        },
+        "copy_friendly_zones": [],
+        "quality": 3,
+        "notes": "Sitio de camping en construcción o mantenimiento: tierra removida, conexiones de agua instaladas, aspersor activo y domo geodésico al fondo; imagen desordenada y poco atractiva para uso promocional."
+      },
+      "tagged_at": "2026-05-06T17:03:13.427Z"
+    },
+    {
+      "id": "1B4j4cVAq12-HCE0urX49h_jd2sIh6_dX",
+      "name": "IMG-20240621-WA0045.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 359826,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "arboles-nativos",
+          "paisaje-vacio",
+          "camping",
+          "pasto"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 4,
+        "notes": "Sitio de camping vacío en construcción o preparación, con pasto recién sembrado, gramíneas en primer plano, árboles nativos al fondo y cielo azul; cables eléctricos y galpón restan calidad on-brand."
+      },
+      "tagged_at": "2026-05-06T17:03:18.482Z"
+    },
+    {
+      "id": "1R7vvsnlJn8-eDZxl8nb-u638sTE-zlZb",
+      "name": "IMG-20240621-WA0042.jpg",
+      "modified": "2024-06-21T15:56:51.000Z",
+      "size": 361433,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "arboles-nativos",
+          "paisaje",
+          "infraestructura"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 4,
+        "notes": "Terreno de camping vacío con pasto recién cortado, árboles frutales y gallinas sueltas; imagen tomada con perspectiva inclinada, sin motorhome ni sujeto principal claro, suelo desordenado en primer plano."
+      },
+      "tagged_at": "2026-05-06T17:03:22.844Z"
+    },
+    {
+      "id": "1IHyM-eTWCkUb8vqLjk1voy_8MiadL3yA",
+      "name": "IMG-20240621-WA0046.jpg",
+      "modified": "2024-06-21T15:56:43.000Z",
+      "size": 284808,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "sitio",
+          "camping",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 40,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Dos casas rodantes estacionadas en sitios de camping rodeadas de árboles, con decks de madera y camino de gravilla; luz plana y encuadre algo desordenado."
+      },
+      "tagged_at": "2026-05-06T17:03:26.956Z"
+    },
+    {
+      "id": "17-IWs9OtGE6ibR6sj1kbY5H01O5O2V-1",
+      "name": "IMG-20240621-WA0048.jpg",
+      "modified": "2024-06-21T15:56:43.000Z",
+      "size": 406416,
+      "tags": {
+        "subjects": [
+          "conexiones",
+          "infraestructura",
+          "sitio",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Dos pedestales de madera con paneles azules de electricidad 220V y agua potable marca Llaima Domo, instalados en un sitio de camping rodeado de vegetación nativa; foto funcional pero sin composición destacada."
+      },
+      "tagged_at": "2026-05-06T17:03:32.520Z"
+    },
+    {
+      "id": "1xz-7RXGK9weH4yUn23aEZfsqM3xLFU9r",
+      "name": "IMG-20240621-WA0050.jpg",
+      "modified": "2024-06-21T15:56:43.000Z",
+      "size": 287706,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "conexiones",
+          "camping",
+          "bosque"
+        ],
+        "mood": "editorial",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Tótem azul de Llaima Domo con indicación de electricidad 220V junto a caja eléctrica y mangueras de agua, en sitio de camping rodeado de bosque seco."
+      },
+      "tagged_at": "2026-05-06T17:03:36.729Z"
+    },
+    {
+      "id": "1hY95BlEz11T-lhTuPIATOksH7TVSvlMC",
+      "name": "IMG-20240621-WA0047.jpg",
+      "modified": "2024-06-21T15:56:43.000Z",
+      "size": 238401,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "conexiones",
+          "camping",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Toma cercana de un punto de agua potable con grifo rojo y cartel azul de 'Llaimadomo Ecoglodomo Lodge', fondo con vegetación y malla metálica; útil para mostrar servicios del camping pero composición funcional sin atractivo visual destacado."
+      },
+      "tagged_at": "2026-05-06T17:03:42.122Z"
+    },
+    {
+      "id": "13yQKmHp9SOkwOkBkrO_IfpV94a8xV6Zq",
+      "name": "Imagen de WhatsApp 2024-02-01 a las 21.13.52_a42d7643.jpg",
+      "modified": "2024-06-21T15:56:29.000Z",
+      "size": 292516,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "arboles-nativos",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 60,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Dos casas rodantes estacionadas en sitio de camping rodeado de árboles frondosos; luz plana sin dorado, puerta abierta y suelo de tierra dan tono cotidiano pero sin impacto visual fuerte."
+      },
+      "tagged_at": "2026-05-06T17:03:46.886Z"
+    },
+    {
+      "id": "1qoMTZAseEBtB4GV8bsaCCDRWzNRNVDQv",
+      "name": "Imagen de WhatsApp 2024-02-01 a las 21.13.53_bdb1ef9b.jpg",
+      "modified": "2024-06-21T15:56:23.000Z",
+      "size": 230856,
+      "tags": {
+        "subjects": [
+          "conexiones",
+          "infraestructura",
+          "sitio",
+          "camping"
+        ],
+        "mood": "editorial",
+        "composition": "close-up",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Poste de conexión eléctrica 220V-10A de Llaima Domo Ecoglamping Lodge, fotografiado de cerca con fondo de vegetación y malla metálica; útil solo para comunicar servicios/infraestructura, no apta para piezas de marca aspiracional."
+      },
+      "tagged_at": "2026-05-06T17:03:52.443Z"
+    },
+    {
+      "id": "1MU-xs-_m3v_cW4QnzW3lj8hAATjNN_nu",
+      "name": "IMG-20240621-WA0057.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 127868,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "baño-camping",
+          "lavamanos",
+          "urinario"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 40,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 4,
+        "notes": "Interior de baño compartido de camping con lavamanos de loza blanca sobre mesón de madera, urinario y revestimiento de madera oscura; imagen funcional pero sin atractivo visual destacado."
+      },
+      "tagged_at": "2026-05-06T17:04:06.216Z"
+    },
+    {
+      "id": "100rVhqXMY2kSUjV6mpEC9hxdqfrl01ca",
+      "name": "IMG-20240621-WA0056.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 186321,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "producto-higiene",
+          "amenities",
+          "interior"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 3,
+        "notes": "Dos botellas de shampoo y acondicionador marca Anyah sobre superficie gris; foto de producto sin contexto outdoor ni camping, completamente fuera de brand para Ruta Camp."
+      },
+      "tagged_at": "2026-05-06T17:04:11.056Z"
+    },
+    {
+      "id": "1nk7ZdADDUU5Jfbrpb_XDhut2NNXLeE-N",
+      "name": "IMG-20240621-WA0053.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 91073,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "duchas",
+          "baños-camping",
+          "instalaciones"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 50,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 3,
+        "notes": "Dos duchas de camping con paredes grises, tomada con luz artificial tenue, imagen oscura y con suciedad visible en las tinas; poco atractiva para uso promocional."
+      },
+      "tagged_at": "2026-05-06T17:04:15.770Z"
+    },
+    {
+      "id": "1Y6dQrWmBKMszNhrPxoUy19_TqKuu88Bo",
+      "name": "IMG-20240621-WA0058.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 109199,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "producto-higiene"
+        ],
+        "mood": "casual",
+        "composition": "close-up",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 50,
+          "y": 50
+        },
+        "copy_friendly_zones": [],
+        "quality": 2,
+        "notes": "Primer plano de un dispensador de jabón líquido marca Anyah sobre mesón de baño; imagen fuera de tema para camping/motorhome, sin valor visual para la marca Ruta Camp."
+      },
+      "tagged_at": "2026-05-06T17:04:22.591Z"
+    },
+    {
+      "id": "1_9ltLjdXRH71ZvlwWfNTCwdQmiTJLDyx",
+      "name": "IMG-20240621-WA0054.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 86442,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "bano-camping",
+          "sanitario",
+          "instalaciones"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [],
+        "quality": 3,
+        "notes": "Baño con inodoro y basurero en espacio pequeño con paredes grises y madera, imagen oscura y sin valor visual para branding outdoor."
+      },
+      "tagged_at": "2026-05-06T17:04:26.974Z"
+    },
+    {
+      "id": "18ce22jX6f7iF5EVLR6JBG4vQEfGieerS",
+      "name": "IMG-20240621-WA0052.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 117951,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "camping",
+          "baño-compartido",
+          "lavamanos",
+          "madera"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 40,
+          "y": 55
+        },
+        "copy_friendly_zones": [],
+        "quality": 4,
+        "notes": "Baño compartido del camping con lavamanos de cerámica sobre mesón de madera, cabinas de baño y espejo grande; foto tomada con leve flare de luz artificial y composición sin intención editorial."
+      },
+      "tagged_at": "2026-05-06T17:04:31.848Z"
+    },
+    {
+      "id": "1gDl13NWH0-Kij1gg7O7OBJvn3s7aMzaM",
+      "name": "IMG-20240621-WA0059.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 99083,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "baño",
+          "dispensador-jabon",
+          "lavamanos"
+        ],
+        "mood": "casual",
+        "composition": "close-up",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 65,
+          "y": 55
+        },
+        "copy_friendly_zones": [],
+        "quality": 3,
+        "notes": "Foto de baño de instalaciones de camping mostrando dispensador de jabón eco marca ANYAH montado en pared, con lavamanos y espejo al fondo; imagen utilitaria, sin valor visual para branding outdoor."
+      },
+      "tagged_at": "2026-05-06T17:04:36.088Z"
+    },
+    {
+      "id": "1WSRerHMfAUf7vuwEXq6SmQCyHt20lHOm",
+      "name": "IMG-20240621-WA0055.jpg",
+      "modified": "2024-06-21T15:56:03.000Z",
+      "size": 113013,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "ducha",
+          "amenities",
+          "bano"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "indoor",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 4,
+        "notes": "Interior de ducha con pared de microcemento oscuro, dos dispensadores de productos y grifería metálica; imagen funcional pero poco evocadora para la marca outdoor."
+      },
+      "tagged_at": "2026-05-06T17:04:40.083Z"
+    },
+    {
+      "id": "1ZK7xxd5cvyRf4G4fDhtjoPW3-dImWHhv",
+      "name": "IMG-20240621-WA0062.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 108997,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "piscina",
+          "deck-madera",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Deck de madera con piscina iluminada en azul/violeta al atardecer, rodeada de árboles y reposeras, con cabaña visible a la derecha."
+      },
+      "tagged_at": "2026-05-06T17:04:45.712Z"
+    },
+    {
+      "id": "14lMpSN9SwV9bGcpCfq2IAewRRgBJ1J6p",
+      "name": "IMG-20240621-WA0061.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 71155,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "piscina-iluminada",
+          "arboles-nativos",
+          "noche"
+        ],
+        "mood": "dramatic",
+        "composition": "medium",
+        "lighting": "night",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Piscina iluminada con luces LED azules y magenta rodeada de árboles iluminados en verde y rojo, fotografiada de noche con bordes muy oscuros."
+      },
+      "tagged_at": "2026-05-06T17:04:49.778Z"
+    },
+    {
+      "id": "1zLzYAnptrIqBmjvIAz-N-zHPQ4cmpS9C",
+      "name": "IMG-20240621-WA0064.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 154246,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "camping",
+          "paisaje",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Piscina con deck de madera y domo blanco al fondo, rodeados de vegetación, tomada al atardecer tardío con luz azulada; no aparece motorhome ni casa rodante."
+      },
+      "tagged_at": "2026-05-06T17:04:54.090Z"
+    },
+    {
+      "id": "1hX9vCc4UP4V-6LFWqCfjV4oxEHHkVpBx",
+      "name": "IMG-20240621-WA0065.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 132595,
+      "tags": {
+        "subjects": [
+          "volcan",
+          "infraestructura",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "cinematic",
+        "composition": "portrait-vertical",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 7,
+        "notes": "Deck de madera iluminado con tiras LED cálidas en primer plano, con vista al volcán nevado al fondo entre vegetación nativa al atardecer."
+      },
+      "tagged_at": "2026-05-06T17:04:57.996Z"
+    },
+    {
+      "id": "1Fu6KsfvrLuFCt9pNPp68g-xJVkAyC1HS",
+      "name": "IMG-20240621-WA0068.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 141286,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "piscina",
+          "deck-madera",
+          "arboles",
+          "reposeras"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 55,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Piscina iluminada con luz verde sobre deck de madera al atardecer, rodeada de vegetación; infraestructura de camping pero sin motorhome ni elementos identitarios de ruta camp."
+      },
+      "tagged_at": "2026-05-06T17:05:02.424Z"
+    },
+    {
+      "id": "1PBYXC_dG4uTQBmr9_KylkGVGDZGQxCYd",
+      "name": "IMG-20240621-WA0067.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 162468,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "piscina",
+          "domo",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "intimate",
+        "composition": "medium",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Piscina iluminada con luz violeta en deck de madera, domo blanco al fondo y lámpara colgante en primer plano durante el atardecer; ambiente glamping acogedor pero foco algo disperso por los elementos en primer plano."
+      },
+      "tagged_at": "2026-05-06T17:05:07.244Z"
+    },
+    {
+      "id": "11kuQm3NbkNzmC_aHScdzstYlgIKhZydO",
+      "name": "IMG-20240621-WA0066.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 161752,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "piscina",
+          "deck",
+          "arboles-nativos",
+          "glamping-dome"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Piscina iluminada con deck de madera y domo blanco al fondo, encuadrada entre linternas colgantes y ramas de árbol en blue hour."
+      },
+      "tagged_at": "2026-05-06T17:05:12.640Z"
+    },
+    {
+      "id": "1vQNPUTp5p9w14ZPftdGbuHR6OHiIktSK",
+      "name": "IMG-20240621-WA0060.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 152288,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "camping",
+          "domo",
+          "piscina",
+          "deck"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 60,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Deck de madera en primer plano con piscina iluminada en rosa y domo geodésico blanco al fondo, rodeado de vegetación y cerros bajo cielo crepuscular; composición con demasiado deck vacío y sin sujeto principal claro."
+      },
+      "tagged_at": "2026-05-06T17:05:17.201Z"
+    },
+    {
+      "id": "1GolR1zJeJ_9TsyBNFggo-TIDfqGxCOgt",
+      "name": "IMG-20240621-WA0063.jpg",
+      "modified": "2024-06-21T15:55:48.000Z",
+      "size": 38373,
+      "tags": {
+        "subjects": [
+          "piscina",
+          "infraestructura",
+          "noche",
+          "arboles-nativos"
+        ],
+        "mood": "intimate",
+        "composition": "medium",
+        "lighting": "night",
+        "focal_point": {
+          "x": 50,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Piscina iluminada de noche con cuatro asientos cilíndricos blancos en el borde; fondo oscuro con árboles iluminados artificialmente. Poco relacionado con motorhomes/camping, bordes negros recortados."
+      },
+      "tagged_at": "2026-05-06T17:05:22.272Z"
+    },
+    {
+      "id": "1sbCLQg7mysR7z1jFcE0t_ahPTYYH5cB7",
+      "name": "DJI_0501.JPG",
+      "modified": "2024-01-17T13:33:17.000Z",
+      "size": 5622218,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "arboles-nativos",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 60,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 4,
+        "notes": "Vista aérea baja de un camping con dos casas rodantes y un motorhome estacionados entre árboles; luz plana, troncos cortados en primer plano y zona de tierra suelta restan atractivo visual."
+      },
+      "tagged_at": "2026-05-06T17:05:26.968Z"
+    },
+    {
+      "id": "1_MRGSaVJutI02BDfhaiRYQ2H7sdm5guN",
+      "name": "DJI_0497.JPG",
+      "modified": "2024-01-17T13:33:17.000Z",
+      "size": 6081417,
+      "tags": {
+        "subjects": [
+          "volcan",
+          "bosque",
+          "infraestructura",
+          "sendero",
+          "camping"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 35
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Vista elevada de un camping rodeado de bosque nativo con pasarelas de madera y estructuras en primer plano, y un volcán nevado dominando el fondo bajo cielo parcialmente nublado."
+      },
+      "tagged_at": "2026-05-06T17:05:31.743Z"
+    },
+    {
+      "id": "1Y1QSF0l6cHLuNp2XLBIYABIAioNBRCIT",
+      "name": "DJI_0507.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5185516,
+      "tags": {
+        "subjects": [
+          "camping",
+          "casa-rodante",
+          "arboles-nativos",
+          "infraestructura",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Vista elevada de un camping con dos casas rodantes estacionadas entre árboles altos, una terraza de madera con persona a la izquierda y área de circulación de tierra; luz plana y composición desordenada."
+      },
+      "tagged_at": "2026-05-06T17:05:36.104Z"
+    },
+    {
+      "id": "1_WsbQRvR6zr82sGXeFUXqnzKZ5WYTeQZ",
+      "name": "DJI_0504.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5458510,
+      "tags": {
+        "subjects": [
+          "camping",
+          "sitio",
+          "bosque",
+          "infraestructura",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 40,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Vista elevada de un camping rodeado de bosque nativo con dos autos estacionados, una terraza con mesas y troncos apilados en primer plano; luz plana y sin sujeto estelar claro."
+      },
+      "tagged_at": "2026-05-06T17:05:40.604Z"
+    },
+    {
+      "id": "1DeUxgVgvnl-qyaPL1cFa290dpZ7emOc_",
+      "name": "DJI_0502.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5495991,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "arboles-nativos",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Vista aérea baja de un camping con dos casas rodantes y una camioneta entre árboles, luz plana y troncos cortados en primer plano que restan prolijidad a la escena."
+      },
+      "tagged_at": "2026-05-06T17:05:45.736Z"
+    },
+    {
+      "id": "1vVLQyP8vbEQ4F0wI3VqjfUOjX5tbSKHw",
+      "name": "DJI_0506.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5559630,
+      "tags": {
+        "subjects": [
+          "camping",
+          "casa-rodante",
+          "sitio",
+          "infraestructura",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Vista elevada del camping con varias casas rodantes estacionadas entre árboles, terraza de madera y edificación principal a la izquierda; luz plana sin interés dramático."
+      },
+      "tagged_at": "2026-05-06T17:05:51.263Z"
+    },
+    {
+      "id": "1axCwzFmHfD6hOH7MAQ4QGHS6N6Q6FsL6",
+      "name": "DJI_0509.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5747063,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 65,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "left",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Toma aérea de dron mostrando dos casas rodantes estacionadas entre árboles en un sitio de camping rodeado de bosque mixto, con camino de tierra visible y troncos cortados en primer plano izquierdo."
+      },
+      "tagged_at": "2026-05-06T17:05:56.790Z"
+    },
+    {
+      "id": "1TI36jytPaClkJdOPVfAebdCHr7uxUsrc",
+      "name": "DJI_0500.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5702627,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "camping",
+          "sitio",
+          "arboles-nativos",
+          "vehiculo"
+        ],
+        "mood": "editorial",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Vista aérea de baja altura de un camping con infraestructura de madera, deck, sendero de tablas, autos estacionados y vegetación nativa densa; luz plana sin atractivo dramático."
+      },
+      "tagged_at": "2026-05-06T17:06:02.308Z"
+    },
+    {
+      "id": "1WC5iw9aBDPnSfv4iGczlO4ZniUXLQuQP",
+      "name": "DJI_0512.JPG",
+      "modified": "2024-01-17T13:33:16.000Z",
+      "size": 5760564,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "infraestructura",
+          "arboles-nativos",
+          "cordillera",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 4,
+        "notes": "Sitio de camping en construcción o recién habilitado con gravilla, galpón al fondo, árboles y montañas; foto tomada desde altura con ángulo inclinado y sin vehículo presente."
+      },
+      "tagged_at": "2026-05-06T17:06:06.919Z"
+    },
+    {
+      "id": "1BQY0-zvgDBT6p23mp0H-aOqEhn_nd9Dm",
+      "name": "DJI_0510.JPG",
+      "modified": "2024-01-17T13:33:15.000Z",
+      "size": 5349149,
+      "tags": {
+        "subjects": [
+          "camping",
+          "infraestructura",
+          "bosque",
+          "sitio",
+          "vehiculo"
+        ],
+        "mood": "calm",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 70,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 6,
+        "notes": "Vista aérea de un camping con domo geodésico blanco sobre deck de madera, rodeado de árboles nativos y un auto estacionado en camino de tierra; luz plana sin sol directo."
+      },
+      "tagged_at": "2026-05-06T17:06:12.076Z"
+    },
+    {
+      "id": "1w2lLT4zyaWCP-kutcME61ys_62L8sNtt",
+      "name": "DJI_0511.JPG",
+      "modified": "2024-01-17T13:33:15.000Z",
+      "size": 5372683,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "camping",
+          "sitio",
+          "arboles-nativos",
+          "gente"
+        ],
+        "mood": "editorial",
+        "composition": "aerial-wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 7,
+        "notes": "Vista aérea de drone sobre dos cabañas de madera con techo metálico y deck con sillas, rodeadas de bosque nativo y un pequeño río al fondo; se distingue una persona en el deck y una cúpula geodésica al fondo."
+      },
+      "tagged_at": "2026-05-06T17:06:17.636Z"
+    },
+    {
+      "id": "1PuXrJg2yOFEruO7hjFYQ5xbvZH-1qIKm",
+      "name": "DJI_0513.JPG",
+      "modified": "2024-01-17T13:33:15.000Z",
+      "size": 5230765,
+      "tags": {
+        "subjects": [
+          "volcan",
+          "bosque",
+          "paisaje",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top",
+          "center"
+        ],
+        "quality": 5,
+        "notes": "Volcán nevado asomando sobre una franja de bosque nativo bajo cielo parcialmente nublado; la imagen es correcta pero plana, sin sujeto protagonista claro ni luz especial."
+      },
+      "tagged_at": "2026-05-06T17:06:21.565Z"
+    }
+  ]
+}
