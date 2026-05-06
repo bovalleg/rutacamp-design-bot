@@ -12,43 +12,71 @@
   .ig-title { font-family:var(--font-display); font-weight:800; line-height:1.0; letter-spacing:-.012em; font-style:italic; }
   .ig-body { font-family:var(--font-body); font-weight:400; line-height:1.4; }
   .ig-hand { font-family:var(--font-hand); font-weight:700; line-height:1; }
+
   .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:{{PHOTO_POSITION}}; filter:saturate(1.05) contrast(1.02); }
-  .protect-bottom { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,0) 38%, rgba(30,28,24,.82) 100%); pointer-events:none; }
-  .protect-top { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.55) 0%, rgba(30,28,24,0) 30%); pointer-events:none; }
-  /* IG safe areas: top 250px (header), bottom 250px (UI). Element scale: ~1.7x post equivalents. */
-  .topbar { position:absolute; top:300px; left:90px; right:90px; display:flex; flex-direction:column; align-items:flex-start; gap:28px; z-index:3; }
-  .topbar img { height:150px; filter:brightness(0) invert(1); }
-  .topbar .eyebrow { font-size:38px; color:var(--rc-amber); }
-  .content { position:absolute; left:90px; right:90px; bottom:380px; z-index:3; }
-  .content h1 { font-size:{{TITLE_SIZE}}px; margin:0; color:var(--rc-cream); }
-  .eyebrow-row { display:flex; align-items:center; gap:30px; margin-top:38px; }
-  .rule { width:110px; height:2px; background:var(--rc-amber); }
-  .sub { font-size:38px; color:var(--rc-amber); }
-  .content p { font-size:46px; line-height:1.35; margin-top:42px; max-width:920px; color:rgba(243,236,221,.92); }
-  .tag { position:absolute; left:90px; bottom:300px; z-index:3; font-family:var(--font-hand); font-size:88px; color:var(--rc-amber); }
-  .footer { position:absolute; left:90px; right:90px; bottom:280px; z-index:3; display:flex; justify-content:flex-end; }
-  .footer .handle { font-size:32px; color:var(--rc-cream); opacity:.85; }
+  /* Single continuous gradient: heavy at top (header), light in middle (so the photo breathes), heavy at bottom (body+footer).
+     Middle keeps a 0.32 baseline so the title stays legible no matter what the photo shows there. */
+  .photo-overlay {
+    position:absolute; inset:0; pointer-events:none;
+    background:linear-gradient(180deg,
+      rgba(30,28,24,.78) 0%,
+      rgba(30,28,24,.45) 22%,
+      rgba(30,28,24,.32) 38%,
+      rgba(30,28,24,.32) 55%,
+      rgba(30,28,24,.55) 68%,
+      rgba(30,28,24,.88) 85%,
+      rgba(30,28,24,.94) 100%
+    );
+  }
+
+  /* Safe frame: respects IG UI areas (top 250 for header, bottom 280 for actions). */
+  .safe-frame {
+    position:absolute;
+    top:250px; left:90px; right:90px; bottom:280px;
+    display:flex; flex-direction:column;
+    justify-content:space-between;
+    z-index:3;
+  }
+
+  .block-top { display:flex; flex-direction:column; align-items:flex-start; gap:30px; padding-top:20px; }
+  .block-top img { height:150px; filter:brightness(0) invert(1); }
+  .block-top .eyebrow { font-size:38px; color:var(--rc-amber); }
+
+  .block-mid { display:flex; flex-direction:column; }
+  /* Title gets its own shadow so it stays legible over photo without needing the protect overlay */
+  .block-mid h1 { font-size:{{TITLE_SIZE}}px; margin:0; color:var(--rc-cream); text-shadow:0 4px 24px rgba(30,28,24,.55), 0 1px 2px rgba(30,28,24,.6); }
+  .eyebrow-row { display:flex; align-items:center; gap:30px; margin-top:42px; }
+  .eyebrow-row .rule { width:110px; height:2px; background:var(--rc-amber); }
+  .eyebrow-row .sub { font-size:38px; color:var(--rc-amber); text-shadow:0 1px 6px rgba(30,28,24,.5); }
+  .block-mid p { font-size:46px; line-height:1.35; margin:46px 0 0; max-width:900px; color:rgba(243,236,221,.94); text-shadow:0 1px 6px rgba(30,28,24,.5); }
+
+  .block-bot { display:flex; flex-direction:column; gap:42px; align-items:stretch; padding-bottom:10px; }
+  .block-bot .tag { font-family:var(--font-hand); font-size:96px; color:var(--rc-amber); line-height:.95; align-self:flex-start; }
+  .block-bot .handle { font-size:32px; letter-spacing:.24em; color:var(--rc-cream); opacity:.85; align-self:flex-end; padding-top:18px; border-top:1px solid rgba(243,236,221,.4); width:100%; text-align:right; }
 </style>
 </head>
 <body>
 <div class="ig-frame" id="frame">
   <div class="photo"></div>
-  <div class="protect-top"></div>
-  <div class="protect-bottom"></div>
-  <div class="topbar">
-    <img src="../brand/assets/logo-light.png" alt="Ruta Camp">
-    <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
-  </div>
-  <div class="content">
-    <h1 class="ig-title">{{TITLE}}</h1>
-    <div class="eyebrow-row">
-      <div class="rule"></div>
-      <span class="ig-eyebrow sub">{{SUBTITLE}}</span>
+  <div class="photo-overlay"></div>
+  <div class="safe-frame">
+    <header class="block-top">
+      <img src="../brand/assets/logo-light.png" alt="Ruta Camp">
+      <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
+    </header>
+    <div class="block-mid">
+      <h1 class="ig-title">{{TITLE}}</h1>
+      <div class="eyebrow-row">
+        <div class="rule"></div>
+        <span class="ig-eyebrow sub">{{SUBTITLE}}</span>
+      </div>
+      <p class="ig-body">{{BODY}}</p>
     </div>
-    <p class="ig-body">{{BODY}}</p>
+    <footer class="block-bot">
+      <span class="ig-hand tag">{{HAND}}</span>
+      <span class="ig-eyebrow handle">{{HANDLE}}</span>
+    </footer>
   </div>
-  <span class="ig-hand tag">{{HAND}}</span>
-  <div class="footer"><span class="ig-eyebrow handle">{{HANDLE}}</span></div>
 </div>
 </body>
 </html>
