@@ -49,22 +49,26 @@ B) Si format = "carrusel":
 }
 
 Tabla de templates por formato:
-| format    | templates disponibles                                                                |
-|-----------|--------------------------------------------------------------------------------------|
-| post      | post-photo, post-cream, post-quote, post-split                                       |
-| story     | story-photo, story-cream                                                             |
-| carrusel  | (en cada slide) carrusel-cover, carrusel-content, carrusel-content-photo, carrusel-end |
+| format    | templates disponibles                                                                                           |
+|-----------|-----------------------------------------------------------------------------------------------------------------|
+| post      | post-photo, post-cream, post-quote, post-split                                                                  |
+| story     | story-photo, story-cream, story-split                                                                           |
+| carrusel  | (en cada slide) carrusel-cover, carrusel-content, carrusel-content-photo, carrusel-content-split, carrusel-end  |
 
-Cuándo usar cada post-template:
-- "post-photo" → destino, mood, naturaleza. Foto full-bleed con copy abajo.
-- "post-cream" → anuncios, fechas, citas cortas. Sin foto, postcard editorial.
-- "post-quote" → testimonio o cita directa de un cliente o frase de marca, ink mode con comillas grandes. Title = la cita literal entre comillas; subtitle = autor o atribución (ej: "— Familia Rodríguez, Febrero 2026"). NO uses con tagline genérica; necesita una cita real.
-- "post-split" → comparativa visual + datos: foto a la izquierda, copy a la derecha en cream. Ideal para presentar destino con datos concretos (servicios, ubicación, horarios). Subtitle = etiqueta corta debajo del logo (ej: "PUERTO FUY").
+Cuándo usar cada template (split incluido):
+- "post-photo" / "story-photo" / "carrusel-cover" / "carrusel-content-photo" → destino, mood, naturaleza. Foto full-bleed con copy abajo o centrado.
+- "post-cream" / "story-cream" / "carrusel-content" → anuncios, fechas, citas cortas. Sin foto, postcard editorial.
+- "post-quote" → testimonio o cita directa con autor. Title = la cita literal; subtitle = autor.
+- "post-split" / "story-split" / "carrusel-content-split" → bloque visual + bloque de datos en SECCIONES SEPARADAS. Foto a un lado, cream con copy al otro. Ideal para presentar un destino con datos concretos (servicios, ubicación, horarios) cuando querés "foto + información" sin tapar la foto. Layout:
+   * post-split: 50/50 vertical, foto izq + cream der.
+   * story-split: 50/50 horizontal, foto arriba + cream abajo.
+   * carrusel-content-split: 50/50 vertical, foto izq + cream der (igual que post-split + index/total + sigue→).
+- "carrusel-end" → cierre con tagline + CTA (siempre ink mode, último slide).
 
-Diferencia entre los content de carrusel:
-- "carrusel-content" → cream (sin foto). Para datos, instrucciones, servicios, fechas, listas.
-- "carrusel-content-photo" → foto full-bleed con copy abajo. Para visual/mood: paisaje, atardecer, descripción del lugar.
-Si usás carrusel-content-photo el slide DEBE tener use_photo:true. Si usás carrusel-content (cream) el slide DEBE tener use_photo:false.
+Reglas para use_photo:
+- Templates que terminan en "-photo", "-cover" o "-split" → use_photo: true (necesitan foto)
+- Templates "-cream" o "-content" (sin sufijo) → use_photo: false (no piden foto)
+- "carrusel-end" → use_photo: false
 
 Reglas duras de copy y diseño:
 1. Una **única** exclamación en TODA la pieza (suma title + body + hand + slides). En carrusel, máx 1 entre todos los slides.
@@ -83,8 +87,10 @@ Reglas tipográficas (cumplir o el title se corta):
 - "post-split": title máx 22 chars, title_size 70-90 (mitad derecha más angosta); subtitle = etiqueta de destino corta (≤14 chars)
 - "story-photo": title máx 22 chars, title_size 130-180
 - "story-cream": title máx 30 chars, title_size 130-180
+- "story-split": title máx 26 chars, title_size 90-130 (la mitad inferior es más alta que ancha); subtitle = etiqueta destino corta (en la mitad de foto)
 - "carrusel-cover": title máx 20 chars, title_size 120-150
 - "carrusel-content" / "carrusel-content-photo": title máx 30 chars, title_size 70-100; body máx 220 chars
+- "carrusel-content-split": title máx 22 chars, title_size 64-84 (mitad derecha angosta); body máx 180 chars
 - "carrusel-end": title igual a tagline ("Vive la aventura."), title_size 130-150
 
 Decisión format/template (si el brief no dice):

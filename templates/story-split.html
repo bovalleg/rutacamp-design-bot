@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<title>Ruta Camp story (split)</title>
+<link rel="stylesheet" href="../brand/colors_and_type.css">
+<style>
+  html, body { margin:0; padding:0; background:transparent; }
+  body { display:grid; place-items:center; }
+  .ig-frame { width:1080px; height:1920px; position:relative; overflow:hidden; font-family:var(--font-body); display:grid; grid-template-rows:960px 960px; }
+  .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
+  .ig-title { font-family:var(--font-display); font-weight:800; font-style:italic; line-height:1.05; letter-spacing:-.012em; }
+  .ig-body { font-family:var(--font-body); font-weight:400; line-height:1.5; }
+
+  .top {
+    position:relative;
+    background-image:url("{{PHOTO_URL}}");
+    background-size:cover;
+    background-position:{{PHOTO_POSITION}};
+    filter:saturate(1.05) contrast(1.02);
+  }
+  .top::after {
+    content:''; position:absolute; inset:0;
+    background:linear-gradient(180deg, rgba(30,28,24,.45) 0%, rgba(30,28,24,0) 25%, rgba(30,28,24,0) 75%, rgba(30,28,24,.4) 100%);
+    pointer-events:none;
+  }
+  /* IG safe area top: 250px reserved for header UI */
+  .top .header { position:absolute; top:280px; left:80px; right:80px; display:flex; justify-content:space-between; align-items:center; z-index:2; }
+  .top .header img { height:90px; filter:brightness(0) invert(1); }
+  .top .header .destino { font-size:24px; color:var(--rc-amber); }
+
+  .bottom { background:var(--rc-cream); color:var(--rc-ink); padding:100px 100px 280px; display:flex; flex-direction:column; justify-content:space-between; }
+  .bottom .eyebrow { font-size:28px; color:var(--rc-ember); }
+  .bottom h1 { font-size:{{TITLE_SIZE}}px; margin:36px 0 0; color:var(--rc-ink); }
+  .bottom .rule { width:90px; height:1px; background:var(--rc-ink); margin:36px 0; }
+  .bottom p { font-size:32px; max-width:880px; color:var(--rc-ink-soft); }
+  .bottom .footer { display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rc-ink); padding-top:28px; }
+  .bottom .footer span { font-family:var(--font-eyebrow); font-size:18px; letter-spacing:.24em; text-transform:uppercase; color:var(--rc-ink-mute); }
+</style>
+</head>
+<body>
+<div class="ig-frame" id="frame">
+  <div class="top">
+    <div class="header">
+      <img src="../brand/assets/logo-light.png" alt="Ruta Camp">
+      <span class="ig-eyebrow destino">{{SUBTITLE}}</span>
+    </div>
+  </div>
+  <div class="bottom">
+    <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
+    <div>
+      <h1 class="ig-title">{{TITLE}}</h1>
+      <div class="rule"></div>
+      <p class="ig-body">{{BODY}}</p>
+    </div>
+    <div class="footer">
+      <span>{{HANDLE}}</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

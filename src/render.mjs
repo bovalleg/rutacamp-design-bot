@@ -14,9 +14,11 @@ const TEMPLATES = {
   'post-split':             { width: 1080, height: 1080 },
   'story-photo':            { width: 1080, height: 1920 },
   'story-cream':            { width: 1080, height: 1920 },
+  'story-split':            { width: 1080, height: 1920 },
   'carrusel-cover':         { width: 1080, height: 1080 },
   'carrusel-content':       { width: 1080, height: 1080 },
   'carrusel-content-photo': { width: 1080, height: 1080 },
+  'carrusel-content-split': { width: 1080, height: 1080 },
   'carrusel-end':           { width: 1080, height: 1080 },
 };
 
