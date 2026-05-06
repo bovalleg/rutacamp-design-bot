@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<title>Ruta Camp carrusel content (photo)</title>
+<link rel="stylesheet" href="../brand/colors_and_type.css">
+<style>
+  html, body { margin:0; padding:0; background:transparent; }
+  body { display:grid; place-items:center; }
+  .ig-frame { width:1080px; height:1080px; position:relative; overflow:hidden; font-family:var(--font-body); color:var(--rc-cream); }
+  .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
+  .ig-title { font-family:var(--font-display); font-weight:700; line-height:1.05; letter-spacing:-.01em; font-style:italic; }
+  .ig-body { font-family:var(--font-body); font-weight:400; line-height:1.45; }
+  .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:center; filter:saturate(1.05) contrast(1.02); }
+  .protect { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.4) 0%, rgba(30,28,24,0) 22%, rgba(30,28,24,0) 45%, rgba(30,28,24,.85) 100%); pointer-events:none; }
+  .topbar { position:absolute; top:60px; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; z-index:3; }
+  .topbar .index { font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.3em; text-transform:uppercase; color:rgba(243,236,221,.85); }
+  .topbar .index .num { color:var(--rc-amber); }
+  .topbar .eyebrow { font-size:18px; color:var(--rc-amber); }
+  .content { position:absolute; left:60px; right:60px; bottom:120px; z-index:3; }
+  .content h1 { font-size:{{TITLE_SIZE}}px; margin:0 0 28px; color:var(--rc-cream); }
+  .content .rule { width:80px; height:1px; background:var(--rc-amber); margin:0 0 28px; }
+  .content p { font-size:28px; max-width:880px; color:rgba(243,236,221,.95); margin:0; }
+  .footer { position:absolute; bottom:60px; left:60px; right:60px; z-index:3; display:flex; justify-content:space-between; align-items:center; }
+  .footer .handle { font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.28em; text-transform:uppercase; color:rgba(243,236,221,.85); }
+  .footer .next { font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.28em; text-transform:uppercase; color:var(--rc-amber); }
+</style>
+</head>
+<body>
+<div class="ig-frame" id="frame">
+  <div class="photo"></div>
+  <div class="protect"></div>
+  <div class="topbar">
+    <span class="index"><span class="num">{{SLIDE_INDEX}}</span> · {{SLIDE_TOTAL}}</span>
+    <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
+  </div>
+  <div class="content">
+    <h1 class="ig-title">{{TITLE}}</h1>
+    <div class="rule"></div>
+    <p class="ig-body">{{BODY}}</p>
+  </div>
+  <div class="footer">
+    <span class="handle">{{HANDLE}}</span>
+    <span class="next">Sigue →</span>
+  </div>
+</div>
+</body>
+</html>

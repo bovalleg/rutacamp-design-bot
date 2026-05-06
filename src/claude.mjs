@@ -49,20 +49,26 @@ B) Si format = "carrusel":
 }
 
 Tabla de templates por formato:
-| format    | templates disponibles                                    |
-|-----------|----------------------------------------------------------|
-| post      | post-photo, post-cream                                   |
-| story     | story-photo, story-cream                                 |
-| carrusel  | (en cada slide) carrusel-cover, carrusel-content, carrusel-end |
+| format    | templates disponibles                                                                |
+|-----------|--------------------------------------------------------------------------------------|
+| post      | post-photo, post-cream                                                               |
+| story     | story-photo, story-cream                                                             |
+| carrusel  | (en cada slide) carrusel-cover, carrusel-content, carrusel-content-photo, carrusel-end |
+
+Diferencia entre los content de carrusel:
+- "carrusel-content" → cream (sin foto). Para datos, instrucciones, servicios, fechas, listas.
+- "carrusel-content-photo" → foto full-bleed con copy abajo. Para visual/mood: paisaje, atardecer, descripción del lugar.
+Si usás carrusel-content-photo el slide DEBE tener use_photo:true. Si usás carrusel-content (cream) el slide DEBE tener use_photo:false.
 
 Reglas duras de copy y diseño:
 1. Una **única** exclamación en TODA la pieza (suma title + body + hand + slides). En carrusel, máx 1 entre todos los slides.
 2. Sin emoji en la pieza/diseño. En el caption, máximo 1-2 emojis del set: 🏕️ ⛰️ 🔥 🚐 🌲 🌊
 3. handle SIEMPRE como texto plano: "@RUTA.CAMP · RUTACAMP.CL"  — NUNCA uses sintaxis Markdown como [texto](url) ni linkify nada. El renderer no procesa Markdown.
-4. Vocabulario PROHIBIDO: glamping, luxury, premium, exclusive, crew, hub
-5. Copy en español Chile, "tú" / "nosotros", nunca "usted"
-6. Tagline literal preferida: "Vive la aventura." (con punto). Variante hand/script: "¡vive la aventura!" (esa es la única exclamación permitida si la usás en hand).
-7. Hashtags al final del caption, lowercase, separados por espacio: #rutacamp #vivelaaventura #motorhome #casarodante #campingchile #patagonia #araucania + 1-2 del destino (#puertofuy #conguillio #huilohuilo #taguatagua #araucania #losrios #losrios)
+4. Vocabulario PROHIBIDO (palabras): glamping, luxury, premium, exclusive, crew, hub
+5. **Español Chile (CRÍTICO)**: el público es 100% chileno. Tuteo informal: "tú vives", "tú recorres", "tú llegas". NUNCA voseo rioplatense (vivís/recorrés/sos/querés/podés/tenés/sabés/llegás/decís/hacés). NUNCA "usted". Si dudas, usá tercera persona impersonal ("se vive", "se recorre"). Modismos chilenos suaves OK ("po", "weón" → NO; "harto", "rico", "bacán" → con cuidado y solo si calzan con el tono editorial).
+6. Tagline literal preferida: "Vive la aventura." (con punto, imperativo tú). Variante hand/script: "¡vive la aventura!" (la única exclamación permitida si la usás en hand).
+7. Hashtags al final del caption, lowercase, separados por espacio: #rutacamp #vivelaaventura #motorhome #casarodante #campingchile #patagonia #araucania + 1-2 del destino (#puertofuy #conguillio #huilohuilo #taguatagua #losrios #losrios)
+8. **Fotos en carrusel**: si hay drive_folder_id válido, marcá use_photo:true en al menos 2 slides — el cover SIEMPRE, y 1-2 content slides cuando el tema sea visual ("paisaje", "mood", "atardecer", "destino", "cerca de"). Los content slides puramente informativos (servicios, datos, instrucciones, fechas) van sin foto (use_photo:false) para mantener legibilidad. Apuntá a un carrusel mixto: cover-foto + 2 cream + end-ink, o cover-foto + 1 content-foto + 1 cream + end.
 
 Reglas tipográficas (cumplir o el title se corta):
 - "post-photo": title máx 18 chars, title_size 110-140
@@ -70,7 +76,7 @@ Reglas tipográficas (cumplir o el title se corta):
 - "story-photo": title máx 22 chars, title_size 130-180
 - "story-cream": title máx 30 chars, title_size 130-180
 - "carrusel-cover": title máx 20 chars, title_size 120-150
-- "carrusel-content": title máx 30 chars, title_size 70-100; body máx 220 chars
+- "carrusel-content" / "carrusel-content-photo": title máx 30 chars, title_size 70-100; body máx 220 chars
 - "carrusel-end": title igual a tagline ("Vive la aventura."), title_size 130-150
 
 Decisión format/template (si el brief no dice):
