@@ -106,20 +106,40 @@ photo_keywords: 3-6 palabras clave en minúsculas que ayuden a elegir foto (ej: 
 
 Devuelve SOLO el JSON, sin envolverlo en \`\`\` ni texto extra.`;
 
-export async function briefToSpec(brief, { format, model = 'claude-opus-4-7' } = {}) {
+// Models to try in order. If the primary is overloaded (529), we fall back automatically.
+const PRIMARY_MODEL = 'claude-opus-4-7';
+const FALLBACK_MODEL = 'claude-sonnet-4-6';
+
+function makeClient() {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error('ANTHROPIC_API_KEY env var not set');
-  const client = new Anthropic({ apiKey });
+  return new Anthropic({ apiKey, maxRetries: 5 });
+}
+
+// Wrapper: try primary model, on 529/overload fall back to secondary, on transient 5xx do final retry.
+async function callWithFallback(fn) {
+  try {
+    return await fn(PRIMARY_MODEL);
+  } catch (err) {
+    if (err?.status === 529 || /overload/i.test(err?.message || '')) {
+      console.warn(`[claude] ${PRIMARY_MODEL} overloaded — falling back to ${FALLBACK_MODEL}`);
+      return await fn(FALLBACK_MODEL);
+    }
+    throw err;
+  }
+}
+
+export async function briefToSpec(brief, { format } = {}) {
+  const client = makeClient();
 
   const manualPath = path.join(__dirname, '..', 'brand', 'MANUAL.md');
   const manual = await fs.readFile(manualPath, 'utf8');
 
-  // If a format hint is passed (from the workflow input), inject it into the user message
   const userContent = format && format !== 'auto'
     ? `Formato pedido: ${format}\n\nBrief: ${brief}`
     : brief;
 
-  const msg = await client.messages.create({
+  const msg = await callWithFallback((model) => client.messages.create({
     model,
     max_tokens: 3000,
     system: [
@@ -127,14 +147,13 @@ export async function briefToSpec(brief, { format, model = 'claude-opus-4-7' } =
       { type: 'text', text: `\n\n--- MANUAL DE MARCA (referencia) ---\n${manual}`, cache_control: { type: 'ephemeral' } },
     ],
     messages: [{ role: 'user', content: userContent }],
-  });
+  }));
 
   const text = msg.content.find(c => c.type === 'text')?.text ?? '';
   const jsonMatch = text.match(/\{[\s\S]*\}/);
   if (!jsonMatch) throw new Error('Claude no devolvió JSON parseable. Output:\n' + text);
   const spec = JSON.parse(jsonMatch[0]);
 
-  // Normalization layer: defensive cleanup of common Claude mistakes
   return normalizeSpec(spec);
 }
 
@@ -174,10 +193,8 @@ function normalizeSpec(spec) {
 // candidates: [{ id, name, base64, mimeType }]
 // alreadyChosen: [{ id, name, base64, mimeType, rationale }] — para diversidad en multi-pick
 // returns { chosen_index, focal_point: { x: 0-100, y: 0-100 }, rationale } — chosen_index = -1 si NINGUNA es buena
-export async function visionPickPhoto(brief, candidates, { template, alreadyChosen = [], model = 'claude-opus-4-7' } = {}) {
-  const apiKey = process.env.ANTHROPIC_API_KEY;
-  if (!apiKey) throw new Error('ANTHROPIC_API_KEY env var not set');
-  const client = new Anthropic({ apiKey });
+export async function visionPickPhoto(brief, candidates, { template, alreadyChosen = [] } = {}) {
+  const client = makeClient();
 
   const copyArea = {
     'post-photo': 'bottom 40% of the square (logo top-left, eyebrow top-right, title+body bottom-left, hand bottom-left, handle bottom-right)',
@@ -227,12 +244,12 @@ export async function visionPickPhoto(brief, candidates, { template, alreadyChos
     }
   }
 
-  const msg = await client.messages.create({
+  const msg = await callWithFallback((model) => client.messages.create({
     model,
     max_tokens: 500,
     system: 'Sos director de arte de Ruta Camp, una red chilena de campings para motorhomes y casas rodantes. Tu trabajo es ELEGIR LA MEJOR foto del set que te pasen. Casi siempre elegís una (chosen_index 0..N-1). Priorizás (1) que el sujeto calce con el brief, (2) composición, luz, mood y compatibilidad con el área de copy. Si la foto ideal no está pero hay una decente que se acerca, esa es la respuesta — no rechaces todas por perfeccionismo. Solo usás chosen_index = -1 si las fotos del set son radicalmente off-topic (ej: el brief habla del lago y las fotos son de un menú de comida). Respondés SOLO con un JSON válido sin markdown.',
     messages: [{ role: 'user', content: userBlocks }],
-  });
+  }));
 
   const text = msg.content.find(c => c.type === 'text')?.text ?? '';
   const m = text.match(/\{[\s\S]*\}/);
