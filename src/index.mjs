@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';
 import { briefToSpec } from './claude.mjs';
 import { pickPhotoWithVision, pickMultiplePhotosWithVision } from './photo-picker.mjs';
 import { downloadFile, uploadFile } from './drive.mjs';
-import { renderSpec, renderCarrusel } from './render.mjs';
+import { renderSpec, renderCarrusel, templateNeedsPhoto } from './render.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -34,6 +34,10 @@ async function main() {
   if (spec.format === 'carrusel') {
     const slides = spec.slides || [];
     console.log(`[2/5] Carrusel with ${slides.length} slides`);
+    // Auto-fix: if Claude forgot to set use_photo:true on a template that needs a photo, do it for them.
+    for (const s of slides) {
+      if (templateNeedsPhoto(s.template) && s.use_photo === undefined) s.use_photo = true;
+    }
     const photoSlots = slides.map(s => Boolean(s.use_photo && spec.drive_folder_id));
     const photosNeeded = photoSlots.filter(Boolean).length;
     let downloadedPhotos = [];
@@ -82,7 +86,7 @@ async function main() {
     outFiles = await renderCarrusel(enrichedSpec, photoPaths, OUT_DIR, baseName);
   } else {
     let photoPath = null;
-    const wantsPhoto = spec.template?.endsWith('-photo') || spec.template === 'post-split';
+    const wantsPhoto = templateNeedsPhoto(spec.template);
     if (wantsPhoto && spec.drive_folder_id) {
       console.log(`[2/5] Picking photo with vision from Drive folder ${spec.drive_folder_id}`);
       const file = await pickPhotoWithVision(

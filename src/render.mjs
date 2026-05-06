@@ -6,6 +6,13 @@ import { pathToFileURL, fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 
+// Returns true if the template's HTML expects a photo to be present.
+// Used by the orchestrator to decide whether to invoke the photo picker.
+export function templateNeedsPhoto(name) {
+  if (!name) return false;
+  return name.endsWith('-photo') || name.endsWith('-split') || name === 'carrusel-cover';
+}
+
 // Template registry: name → { dimensions }
 const TEMPLATES = {
   'post-photo':             { width: 1080, height: 1080 },
