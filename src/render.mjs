@@ -6,12 +6,14 @@ import { pathToFileURL, fileURLToPath } from 'node:url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
 
-// Template registry: name → { dimensions, font check }
+// Template registry: name → { dimensions }
 const TEMPLATES = {
-  'post-photo':       { width: 1080, height: 1080 },
-  'post-cream':       { width: 1080, height: 1080 },
-  'story-photo':      { width: 1080, height: 1920 },
-  'story-cream':      { width: 1080, height: 1920 },
+  'post-photo':             { width: 1080, height: 1080 },
+  'post-cream':             { width: 1080, height: 1080 },
+  'post-quote':             { width: 1080, height: 1080 },
+  'post-split':             { width: 1080, height: 1080 },
+  'story-photo':            { width: 1080, height: 1920 },
+  'story-cream':            { width: 1080, height: 1920 },
   'carrusel-cover':         { width: 1080, height: 1080 },
   'carrusel-content':       { width: 1080, height: 1080 },
   'carrusel-content-photo': { width: 1080, height: 1080 },
@@ -20,6 +22,13 @@ const TEMPLATES = {
 
 function applyTemplate(html, vars) {
   return html.replace(/\{\{(\w+)\}\}/g, (_, k) => vars[k] ?? '');
+}
+
+function focalPointToCss(fp) {
+  if (!fp) return 'center center';
+  const x = Math.max(0, Math.min(100, Number(fp.x ?? 50)));
+  const y = Math.max(0, Math.min(100, Number(fp.y ?? 50)));
+  return `${x}% ${y}%`;
 }
 
 function defaultVars(spec, photoLocalPath, extraVars = {}) {
@@ -33,6 +42,7 @@ function defaultVars(spec, photoLocalPath, extraVars = {}) {
     HANDLE: spec.handle || '@RUTA.CAMP · RUTACAMP.CL',
     CTA: spec.cta || 'RESERVAS · LINK EN BIO',
     PHOTO_URL: photoLocalPath ? pathToFileURL(path.resolve(photoLocalPath)).href : '',
+    PHOTO_POSITION: focalPointToCss(spec.focal_point),
     PHOTO_OR_INK: photoLocalPath
       ? '<div class="photo"></div>'
       : '<div class="ink-fill"></div>',

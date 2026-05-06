@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<title>Ruta Camp post (quote)</title>
+<link rel="stylesheet" href="../brand/colors_and_type.css">
+<style>
+  html, body { margin:0; padding:0; background:transparent; }
+  body { display:grid; place-items:center; }
+  .ig-frame { width:1080px; height:1080px; position:relative; overflow:hidden; background:var(--rc-ink); color:var(--rc-cream); font-family:var(--font-body); }
+  .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
+  .ig-title { font-family:var(--font-display); font-style:italic; line-height:1.1; }
+  .topbar { position:absolute; top:60px; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; }
+  .topbar img { height:90px; }
+  .topbar .eyebrow { font-size:22px; color:var(--rc-amber); }
+  .quote-mark { position:absolute; top:200px; left:120px; font-family:var(--font-display); font-style:italic; font-size:240px; color:var(--rc-ember); line-height:.6; }
+  .inner { position:absolute; inset:280px 120px 160px; display:flex; flex-direction:column; justify-content:center; }
+  .inner .quote { font-size:{{TITLE_SIZE}}px; font-weight:600; line-height:1.15; color:var(--rc-cream); margin:0 0 56px; max-width:840px; }
+  .inner .author { font-size:22px; color:var(--rc-amber); }
+  .footer { position:absolute; bottom:60px; right:60px; }
+  .footer .handle { font-family:var(--font-eyebrow); font-size:18px; letter-spacing:.28em; text-transform:uppercase; color:var(--rc-cream); opacity:.75; }
+</style>
+</head>
+<body>
+<div class="ig-frame" id="frame">
+  <div class="topbar">
+    <img src="../brand/assets/logo-light.png" alt="Ruta Camp">
+    <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
+  </div>
+  <span class="quote-mark">“</span>
+  <div class="inner">
+    <p class="ig-title quote">{{TITLE}}</p>
+    <span class="ig-eyebrow author">{{SUBTITLE}}</span>
+  </div>
+  <div class="footer"><span class="handle">{{HANDLE}}</span></div>
+</div>
+</body>
+</html>

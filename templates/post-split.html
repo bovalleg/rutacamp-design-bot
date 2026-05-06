@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es-CL">
+<head>
+<meta charset="utf-8">
+<title>Ruta Camp post (split)</title>
+<link rel="stylesheet" href="../brand/colors_and_type.css">
+<style>
+  html, body { margin:0; padding:0; background:transparent; }
+  body { display:grid; place-items:center; }
+  .ig-frame { width:1080px; height:1080px; position:relative; overflow:hidden; font-family:var(--font-body); display:grid; grid-template-columns:1fr 1fr; }
+  .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
+  .ig-title { font-family:var(--font-display); font-weight:800; font-style:italic; line-height:1.05; letter-spacing:-.012em; }
+  .ig-body { font-family:var(--font-body); font-weight:400; line-height:1.5; }
+
+  .left { position:relative; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:{{PHOTO_POSITION}}; filter:saturate(1.05) contrast(1.02); }
+  .left::after { content:''; position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.45) 0%, rgba(30,28,24,0) 35%, rgba(30,28,24,0) 65%, rgba(30,28,24,.55) 100%); pointer-events:none; }
+  .left img.logo { position:absolute; top:60px; left:60px; height:80px; filter:brightness(0) invert(1); z-index:2; }
+  .left .destino { position:absolute; bottom:60px; left:60px; font-size:22px; color:var(--rc-amber); z-index:2; }
+
+  .right { background:var(--rc-cream); color:var(--rc-ink); padding:60px; display:flex; flex-direction:column; justify-content:space-between; }
+  .right .eyebrow { font-size:22px; color:var(--rc-ember); }
+  .right h1 { font-size:{{TITLE_SIZE}}px; margin:0; color:var(--rc-ink); }
+  .right .rule { width:50px; height:1px; background:var(--rc-ink); margin:24px 0; }
+  .right p { font-size:24px; color:var(--rc-ink-soft); }
+  .right .footer { display:flex; justify-content:space-between; align-items:center; border-top:1px solid var(--rc-ink); padding-top:22px; margin-top:24px; }
+  .right .footer span { font-family:var(--font-eyebrow); font-size:14px; letter-spacing:.24em; text-transform:uppercase; color:var(--rc-ink-mute); }
+</style>
+</head>
+<body>
+<div class="ig-frame" id="frame">
+  <div class="left">
+    <img class="logo" src="../brand/assets/logo-light.png" alt="Ruta Camp">
+    <span class="ig-eyebrow destino">{{SUBTITLE}}</span>
+  </div>
+  <div class="right">
+    <span class="ig-eyebrow eyebrow">{{EYEBROW}}</span>
+    <div>
+      <h1 class="ig-title">{{TITLE}}</h1>
+      <div class="rule"></div>
+      <p class="ig-body">{{BODY}}</p>
+    </div>
+    <div class="footer">
+      <span>{{HANDLE}}</span>
+    </div>
+  </div>
+</div>
+</body>
+</html>

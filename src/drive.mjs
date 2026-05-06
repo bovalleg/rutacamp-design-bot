@@ -35,7 +35,7 @@ export async function listImagesInFolder(folderId, { recursive = true, max = 50 
     do {
       const { data } = await drive.files.list({
         q: `'${id}' in parents and trashed = false`,
-        fields: 'nextPageToken, files(id, name, mimeType, size, modifiedTime, imageMediaMetadata)',
+        fields: 'nextPageToken, files(id, name, mimeType, size, modifiedTime, imageMediaMetadata, thumbnailLink)',
         pageSize: 100,
         pageToken,
         supportsAllDrives: true,
@@ -63,6 +63,16 @@ export async function downloadFile(fileId, destPath) {
   );
   await fs.writeFile(destPath, Buffer.from(res.data));
   return destPath;
+}
+
+// Returns a Buffer with the file bytes (used for sending small previews to Claude vision)
+export async function downloadFileBuffer(fileId) {
+  const drive = google.drive({ version: 'v3', auth: await serviceAccountAuth().getClient() });
+  const res = await drive.files.get(
+    { fileId, alt: 'media', supportsAllDrives: true },
+    { responseType: 'arraybuffer' }
+  );
+  return Buffer.from(res.data);
 }
 
 export async function uploadFile(filePath, name, parentFolderId, mimeType = 'image/png') {

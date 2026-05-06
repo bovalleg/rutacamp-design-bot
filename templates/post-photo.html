@@ -12,7 +12,7 @@
   .ig-title { font-family:var(--font-display); font-weight:800; line-height:1.0; letter-spacing:-.012em; font-style:italic; }
   .ig-body { font-family:var(--font-body); font-weight:400; line-height:1.4; }
   .ig-hand { font-family:var(--font-hand); font-weight:700; line-height:1; }
-  .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:center; filter:saturate(1.05) contrast(1.02); }
+  .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:{{PHOTO_POSITION}}; filter:saturate(1.05) contrast(1.02); }
   .photo::after { content:''; position:absolute; inset:0; background:linear-gradient(170deg, rgba(195,90,42,.05) 0%, rgba(30,28,24,0) 35%); }
   .protect-bottom { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,0) 35%, rgba(30,28,24,.78) 100%); pointer-events:none; }
   .protect-top { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.55) 0%, rgba(30,28,24,0) 38%); pointer-events:none; }

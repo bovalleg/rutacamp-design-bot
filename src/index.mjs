@@ -3,7 +3,7 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { briefToSpec } from './claude.mjs';
-import { pickPhoto, pickMultiplePhotos } from './photo-picker.mjs';
+import { pickPhotoWithVision, pickMultiplePhotosWithVision } from './photo-picker.mjs';
 import { downloadFile, uploadFile } from './drive.mjs';
 import { renderSpec, renderCarrusel } from './render.mjs';
 
@@ -15,7 +15,7 @@ const OUTPUT_DRIVE_FOLDER = process.env.OUTPUT_DRIVE_FOLDER_ID || '';
 
 async function main() {
   const brief = process.env.BRIEF || process.argv.slice(2).join(' ').trim();
-  const formatHint = process.env.FORMAT || 'auto';   // auto | post | story | carrusel
+  const formatHint = process.env.FORMAT || 'auto';
   if (!brief) {
     console.error('Usage: BRIEF="..." [FORMAT=post|story|carrusel] node src/index.mjs');
     process.exit(1);
@@ -34,40 +34,67 @@ async function main() {
   if (spec.format === 'carrusel') {
     const slides = spec.slides || [];
     console.log(`[2/5] Carrusel with ${slides.length} slides`);
-    // For each slide that uses a photo, fetch a different one from the same folder
     const photoSlots = slides.map(s => Boolean(s.use_photo && spec.drive_folder_id));
     const photosNeeded = photoSlots.filter(Boolean).length;
     let downloadedPhotos = [];
+    let pickedFiles = [];
     if (photosNeeded > 0 && spec.drive_folder_id) {
-      const files = await pickMultiplePhotos(spec.drive_folder_id, spec.photo_keywords || [], photosNeeded);
-      console.log(`[2/5] Picked ${files.length} photos`);
-      for (let i = 0; i < files.length; i++) {
-        const f = files[i];
+      // For carrusel, the cover usually wants photo of destino mood; content slides may want detail shots.
+      // We pick all distinct photos with vision (using the cover template as the framing reference).
+      pickedFiles = await pickMultiplePhotosWithVision(
+        spec.drive_folder_id,
+        brief,
+        spec.photo_keywords || [],
+        photosNeeded,
+        { template: 'carrusel-cover' },
+      );
+      console.log(`[2/5] Picked ${pickedFiles.length} photos with vision`);
+      for (let i = 0; i < pickedFiles.length; i++) {
+        const f = pickedFiles[i];
         const dest = path.join(OUT_DIR, `photo_${i + 1}${path.extname(f.name || '.jpg')}`);
         await downloadFile(f.id, dest);
-        downloadedPhotos.push(dest);
+        downloadedPhotos.push({ path: dest, focal_point: f.focal_point });
       }
     }
+    // Map picked photos onto slides: each slide that wants a photo consumes one in order
     const photosByIndex = [];
     let pi = 0;
     for (const want of photoSlots) {
-      photosByIndex.push(want ? (downloadedPhotos[pi++] || null) : null);
+      if (want && downloadedPhotos[pi]) {
+        const ph = downloadedPhotos[pi++];
+        photosByIndex.push(ph);
+      } else {
+        photosByIndex.push(null);
+      }
     }
+    // Inject focal_point into each slide spec so render uses it
+    const enrichedSlides = slides.map((s, i) => {
+      const ph = photosByIndex[i];
+      return ph ? { ...s, focal_point: ph.focal_point } : s;
+    });
+    const enrichedSpec = { ...spec, slides: enrichedSlides };
+    const photoPaths = photosByIndex.map(ph => ph ? ph.path : null);
     console.log('[4/5] Rendering carrusel');
-    outFiles = await renderCarrusel(spec, photosByIndex, OUT_DIR, baseName);
+    outFiles = await renderCarrusel(enrichedSpec, photoPaths, OUT_DIR, baseName);
   } else {
     let photoPath = null;
-    const wantsPhoto = spec.template?.endsWith('-photo');
+    const wantsPhoto = spec.template?.endsWith('-photo') || spec.template === 'post-split';
     if (wantsPhoto && spec.drive_folder_id) {
-      console.log('[2/5] Picking photo from Drive folder', spec.drive_folder_id);
-      const file = await pickPhoto(spec.drive_folder_id, spec.photo_keywords || []);
+      console.log(`[2/5] Picking photo with vision from Drive folder ${spec.drive_folder_id}`);
+      const file = await pickPhotoWithVision(
+        spec.drive_folder_id,
+        brief,
+        spec.photo_keywords || [],
+        { template: spec.template },
+      );
       if (!file) {
         console.warn('[2/5] No photo found, falling back to -cream template');
         spec.template = spec.format === 'story' ? 'story-cream' : 'post-cream';
       } else {
-        console.log('[2/5] Picked:', file.name, `(${file.size} bytes)`);
+        console.log('[2/5] Picked:', file.name);
         photoPath = path.join(OUT_DIR, 'photo' + path.extname(file.name || '.jpg'));
         await downloadFile(file.id, photoPath);
+        spec.focal_point = file.focal_point;
       }
     } else {
       console.log('[2/5] No photo needed for this spec');
@@ -78,7 +105,6 @@ async function main() {
     outFiles = [out];
   }
 
-  // Upload all output PNGs to Drive
   if (OUTPUT_DRIVE_FOLDER) {
     console.log(`[5/5] Uploading ${outFiles.length} file(s) to Drive folder`);
     for (const f of outFiles) {
@@ -90,7 +116,6 @@ async function main() {
     console.log('[5/5] OUTPUT_DRIVE_FOLDER_ID not set — skipping upload');
   }
 
-  // Caption sidecar
   const captionPath = path.join(OUT_DIR, baseName + '.caption.txt');
   await fs.writeFile(captionPath, spec.caption || '');
   console.log('Caption written to', captionPath);

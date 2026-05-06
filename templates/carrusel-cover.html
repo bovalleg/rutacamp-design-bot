@@ -11,7 +11,7 @@
   .ig-eyebrow { font-family:var(--font-eyebrow); text-transform:uppercase; letter-spacing:.24em; font-weight:500; }
   .ig-title { font-family:var(--font-display); font-weight:800; line-height:1.0; letter-spacing:-.012em; font-style:italic; }
   .ig-hand { font-family:var(--font-hand); font-weight:700; line-height:1; }
-  .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:center; filter:saturate(1.05) contrast(1.02); }
+  .photo { position:absolute; inset:0; background-image:url("{{PHOTO_URL}}"); background-size:cover; background-position:{{PHOTO_POSITION}}; filter:saturate(1.05) contrast(1.02); }
   .ink-fill { position:absolute; inset:0; background:var(--rc-ink); }
   .protect { position:absolute; inset:0; background:linear-gradient(180deg, rgba(30,28,24,.55) 0%, rgba(30,28,24,.15) 35%, rgba(30,28,24,.85) 100%); pointer-events:none; }
   .topbar { position:absolute; top:60px; left:60px; right:60px; display:flex; justify-content:space-between; align-items:center; z-index:3; }

@@ -51,9 +51,15 @@ B) Si format = "carrusel":
 Tabla de templates por formato:
 | format    | templates disponibles                                                                |
 |-----------|--------------------------------------------------------------------------------------|
-| post      | post-photo, post-cream                                                               |
+| post      | post-photo, post-cream, post-quote, post-split                                       |
 | story     | story-photo, story-cream                                                             |
 | carrusel  | (en cada slide) carrusel-cover, carrusel-content, carrusel-content-photo, carrusel-end |
+
+Cuándo usar cada post-template:
+- "post-photo" → destino, mood, naturaleza. Foto full-bleed con copy abajo.
+- "post-cream" → anuncios, fechas, citas cortas. Sin foto, postcard editorial.
+- "post-quote" → testimonio o cita directa de un cliente o frase de marca, ink mode con comillas grandes. Title = la cita literal entre comillas; subtitle = autor o atribución (ej: "— Familia Rodríguez, Febrero 2026"). NO uses con tagline genérica; necesita una cita real.
+- "post-split" → comparativa visual + datos: foto a la izquierda, copy a la derecha en cream. Ideal para presentar destino con datos concretos (servicios, ubicación, horarios). Subtitle = etiqueta corta debajo del logo (ej: "PUERTO FUY").
 
 Diferencia entre los content de carrusel:
 - "carrusel-content" → cream (sin foto). Para datos, instrucciones, servicios, fechas, listas.
@@ -73,6 +79,8 @@ Reglas duras de copy y diseño:
 Reglas tipográficas (cumplir o el title se corta):
 - "post-photo": title máx 18 chars, title_size 110-140
 - "post-cream": title máx 28 chars, title_size 110-140 (puede ser 2 líneas con un \\n explícito si llega a ~14 chars/línea)
+- "post-quote": title = la cita (máx 110 chars), title_size 56-72; subtitle = atribución
+- "post-split": title máx 22 chars, title_size 70-90 (mitad derecha más angosta); subtitle = etiqueta de destino corta (≤14 chars)
 - "story-photo": title máx 22 chars, title_size 130-180
 - "story-cream": title máx 30 chars, title_size 130-180
 - "carrusel-cover": title máx 20 chars, title_size 120-150
@@ -161,3 +169,46 @@ function normalizeSpec(spec) {
 
   return spec;
 }
+
+// ---- Vision: choose best photo + focal point ----
+// candidates: [{ id, name, base64, mimeType }]
+// returns { chosen_index, focal_point: { x: 0-100, y: 0-100 }, rationale }
+export async function visionPickPhoto(brief, candidates, { template, model = 'claude-opus-4-7' } = {}) {
+  const apiKey = process.env.ANTHROPIC_API_KEY;
+  if (!apiKey) throw new Error('ANTHROPIC_API_KEY env var not set');
+  const client = new Anthropic({ apiKey });
+
+  // Compose copy-area hint per template so Claude knows where text will land
+  const copyArea = {
+    'post-photo': 'bottom 40% of the square (logo top-left, eyebrow top-right, title+body bottom-left, hand bottom-left, handle bottom-right)',
+    'story-photo': 'bottom third of the vertical (logo+eyebrow top, title+body bottom; safe areas of 250-300px top and bottom for IG UI)',
+    'carrusel-cover': 'center horizontally + bottom-right swipe indicator (title is centered horizontally over the photo, gradient protection both ends)',
+    'carrusel-content-photo': 'bottom 35% of the square (eyebrow + index top, title+body bottom)',
+    'post-split': 'left half is photo only; the right half is cream with copy. Subject of the photo should NOT be in the right half — it gets cropped (the photo only fills 540px wide).',
+  }[template] || 'bottom half (text overlays the bottom)';
+
+  const userBlocks = [
+    { type: 'text', text: `Brief del post: ${brief}\nTemplate destino: ${template}\nÁrea de copy: ${copyArea}\n\nMirá las ${candidates.length} fotos numeradas y elegí la que mejor calce con el brief y el área de copy. Devolvé EXCLUSIVAMENTE un objeto JSON: { "chosen_index": <0-based>, "focal_point": { "x": <0-100>, "y": <0-100> }, "rationale": "<una linea>" }. focal_point es donde está el sujeto principal en la foto elegida (50,50 = centro; 0,0 = esquina superior izquierda). Para que el sujeto NO quede tapado por el copy, mové el focal point hacia la zona OPUESTA al área de copy.` },
+  ];
+  for (let i = 0; i < candidates.length; i++) {
+    const c = candidates[i];
+    userBlocks.push({ type: 'text', text: `Foto ${i}:` });
+    userBlocks.push({
+      type: 'image',
+      source: { type: 'base64', media_type: c.mimeType || 'image/jpeg', data: c.base64 },
+    });
+  }
+
+  const msg = await client.messages.create({
+    model,
+    max_tokens: 400,
+    system: 'Sos un director de arte para Ruta Camp. Eligís fotos para posts de Instagram según composición, luz, mood y compatibilidad con el área de copy. Respondés SOLO con un JSON válido sin markdown.',
+    messages: [{ role: 'user', content: userBlocks }],
+  });
+
+  const text = msg.content.find(c => c.type === 'text')?.text ?? '';
+  const m = text.match(/\{[\s\S]*\}/);
+  if (!m) throw new Error('Vision no devolvió JSON parseable: ' + text);
+  return JSON.parse(m[0]);
+}
+
