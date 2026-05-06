@@ -1,0 +1,605 @@
+{
+  "destino": "tagua-tagua",
+  "label": "Tagua Tagua (Base Puelo)",
+  "drive_folder_id": "13imQqhX1PpSw47Yx2jhn3UPUfEKjlLQO",
+  "updated": "2026-05-06T17:08:10.188Z",
+  "photos": [
+    {
+      "id": "1AYDU4zcN2pkaS0issD2yvn1lotAwQUAp",
+      "name": "Copy of IMG-20240621-WA0117.jpg",
+      "modified": "2024-10-17T15:32:56.683Z",
+      "size": 317997,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "sitio",
+          "montaña",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "SUV blanco con casa rodante estacionada en sitio de camping de ripio, rodeado de vegetación nativa y pared rocosa de montaña al fondo, luz de mediodía dura sin magia de hora dorada."
+      },
+      "tagged_at": "2026-05-06T17:06:29.181Z"
+    },
+    {
+      "id": "19Uxn4lmAqXhXnaKPsjLurpwLuR_JlrcO",
+      "name": "Copy of IMG-20240621-WA0116.jpg",
+      "modified": "2024-10-17T15:32:56.683Z",
+      "size": 305874,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "sitio",
+          "camping",
+          "montaña",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping con mesa de picnic en primer plano, casa rodante blanca al fondo bajo árboles nativos, con pared rocosa de montaña detrás; luz dura con sombras contrastadas y composición desordenada."
+      },
+      "tagged_at": "2026-05-06T17:06:34.371Z"
+    },
+    {
+      "id": "1wMOKPPxB3U5X9QrLBOkZHh2puOY1m96A",
+      "name": "Copy of Lago Tagua Tagua.jpg",
+      "modified": "2024-10-17T15:32:56.683Z",
+      "size": 1115022,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "bosque",
+          "arboles-nativos",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Lago patagónico de agua turquesa intensa con montañas boscosas al fondo; colores sobresaturados y luz dura de mediodía le restan naturalidad a la imagen."
+      },
+      "tagged_at": "2026-05-06T17:06:38.910Z"
+    },
+    {
+      "id": "1eF66Semm7LzO46XT2InYiikIot5ipE6s",
+      "name": "Copy of IMG-20240621-WA0113.jpg",
+      "modified": "2024-10-17T15:32:49.854Z",
+      "size": 217035,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "montaña",
+          "sitio",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 40,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Casa rodante estacionada en sitio rústico con piedras, rodeada de vegetación y montañas al fondo; contraluz fuerte con llamarada solar en esquina superior izquierda que resta calidad."
+      },
+      "tagged_at": "2026-05-06T17:06:43.484Z"
+    },
+    {
+      "id": "1qdRGEwF5ITJP5o6tIxhAWyrOREydqOXd",
+      "name": "Copy of IMG-20240621-WA0115.jpg",
+      "modified": "2024-10-17T15:32:49.854Z",
+      "size": 295046,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "sitio",
+          "arboles-nativos",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "SUV blanco con casa rodante estacionada en sitio de camping rodeado de vegetación nativa, dos niños pequeños visibles al fondo; fuerte lens flare solar resta calidad técnica."
+      },
+      "tagged_at": "2026-05-06T17:06:48.691Z"
+    },
+    {
+      "id": "1kFpNRQLujQkZObPWK7Jvz0gOaREtSYzf",
+      "name": "Copy of IMG-20240621-WA0114.jpg",
+      "modified": "2024-10-17T15:32:49.854Z",
+      "size": 300403,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "sitio",
+          "montaña",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 35,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "SUV blanco con casa rodante remolcada estacionados en sitio de camping de ripio, rodeados de vegetación nativa y montaña rocosa al fondo, luz dura de mediodía."
+      },
+      "tagged_at": "2026-05-06T17:06:54.145Z"
+    },
+    {
+      "id": "1QIudnWb_nQpxWNcPpcOEwt40RwDuI7Jj",
+      "name": "IMG-20240621-WA0117.jpg",
+      "modified": "2024-06-21T17:06:58.000Z",
+      "size": 317997,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "sitio",
+          "montaña",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "SUV blanco con casa rodante estacionada en sitio de camping de ripio, rodeado de vegetación nativa y montaña rocosa al fondo bajo cielo despejado; luz dura de mediodía, composición sin punto de vista destacado."
+      },
+      "tagged_at": "2026-05-06T17:06:58.862Z"
+    },
+    {
+      "id": "1OSNrY51hCiyk_aQHXlI-X5-A9GXqv8ou",
+      "name": "IMG-20240621-WA0114.jpg",
+      "modified": "2024-06-21T17:06:58.000Z",
+      "size": 300403,
+      "tags": {
+        "subjects": [
+          "vehiculo",
+          "casa-rodante",
+          "sitio",
+          "montaña",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 35,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "SUV blanco con casa rodante remolcada estacionados en sitio de camping de ripio rodeado de vegetación nativa y montaña rocosa al fondo, luz de mediodía dura y patente visible."
+      },
+      "tagged_at": "2026-05-06T17:07:03.408Z"
+    },
+    {
+      "id": "1IY_US8ZX-KWwnDHlnQBb3rPb7gZgqvr5",
+      "name": "IMG-20240621-WA0115.jpg",
+      "modified": "2024-06-21T17:06:58.000Z",
+      "size": 295046,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "SUV blanco con casa rodante estacionada en sitio de ripio rodeado de vegetación nativa, dos niños pequeños al fondo; imagen con fuerte flare solar y sobreexposición parcial que reduce calidad."
+      },
+      "tagged_at": "2026-05-06T17:07:07.995Z"
+    },
+    {
+      "id": "1m5c6C7E1xdmjZclLANYO2P-a40HghB1p",
+      "name": "IMG-20240621-WA0116.jpg",
+      "modified": "2024-06-21T17:06:58.000Z",
+      "size": 305874,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "sitio",
+          "camping",
+          "montaña",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping con mesa de picnic en primer plano, casa rodante blanca al fondo bajo la sombra de árboles, con pared rocosa de montaña al fondo; luz dura con sombras contrastadas y escena algo desordenada."
+      },
+      "tagged_at": "2026-05-06T17:07:12.625Z"
+    },
+    {
+      "id": "1yooptJrVJ_JCJ9oiO-vlnXZIftG73N9s",
+      "name": "IMG-20240621-WA0113.jpg",
+      "modified": "2024-06-21T17:06:58.000Z",
+      "size": 217035,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "montaña",
+          "sitio",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 40,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante estacionada en sitio rústico con piedras, rodeada de vegetación y montañas al fondo bajo sol intenso con lente flare visible."
+      },
+      "tagged_at": "2026-05-06T17:07:16.970Z"
+    },
+    {
+      "id": "1TKm0wRwCG3WLyQt3VXnwzit-0SErB2sP",
+      "name": "DSC_0032.JPG",
+      "modified": "2023-12-20T18:55:58.000Z",
+      "size": 10506039,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "montaña",
+          "nieve",
+          "bosque",
+          "camping"
+        ],
+        "mood": "editorial",
+        "composition": "wide",
+        "lighting": "golden-hour",
+        "focal_point": {
+          "x": 30,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Estructura tipo quincho o área común de camping con grandes ventanales, césped verde iluminado por luz baja y montaña nevada al fondo con bosque nativo."
+      },
+      "tagged_at": "2026-05-06T17:07:21.657Z"
+    },
+    {
+      "id": "1kwdVNQjDo-ky_0kkaSJS3nZj_gjDYof6",
+      "name": "Copy of 20230714_143950.jpg",
+      "modified": "2023-12-20T18:52:17.000Z",
+      "size": 15197598,
+      "tags": {
+        "subjects": [
+          "lago",
+          "cordillera",
+          "arco-iris",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Arco iris completo sobre lago glaciar turquesa rodeado de cordillera y bosque nativo, orilla pedregosa en primer plano, nubes dramáticas con niebla entre las montañas."
+      },
+      "tagged_at": "2026-05-06T17:07:26.410Z"
+    },
+    {
+      "id": "1h4Sj8ptXKxj7iz-rj5qBd7EsVO4fmRez",
+      "name": "Copy of 20230714_143738.jpg",
+      "modified": "2023-12-20T18:52:12.000Z",
+      "size": 22593430,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "arboles-nativos",
+          "niebla",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 8,
+        "notes": "Lago de aguas turquesas enmarcado por árboles nativos con musgo y montaña cubierta de niebla al fondo, orilla rocosa en primer plano, luz lateral dramática."
+      },
+      "tagged_at": "2026-05-06T17:07:32.299Z"
+    },
+    {
+      "id": "1_qiLUND-SgVMfQPjuLvqueEFsi31IXrA",
+      "name": "Copy of 20230714_143715.jpg",
+      "modified": "2023-12-20T18:52:10.000Z",
+      "size": 18224400,
+      "tags": {
+        "subjects": [
+          "lago",
+          "cordillera",
+          "arboles-nativos",
+          "niebla",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Lago patagónico en primer plano con rocas y arbusto otoñal amarillo, cordillera nevada al fondo envuelta en nubes dramáticas y vegetación nativa flanqueando la escena."
+      },
+      "tagged_at": "2026-05-06T17:07:38.237Z"
+    },
+    {
+      "id": "1xBRlQ4p-O4anoBloofBqOCzo4NlojpTI",
+      "name": "Copy of 20230714_143131.jpg",
+      "modified": "2023-12-20T18:52:00.000Z",
+      "size": 10738585,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "arboles-nativos",
+          "niebla",
+          "paisaje"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Árbol solitario a orillas de lago patagónico con montaña cubierta de nieve y nubes bajas al fondo; composición limpia y atmósfera serena."
+      },
+      "tagged_at": "2026-05-06T17:07:42.640Z"
+    },
+    {
+      "id": "1QBTxqu-p2xfcxRzO4EgOpGUroHUKPwds",
+      "name": "Copy of 20230714_143105.jpg",
+      "modified": "2023-12-20T18:51:14.000Z",
+      "size": 18103595,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "cordillera",
+          "arboles-nativos",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 35,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Orilla de lago patagónico con playa de arena oscura, montañas cubiertas de vegetación nativa y cumbres con nieve al fondo; buena atmósfera pero sin vehículo ni sujeto humano, composición algo inclinada y luz plana."
+      },
+      "tagged_at": "2026-05-06T17:07:49.673Z"
+    },
+    {
+      "id": "1qazSOnSrZPkyaiACxGiYd4CS-JwArrBb",
+      "name": "Copy of 20230712_170404.jpg",
+      "modified": "2023-12-20T18:49:44.000Z",
+      "size": 16537428,
+      "tags": {
+        "subjects": [
+          "infraestructura",
+          "camping",
+          "montaña",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "editorial",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Edificio principal del camping —estructura negra de madera y vidrio— en pradera verde con montaña boscosa de fondo bajo cielo nublado y luz tenue de atardecer."
+      },
+      "tagged_at": "2026-05-06T17:07:55.652Z"
+    },
+    {
+      "id": "1RY997ta9InXtyU-m0T9fsB5MX1k6ITDS",
+      "name": "Copy of 20230712_165138.jpg",
+      "modified": "2023-12-20T18:48:59.000Z",
+      "size": 15999830,
+      "tags": {
+        "subjects": [
+          "lago",
+          "cordillera",
+          "paisaje",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "dramatic",
+        "composition": "wide",
+        "lighting": "blue-hour",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Vista panorámica desde un sitio de camping hacia un lago patagónico encajonado entre montañas nevadas, con luz crepuscular reflejándose en el agua y cielo nublado dramático."
+      },
+      "tagged_at": "2026-05-06T17:08:01.026Z"
+    },
+    {
+      "id": "1jYA2fD-1oMdIo8uLwtuL6nZV3hC113cJ",
+      "name": "Lago Tagua Tagua.jpg",
+      "modified": "2023-11-22T20:09:04.000Z",
+      "size": 1115022,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "bosque",
+          "arboles-nativos",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Lago de aguas turquesa intenso con montañas boscosas al fondo y nieve en cimas; imagen nítida pero con colores sobresaturados y temperatura de color poco natural que resta credibilidad on-brand."
+      },
+      "tagged_at": "2026-05-06T17:08:06.256Z"
+    },
+    {
+      "id": "1llPYqwFvQNS9xx8mGM-KsONH0_C6SBO-",
+      "name": "Foto lago cordillera.jpg",
+      "modified": "2023-11-22T20:06:27.000Z",
+      "size": 112284,
+      "tags": {
+        "subjects": [
+          "lago",
+          "cordillera",
+          "bosque",
+          "camping",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Vista aérea de lago turquesa patagónico flanqueado por cordillera verde, con pequeña infraestructura de camping visible en esquina inferior izquierda"
+      },
+      "tagged_at": "2026-05-06T17:08:10.188Z"
+    }
+  ]
+}
