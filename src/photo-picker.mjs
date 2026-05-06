@@ -94,15 +94,46 @@ async function downloadCandidates(candidates) {
 }
 
 // ---- Catalog-based pre-filter ----
-async function loadCatalog(destinoKey) {
-  if (!destinoKey) return null;
+// Lazy import of DESTINOS so we can detect "umbrella" destinos that aggregate others.
+async function getDestinosMap() {
+  const mod = await import('./folders.mjs');
+  return mod.DESTINOS;
+}
+
+async function loadOneCatalog(destinoKey) {
   try {
     const raw = await fs.readFile(path.join(ROOT, catalogPathForDestino(destinoKey)), 'utf8');
     const cat = JSON.parse(raw);
-    return (cat?.photos || []).filter(p => p.tags); // skip un-tagged entries
+    return (cat?.photos || []).filter(p => p.tags);
   } catch {
     return null;
   }
+}
+
+async function loadCatalog(destinoKey) {
+  if (!destinoKey) return null;
+  // Check if this destino is an "umbrella" that should aggregate others (e.g. "red")
+  const destinos = await getDestinosMap();
+  const meta = destinos[destinoKey];
+  if (meta?.skip_in_default_catalog) {
+    // Aggregate every catalogued destino (the ones that DO get tagged in the default run)
+    const sources = Object.keys(destinos).filter(k => destinos[k].drive_folder_id && !destinos[k].skip_in_default_catalog);
+    const all = [];
+    const seenIds = new Set();
+    for (const k of sources) {
+      const cat = await loadOneCatalog(k);
+      if (!cat) continue;
+      for (const p of cat) {
+        if (seenIds.has(p.id)) continue; // dedup if Drive returned the same file from multiple folders
+        seenIds.add(p.id);
+        all.push({ ...p, _source: k });
+      }
+    }
+    if (!all.length) return null;
+    console.log(`[vision] Aggregated catalog for "${destinoKey}": ${all.length} photos from ${sources.join(', ')}`);
+    return all;
+  }
+  return loadOneCatalog(destinoKey);
 }
 
 // Extract subject hints from a brief. Returns an array of normalized tokens.
