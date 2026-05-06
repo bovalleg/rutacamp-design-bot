@@ -1,0 +1,2970 @@
+{
+  "destino": "puerto-fuy",
+  "label": "Puerto Fuy",
+  "drive_folder_id": "1glVvj18UBe1k1lRy42MVtTbkhiBFHscX",
+  "updated": "2026-05-06T17:01:55.792Z",
+  "photos": [
+    {
+      "id": "14Csv5uFQweEgd2h2OVG8Oirzo6Sfr_Ig",
+      "name": "Imagen de WhatsApp 2024-02-16 a las 22.13.48_325b7afa.jpg",
+      "modified": "2024-06-21T17:02:32.000Z",
+      "size": 569974,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "bosque",
+          "infraestructura",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 40,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Camioneta Chevrolet remolcando una casa rodante Winnebago entrando al camping Outscape, rodeada de bosque nativo con luz de mediodía dura; el cartel de la marca es prominente a la derecha."
+      },
+      "tagged_at": "2026-05-06T16:52:16.410Z"
+    },
+    {
+      "id": "178OX6XRkSNZmqT2QFaanxNoBnsDQXmYj",
+      "name": "Imagen de WhatsApp 2024-02-04 a las 20.32.14_a1c3f402.jpg",
+      "modified": "2024-06-21T16:59:38.000Z",
+      "size": 254754,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "sitio",
+          "bosque",
+          "gente",
+          "infraestructura"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 40,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante Gulf Stream Conquest estacionada en sitio de camping entre árboles, tres personas cerca de la puerta y mesa de picnic nueva en primer plano"
+      },
+      "tagged_at": "2026-05-06T16:52:20.742Z"
+    },
+    {
+      "id": "1JI_IdQEEyQrYgIheWMZ6hwLJnmbJ2dg_",
+      "name": "Imagen de WhatsApp 2024-02-04 a las 20.32.14_6d12b98e.jpg",
+      "modified": "2024-06-21T16:59:32.000Z",
+      "size": 289331,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante Conquest estacionada en sitio boscoso junto a un lago, con tres personas instalándose; luz difusa de día nublado, árbol en primer plano obstruye parcialmente la vista."
+      },
+      "tagged_at": "2026-05-06T16:52:25.225Z"
+    },
+    {
+      "id": "1WPkpKp9lr2omCjJ29uVryb023_xCHcvn",
+      "name": "Imagen de WhatsApp 2024-02-04 a las 20.32.14_bc03e203.jpg",
+      "modified": "2024-06-21T16:59:25.000Z",
+      "size": 324960,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "familia",
+          "vehiculo",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 48,
+          "y": 72
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Casa rodante estacionada entre árboles altos con familia en el sitio y camioneta a la derecha; composición desordenada por troncos en primer plano y cielo sobreexpuesto."
+      },
+      "tagged_at": "2026-05-06T16:52:30.705Z"
+    },
+    {
+      "id": "1bi5pyEuSYUSwmVT5-rK_mF8ccHZJXj_W",
+      "name": "Imagen de WhatsApp 2024-02-04 a las 20.32.14_3258327d.jpg",
+      "modified": "2024-06-21T16:59:19.000Z",
+      "size": 343059,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "lago"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 60,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante Forest River FSX estacionada en sitio boscoso con toldo extendido, mesa con mantel y vajilla en primer plano, lago visible entre los árboles al fondo."
+      },
+      "tagged_at": "2026-05-06T16:52:35.612Z"
+    },
+    {
+      "id": "119O3WIBoKMh__OmQgQpHFy20wUEduLil",
+      "name": "IMG-20240621-WA0098.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 421681,
+      "tags": {
+        "subjects": [
+          "camping",
+          "sitio",
+          "casa-rodante",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 75,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "left"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping con casa rodante y persona sentada a la derecha, rodeado de bosque denso con luz solar contrastada y objetos dispersos en primer plano."
+      },
+      "tagged_at": "2026-05-06T16:52:39.762Z"
+    },
+    {
+      "id": "1ujix-uWs9MYdqDbk_Wr7NBws0SJJg6O9",
+      "name": "IMG-20240621-WA0104.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 555739,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 30,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Camping entre árboles altos con varias casas rodantes estacionadas, una persona caminando al fondo y luz de mediodía filtrándose entre los troncos."
+      },
+      "tagged_at": "2026-05-06T16:52:44.345Z"
+    },
+    {
+      "id": "1bA1JtEi7KMxI-xwg_hclyFLdbdIowd4S",
+      "name": "IMG-20240621-WA0099.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 525927,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "arboles-nativos",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 75,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "left"
+        ],
+        "quality": 5,
+        "notes": "Casa rodante marca Hobby estacionada en sitio de camping entre árboles altos, con equipaje disperso en el suelo y personas en el campamento; luz dura de mediodía con alto contraste."
+      },
+      "tagged_at": "2026-05-06T16:52:49.390Z"
+    },
+    {
+      "id": "1vyGBvTyi2tviRBWfIrje8eOmMdrBIOX8",
+      "name": "IMG-20240621-WA0107.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 601180,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "sitio",
+          "bosque",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 60,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping en bosque de coníferas con casa rodante Baker y camioneta Honda Ridgeline, primer plano desordenado con bolsos y equipaje disperso en el suelo."
+      },
+      "tagged_at": "2026-05-06T16:52:53.916Z"
+    },
+    {
+      "id": "1TUHxYW8XaUxvM8ubpcCe-62RhQu7YxVH",
+      "name": "IMG-20240621-WA0102.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 604676,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "vehiculo"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 30,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Camping con varias casas rodantes estacionadas entre pinos altos, luz dura con manchas de sol y sombra, ambiente cotidiano de sitio ocupado."
+      },
+      "tagged_at": "2026-05-06T16:52:58.159Z"
+    },
+    {
+      "id": "1dK0sg63EZ8zFF6jfVZooCzQKXW4CDKEO",
+      "name": "IMG-20240621-WA0100.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 546613,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 30,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 6,
+        "notes": "Camping con varias casas rodantes estacionadas entre árboles altos, luz contrastada de mediodía filtrándose por el dosel, sendero de tierra en primer plano."
+      },
+      "tagged_at": "2026-05-06T16:53:02.750Z"
+    },
+    {
+      "id": "1ttEAHP1gNSkhv-3XEJjidvdn2stfvGmJ",
+      "name": "IMG-20240621-WA0103.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 506561,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "sitio",
+          "gente",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Casa rodante blanca estacionada en sitio de camping rodeado de bosque nativo, con persona y coche de bebé visibles al fondo; luz dura de mediodía y composición sin encuadre deliberado."
+      },
+      "tagged_at": "2026-05-06T16:53:08.233Z"
+    },
+    {
+      "id": "1z4CV11hxDGKPplkj5Ois5uJxKCpJDC4D",
+      "name": "IMG-20240621-WA0106.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 468654,
+      "tags": {
+        "subjects": [
+          "camping",
+          "sitio",
+          "vehiculo",
+          "bosque",
+          "casa-rodante"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping con áridos de gravilla rodeado de bosque de coníferas, dos camionetas blancas y una casa rodante estacionadas, luz dura de mediodía filtrándose entre los árboles; composición desordenada y contraluz parcial reducen el impacto visual."
+      },
+      "tagged_at": "2026-05-06T16:53:13.022Z"
+    },
+    {
+      "id": "1mokQoVtdBBlZG82Wnp2IZS4lVo-RFw98",
+      "name": "IMG-20240621-WA0101.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 559547,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 35,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Camping con varias casas rodantes estacionadas entre pinos altos, luz de mediodía con sombras duras y contraste alto; composición correcta pero sin momento especial."
+      },
+      "tagged_at": "2026-05-06T16:53:24.193Z"
+    },
+    {
+      "id": "1IXSgiZBjLERjfrnT2UPCLCLnBJsdnpVQ",
+      "name": "IMG-20240621-WA0105.jpg",
+      "modified": "2024-06-21T16:56:39.000Z",
+      "size": 592808,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 28,
+          "y": 72
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Sitio de camping con varias casas rodantes estacionadas bajo un bosque de pinos altos en día soleado con luz contrastada"
+      },
+      "tagged_at": "2026-05-06T16:53:28.151Z"
+    },
+    {
+      "id": "1kHaOMX0x0vRQ-TX7W_Xguhp6kTSvunkP",
+      "name": "Imagen de WhatsApp 2023-12-30 a las 21.48.18_876da03a.jpg",
+      "modified": "2024-06-21T16:53:41.000Z",
+      "size": 388152,
+      "tags": {
+        "subjects": [
+          "fogon",
+          "bosque",
+          "asado-parrilla",
+          "lago",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 85
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Parrilla de camping en primer plano con costillas y papas en papel aluminio, rodeada de bosque denso con destellos de lago al fondo."
+      },
+      "tagged_at": "2026-05-06T16:53:32.367Z"
+    },
+    {
+      "id": "1nRaZj0RwLUe9oyznqN-aGUkr3oJDRyvP",
+      "name": "Imagen de WhatsApp 2023-12-30 a las 21.48.14_781225a1.jpg",
+      "modified": "2024-06-21T16:53:35.000Z",
+      "size": 383611,
+      "tags": {
+        "subjects": [
+          "fogon",
+          "camping",
+          "bosque",
+          "arboles-nativos",
+          "parrilla-camping"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 80
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Parrilla de camping con cortes de carne y papas en papel aluminio sobre brasas, rodeada de bosque nativo con luz de mediodía filtrándose entre los árboles."
+      },
+      "tagged_at": "2026-05-06T16:53:37.264Z"
+    },
+    {
+      "id": "10ybEBniYvFkXHWGJCmPNoRwNvksb1Kjn",
+      "name": "Imagen de WhatsApp 2023-12-30 a las 21.48.08_e8b9964e.jpg",
+      "modified": "2024-06-21T16:53:17.000Z",
+      "size": 343059,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "camping",
+          "sitio",
+          "bosque",
+          "lago"
+        ],
+        "mood": "casual",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 62,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante Forest River FSX estacionada en sitio boscoso con toldo desplegado, mesa de picnic con mantel y utensilios, y lago azul visible entre los árboles al fondo."
+      },
+      "tagged_at": "2026-05-06T16:53:42.483Z"
+    },
+    {
+      "id": "1CkLHR6ivRvelZnMtFgiKrlE-Uj4Tkxz5",
+      "name": "IMG-20240621-WA0087.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 483302,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "arboles-nativos",
+          "sitio",
+          "vehiculo"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante Forest River FSX estacionada entre árboles altos en sitio de camping, fotografiada desde ángulo bajo contrapicado con luz diurna filtrándose entre el follaje."
+      },
+      "tagged_at": "2026-05-06T16:53:49.814Z"
+    },
+    {
+      "id": "1Y-cf6iHRo6nH0UuJJboM-8WxEKWL5WpG",
+      "name": "IMG-20240621-WA0086.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 452821,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "arboles-nativos",
+          "lago",
+          "sendero",
+          "paisaje"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Interior de bosque de coníferas con troncos altos en contraluz, se vislumbra un lago azul al fondo entre los árboles; alto contraste entre sombras del primer plano y cielo iluminado."
+      },
+      "tagged_at": "2026-05-06T16:53:54.252Z"
+    },
+    {
+      "id": "12GfJsMGU_etCFuH4cjcGGPwTeuRJELel",
+      "name": "IMG-20240621-WA0093.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 597251,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "arboles-nativos",
+          "sitio",
+          "vehiculo"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 82,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante FSX blanca estacionada en sitio de camping rodeado de árboles altos con luz solar filtrándose entre los troncos; vehículo remolcador visible al fondo."
+      },
+      "tagged_at": "2026-05-06T16:53:58.959Z"
+    },
+    {
+      "id": "14dHQ3XUY7qazoyPx4Fh1Cnz8XZGit1Gv",
+      "name": "IMG-20240621-WA0092.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 436718,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "arboles-nativos",
+          "sitio",
+          "camping"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "golden-hour",
+        "focal_point": {
+          "x": 25,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Casa rodante Salem FSX estacionada en sitio boscoso rodeada de altos árboles coníferos, con luz solar filtrándose desde la izquierda creando destello dramático y ambiente selvático."
+      },
+      "tagged_at": "2026-05-06T16:54:03.386Z"
+    },
+    {
+      "id": "17xhze6hICP0qL3R1lMFc6YtQMjLP23jO",
+      "name": "IMG-20240621-WA0088.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 601333,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "arboles-nativos",
+          "sitio",
+          "vehiculo"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 82,
+          "y": 78
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante FSX estacionada en sitio boscoso con pinos altos, luz de mediodía filtrándose entre los árboles; el vehículo queda parcialmente cortado en el borde derecho."
+      },
+      "tagged_at": "2026-05-06T16:54:07.907Z"
+    },
+    {
+      "id": "1Vpt5sKllMVQoZtrCEuMZ5FGg_y2tNhid",
+      "name": "IMG-20240621-WA0082.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 481803,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "arboles-nativos",
+          "sitio",
+          "vehiculo"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Casa rodante Forest River FSX estacionada bajo un denso dosel de árboles altos, tomada desde ángulo bajo contrapicado que realza la verticalidad del bosque."
+      },
+      "tagged_at": "2026-05-06T16:54:12.625Z"
+    },
+    {
+      "id": "1YpdRQbX1L6FpKd4I0g7nwpyDqqrMAhcR",
+      "name": "IMG-20240621-WA0085.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 601886,
+      "tags": {
+        "subjects": [
+          "rio",
+          "bosque",
+          "arboles-nativos",
+          "casa-rodante",
+          "sitio"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Estero pedregoso en primer plano con una casa rodante blanca apenas visible entre árboles nativos al fondo, luz de mediodía filtrada por el dosel."
+      },
+      "tagged_at": "2026-05-06T16:54:16.534Z"
+    },
+    {
+      "id": "1WfTqU0C4F1-cWXbiBKSevB9bLkwoQcN8",
+      "name": "IMG-20240621-WA0091.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 528193,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "arboles-nativos",
+          "sitio",
+          "sendero"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 20,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Casa rodante pequeña estacionada en sitio de camping rodeado de bosque nativo denso; el vehículo queda muy al fondo izquierdo y la vegetación domina el encuadre."
+      },
+      "tagged_at": "2026-05-06T16:54:21.091Z"
+    },
+    {
+      "id": "1DtjRZQcw4WA8AIGFP10RMQQ2dTlxHqLP",
+      "name": "IMG-20240621-WA0090.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 450338,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "arboles-nativos",
+          "lago",
+          "paisaje",
+          "sendero"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Vista desde el interior de un bosque nativo hacia un lago azul a través de los árboles, con fuerte contraste entre sombras en primer plano y luz intensa en el agua"
+      },
+      "tagged_at": "2026-05-06T16:54:25.728Z"
+    },
+    {
+      "id": "1boi36bmU8Sm824Z-aum6Pknpls2Eda5x",
+      "name": "IMG-20240621-WA0089.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 574363,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "rio",
+          "sitio",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 22,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante pequeña estacionada junto a un sendero de tierra rodeada de bosque denso de coníferas, con un río o arroyo visible entre la vegetación en primer plano derecho."
+      },
+      "tagged_at": "2026-05-06T16:54:30.757Z"
+    },
+    {
+      "id": "1H8lQ6NfWEOxk836WnWNjDbf-v3jKzny7",
+      "name": "IMG-20240621-WA0084.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 447740,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "bosque",
+          "sitio",
+          "camping",
+          "arboles-nativos"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 25,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Casa rodante Salem FSX estacionada en sitio de camping rodeado de bosque alto con luz solar filtrándose entre los árboles y destello de lago al fondo."
+      },
+      "tagged_at": "2026-05-06T16:54:35.012Z"
+    },
+    {
+      "id": "1h82nGUsWfczWGXWSmrDQ5fRq9xBSUytU",
+      "name": "IMG-20240621-WA0083.jpg",
+      "modified": "2024-06-21T16:52:08.000Z",
+      "size": 606410,
+      "tags": {
+        "subjects": [
+          "rio",
+          "bosque",
+          "arboles-nativos",
+          "casa-rodante",
+          "sitio"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Estero de piedras rodeado de bosque nativo con una casa rodante apenas visible entre los árboles al fondo, luz suave filtrada por el follaje."
+      },
+      "tagged_at": "2026-05-06T16:54:41.891Z"
+    },
+    {
+      "id": "1s_te6VBnQYrjidBto1dp6QNuHfd8Ldxh",
+      "name": "Imagen de WhatsApp 2023-12-30 a las 00.00.46_f29ab8dd.jpg",
+      "modified": "2024-06-21T16:51:06.000Z",
+      "size": 65142,
+      "tags": {
+        "subjects": [
+          "lago",
+          "volcan",
+          "noche",
+          "bosque",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "wide",
+        "lighting": "night",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Vista nocturna de un volcán nevado reflejado en un lago con luces de una localidad al otro lado; encuadre oscuro con siluetas de árboles a los lados, cielo azul profundo con estrellas tenues."
+      },
+      "tagged_at": "2026-05-06T16:54:46.684Z"
+    },
+    {
+      "id": "1ACxIWSFzsN--rOP6fvHkkp1rFSeYobWw",
+      "name": "IMG-20240621-WA0078.jpg",
+      "modified": "2024-06-21T16:50:42.000Z",
+      "size": 104175,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "lago",
+          "volcan",
+          "cordillera"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 62,
+          "y": 82
+        },
+        "copy_friendly_zones": [
+          "top",
+          "center"
+        ],
+        "quality": 6,
+        "notes": "Casa rodante FSX con camioneta blanca estacionadas frente a un lago azul con volcán nevado al fondo, cielo despejado, luz de mediodía un poco dura pero escena muy on-brand."
+      },
+      "tagged_at": "2026-05-06T16:54:52.589Z"
+    },
+    {
+      "id": "1BkoKhBieELR4k_8Y0OEd73suOmtH9aJL",
+      "name": "IMG-20240621-WA0077.jpg",
+      "modified": "2024-06-21T16:50:42.000Z",
+      "size": 589010,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "bosque",
+          "arboles-nativos",
+          "sendero"
+        ],
+        "mood": "wild",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Toyota 4Runner blanco arrastrando casa rodante Salem por sendero de tierra rodeado de bosque nativo con luz solar filtrada entre copas."
+      },
+      "tagged_at": "2026-05-06T16:54:56.653Z"
+    },
+    {
+      "id": "1UDWBmLIhvncyNE4EHf5beroinCmZb458",
+      "name": "IMG-20240621-WA0079.jpg",
+      "modified": "2024-06-21T16:50:42.000Z",
+      "size": 599260,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "bosque",
+          "arboles-nativos",
+          "sendero"
+        ],
+        "mood": "wild",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 48,
+          "y": 62
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Toyota 4Runner blanco remolcando una casa rodante avanzando por un sendero de tierra rodeado de bosque nativo frondoso con luz solar filtrándose entre las copas."
+      },
+      "tagged_at": "2026-05-06T16:55:01.202Z"
+    },
+    {
+      "id": "1lLTHv2an4M2ge0XlKXnUn2hZTGmmlAvq",
+      "name": "IMG-20240621-WA0076.jpg",
+      "modified": "2024-06-21T16:50:42.000Z",
+      "size": 84134,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "vehiculo",
+          "lago",
+          "volcan",
+          "montaña"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 62,
+          "y": 82
+        },
+        "copy_friendly_zones": [
+          "top",
+          "center"
+        ],
+        "quality": 7,
+        "notes": "Casa rodante FSX remolcada por SUV blanca estacionada frente a un lago azul con volcán nevado y cordillera verde al fondo, cielo despejado intenso."
+      },
+      "tagged_at": "2026-05-06T16:55:05.685Z"
+    },
+    {
+      "id": "1SB1C4rS3uPKgljh3o7gb544pQnlLvidr",
+      "name": "DJI_0423.JPG",
+      "modified": "2024-01-18T20:18:44.000Z",
+      "size": 13066240,
+      "tags": {
+        "subjects": [
+          "aerea",
+          "lago",
+          "bosque",
+          "camping",
+          "infraestructura"
+        ],
+        "mood": "editorial",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 25,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "right"
+        ],
+        "quality": 6,
+        "notes": "Toma aérea de un poblado o camping a orilla de lago rodeado de bosque nativo denso, con muelle visible y múltiples vehículos; luz de mediodía dura sin hora dorada."
+      },
+      "tagged_at": "2026-05-06T16:55:11.392Z"
+    },
+    {
+      "id": "1ty_xGu_jAsbKxH0JfzF3eVkCSlQrwEBZ",
+      "name": "DJI_0422.JPG",
+      "modified": "2024-01-18T20:18:34.000Z",
+      "size": 10919936,
+      "tags": {
+        "subjects": [
+          "camping",
+          "volcan",
+          "bosque",
+          "rio",
+          "drone-shot"
+        ],
+        "mood": "editorial",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 7,
+        "notes": "Toma aérea de un camping junto a un río rodeado de bosque nativo, con un volcán nevado dominando el fondo en día despejado."
+      },
+      "tagged_at": "2026-05-06T16:55:15.326Z"
+    },
+    {
+      "id": "1rtlAiCAJF6Sk5RgkT8qqqOa0VZXVhcrd",
+      "name": "DJI_0421.JPG",
+      "modified": "2024-01-18T20:17:14.000Z",
+      "size": 12046336,
+      "tags": {
+        "subjects": [
+          "lago",
+          "drone-shot",
+          "bosque",
+          "arboles-nativos",
+          "vehiculo"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 68,
+          "y": 58
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Toma aérea de lago patagónico azul intenso con bote navegando, orilla arenosa y bosque nativo en el borde izquierdo."
+      },
+      "tagged_at": "2026-05-06T16:55:20.094Z"
+    },
+    {
+      "id": "1DQlFOW-L7d3KyNCsrJWT-KnyM_9incog",
+      "name": "DJI_0420.JPG",
+      "modified": "2024-01-18T20:16:14.000Z",
+      "size": 13553664,
+      "tags": {
+        "subjects": [
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "paisaje",
+          "drone-shot"
+        ],
+        "mood": "wild",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "bottom",
+          "right"
+        ],
+        "quality": 7,
+        "notes": "Toma aérea de lago patagónico de color turquesa con orilla de arena y densa vegetación nativa; sin vehículos ni personas visibles."
+      },
+      "tagged_at": "2026-05-06T16:55:25.053Z"
+    },
+    {
+      "id": "1gqHxmhCqPufP0Xf-R-dZCJjX0aRUyKOm",
+      "name": "DJI_0419.JPG",
+      "modified": "2024-01-18T20:16:08.000Z",
+      "size": 13709312,
+      "tags": {
+        "subjects": [
+          "lago",
+          "drone-shot",
+          "bosque",
+          "vehiculo",
+          "paisaje"
+        ],
+        "mood": "calm",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 35,
+          "y": 70
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 7,
+        "notes": "Toma aérea de un lago azul-turquesa con una lancha dejando estela, orilla con playa y bosque nativo denso al fondo; se distingue infraestructura de camping en esquina superior izquierda."
+      },
+      "tagged_at": "2026-05-06T16:55:30.069Z"
+    },
+    {
+      "id": "1jdRyq8Mn-jP7sWbYB8vbRmvzHwBuseIT",
+      "name": "DJI_0418.JPG",
+      "modified": "2024-01-18T20:15:58.000Z",
+      "size": 9613312,
+      "tags": {
+        "subjects": [
+          "lago",
+          "volcan",
+          "camping",
+          "bosque",
+          "cordillera"
+        ],
+        "mood": "dramatic",
+        "composition": "aerial-wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 8,
+        "notes": "Toma aérea de un camping a orillas de un lago con volcán nevado al fondo rodeado de bosque nativo, cielo despejado y agua azul intensa."
+      },
+      "tagged_at": "2026-05-06T16:55:34.642Z"
+    },
+    {
+      "id": "1fW6QZJJznHD-hoBGI6hvyWSwG5fwtt4g",
+      "name": "DJI_0412.JPG",
+      "modified": "2024-01-18T20:09:48.000Z",
+      "size": 14802944,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "sitio",
+          "bosque",
+          "lago",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 42,
+          "y": 58
+        },
+        "copy_friendly_zones": [
+          "top",
+          "right"
+        ],
+        "quality": 6,
+        "notes": "Trailer off-road oscuro estacionado en sitio de camping rodeado de árboles nativos con lago azul visible al fondo entre los troncos; luz de mediodía con sombras duras y algo de sobreexposición en el cielo."
+      },
+      "tagged_at": "2026-05-06T16:55:40.652Z"
+    },
+    {
+      "id": "1IXHg9tlZncKI4PSkPgFt0ezEGHfMgJ28",
+      "name": "DJI_0411.JPG",
+      "modified": "2024-01-18T20:09:30.000Z",
+      "size": 13058048,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "sitio",
+          "lago",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Trailer de camping oscuro estacionado en sitio de tierra bajo árboles nativos, con lago azul visible entre los troncos al fondo; luz dura de mediodía genera sombras contrastadas y recorta el vehículo."
+      },
+      "tagged_at": "2026-05-06T16:55:45.514Z"
+    },
+    {
+      "id": "1YTvxasN7TH2ohT1BJZh6sOd1cGfw1raK",
+      "name": "IMG_20240917_115501648_HDR.jpg",
+      "modified": "2025-01-27T17:36:58.938Z",
+      "size": 5030220,
+      "tags": {
+        "subjects": [
+          "rio",
+          "bosque",
+          "arboles-nativos",
+          "paisaje",
+          "tronco-caido"
+        ],
+        "mood": "wild",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Arroyo pedregoso atravesando bosque de coníferas con tronco caído cubierto de musgo; imagen on-brand pero sin elemento humano ni vehículo, nitidez aceptable con algo de movimiento en el agua."
+      },
+      "tagged_at": "2026-05-06T16:55:51.318Z"
+    },
+    {
+      "id": "1YIMB22p6VZhAFxJg7E5vUer1fAGuIICB",
+      "name": "IMG_20240917_115718046.jpg",
+      "modified": "2025-01-27T17:36:52.128Z",
+      "size": 7233538,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "camping",
+          "bosque",
+          "rio",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 70
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Dos sillas de camping plegables frente a un río entre árboles nativos; luz solar moteada, sin vehículo visible, ambiente tranquilo de descanso en sitio boscoso."
+      },
+      "tagged_at": "2026-05-06T16:55:57.821Z"
+    },
+    {
+      "id": "1YEtCULAymbJjUIkNsdxjeIxJkYxc7zR3",
+      "name": "IMG_20240917_115743531_HDR.jpg",
+      "modified": "2025-01-27T17:36:42.642Z",
+      "size": 5782578,
+      "tags": {
+        "subjects": [
+          "gente",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 72
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona de espaldas sentada en hamaca roja mirando un lago tranquilo enmarcado por árboles nativos con cerro al fondo; primer plano oscuro con buena apertura visual al lago"
+      },
+      "tagged_at": "2026-05-06T16:56:02.848Z"
+    },
+    {
+      "id": "1Y1jQ-xnAzfelvgwFhMbOUpFqNb1yxyw9",
+      "name": "IMG_20240917_115713046.jpg",
+      "modified": "2025-01-27T17:36:36.357Z",
+      "size": 7129590,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "camping",
+          "rio",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "intimate",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Dos sillas de camping plegables frente a un río entre árboles nativos, luz solar filtrada con sombras duras, sin motorhome visible pero ambiente de sitio ribereño muy on-brand."
+      },
+      "tagged_at": "2026-05-06T16:56:07.892Z"
+    },
+    {
+      "id": "1XjfegkAB--Wez-wCjCMT44lZveIPyJ4I",
+      "name": "IMG_20240917_115746103_HDR.jpg",
+      "modified": "2025-01-27T17:36:24.675Z",
+      "size": 5433167,
+      "tags": {
+        "subjects": [
+          "gente",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona recostada en hamaca roja abrigada con manta gris, de espaldas contemplando un lago sereno rodeado de bosque nativo y montaña al fondo"
+      },
+      "tagged_at": "2026-05-06T16:56:13.211Z"
+    },
+    {
+      "id": "1Xcy9PbpYbZtsX_1enfzX-qekc4E5ka0J",
+      "name": "IMG_20240917_115750018_HDR.jpg",
+      "modified": "2025-01-27T17:36:17.226Z",
+      "size": 5127892,
+      "tags": {
+        "subjects": [
+          "gente",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 55,
+          "y": 72
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Persona recostada en hamaca roja mirando hacia un lago tranquilo enmarcado por árboles nativos y una colina boscosa al fondo; primer plano muy oscuro pero la escena transmite descanso y conexión con la naturaleza."
+      },
+      "tagged_at": "2026-05-06T16:56:19.202Z"
+    },
+    {
+      "id": "1X_fWwjqFQr2ujoNu2HQmC_jjxTqgzI4C",
+      "name": "IMG_20240917_115757425_HDR.jpg",
+      "modified": "2025-01-27T17:36:08.971Z",
+      "size": 5880591,
+      "tags": {
+        "subjects": [
+          "gente",
+          "camping",
+          "lago",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona recostada en hamaca roja entre árboles nativos con lago y montaña de fondo, ambiente relajado y auténtico de camping patagónico."
+      },
+      "tagged_at": "2026-05-06T16:56:24.495Z"
+    },
+    {
+      "id": "1X__SiHn6FqLuLx6Y385qeUFjSahzGXld",
+      "name": "IMG_20240917_115803862_HDR.jpg",
+      "modified": "2025-01-27T17:36:01.439Z",
+      "size": 5442291,
+      "tags": {
+        "subjects": [
+          "gente",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona recostada en hamaca roja de espaldas contemplando un lago tranquilo rodeado de árboles nativos, composición tipo ventana con capas bosque-lago-montaña."
+      },
+      "tagged_at": "2026-05-06T16:56:29.840Z"
+    },
+    {
+      "id": "1X_SBbkTJVDt1tWk0FD6ttk_ikbSZbZG_",
+      "name": "IMG_20240917_130304069.jpg",
+      "modified": "2025-01-27T17:35:54.569Z",
+      "size": 7462180,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "bosque",
+          "sitio",
+          "gente",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Motorhome Minnie Winnie estacionado entre árboles altos en sitio de camping, persona sentada en mesa de picnic; luz solar dura con sombras marcadas, composición irregular por troncos en primer plano."
+      },
+      "tagged_at": "2026-05-06T16:56:35.701Z"
+    },
+    {
+      "id": "1XVQwbUyAnjTRNMcKHgC6tTd-EajxPHWG",
+      "name": "IMG_20240917_130315849_HDR.jpg",
+      "modified": "2025-01-27T17:35:46.733Z",
+      "size": 6757561,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "sitio",
+          "lago",
+          "hamaca",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 75,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Sitio de camping entre árboles altos con hamaca naranja colgada, lago y montaña visibles al fondo entre la vegetación, luz de mediodía con sombras marcadas."
+      },
+      "tagged_at": "2026-05-06T16:56:41.654Z"
+    },
+    {
+      "id": "1XZUbqKtWWATuYr6PsYhcAklHomeAFdUa",
+      "name": "IMG_20240917_130309298.jpg",
+      "modified": "2024-10-19T21:14:33.626Z",
+      "size": 7386616,
+      "tags": {
+        "subjects": [
+          "casa-rodante",
+          "motorhome",
+          "bosque",
+          "sitio",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 48,
+          "y": 52
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping en bosque de coníferas con dos vehículos recreacionales y una persona sentada en mesa de picnic; luz solar moteada, composición algo desordenada con troncos que fragmentan la escena."
+      },
+      "tagged_at": "2026-05-06T16:56:47.269Z"
+    },
+    {
+      "id": "1pJUZJQSwqfw8MwGn46q3n5JBtckro-tn",
+      "name": "IMG_20240917_115501648_HDR.jpg",
+      "modified": "2024-10-09T15:20:32.975Z",
+      "size": 5030220,
+      "tags": {
+        "subjects": [
+          "rio",
+          "bosque",
+          "arboles-nativos",
+          "tronco-caido",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Arroyo de montaña con tronco caído sobre el agua, rodeado de bosque de coníferas; foto tomada con celular, sin encuadre definido y leve sobreexposición en copas de árboles."
+      },
+      "tagged_at": "2026-05-06T16:56:52.625Z"
+    },
+    {
+      "id": "1r-S_ZIQ9PCSjpL7iAW1jVJn_HjNeQhKc",
+      "name": "IMG_20240917_112154563.jpg",
+      "modified": "2024-10-09T15:18:50.487Z",
+      "size": 2271678,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "arboles-nativos",
+          "sendero",
+          "paisaje"
+        ],
+        "mood": "wild",
+        "composition": "wide",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 2,
+        "notes": "Foto nocturna o con muy baja luz de un bosque nativo con camino de tierra; imagen sobreexpuesta/lavada, sin foco claro y sin sujeto principal identificable, muy poco aprovechable para comunicación visual."
+      },
+      "tagged_at": "2026-05-06T16:56:57.961Z"
+    },
+    {
+      "id": "1qp1zZRhTCo6oD2Hwh9pw8QYZqy7T6aIV",
+      "name": "IMG_20240917_112240162.jpg",
+      "modified": "2024-10-09T15:18:50.411Z",
+      "size": 5271583,
+      "tags": {
+        "subjects": [
+          "rio",
+          "arboles-nativos",
+          "paisaje",
+          "montaña"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Playa de arena y piedras volcánicas frente a un río tranquilo rodeado de bosque nativo patagónico; primer plano demasiado dominado por suelo árido, sin sujeto principal claro y con lente flare visible."
+      },
+      "tagged_at": "2026-05-06T16:57:04.199Z"
+    },
+    {
+      "id": "1qodhPHUUQyEO6tKJ0K43jqPchwYe35vu",
+      "name": "IMG_20240917_112244051.jpg",
+      "modified": "2024-10-09T15:18:50.365Z",
+      "size": 5602741,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "bosque",
+          "paisaje",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Lago patagónico de aguas calmas con reflejo de cerros boscosos, orilla de ripio en primer plano y cielo despejado; sin elementos humanos ni vehículos, luz dura de mediodía."
+      },
+      "tagged_at": "2026-05-06T16:57:09.842Z"
+    },
+    {
+      "id": "1qhCEpp1mrxdZgEgtbKoVWXTl37iHxW8J",
+      "name": "IMG_20240917_112252581.jpg",
+      "modified": "2024-10-09T15:18:50.323Z",
+      "size": 3945523,
+      "tags": {
+        "subjects": [
+          "volcan",
+          "lago",
+          "bosque",
+          "nieve",
+          "paisaje"
+        ],
+        "mood": "dramatic",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 38
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Volcán nevado con reflejo perfecto en lago calmo, orilla pedregosa en primer plano y bosque nativo al fondo; cielo azul despejado sin golden hour."
+      },
+      "tagged_at": "2026-05-06T16:57:14.152Z"
+    },
+    {
+      "id": "1qgsMZbcnsPxPwCYHW_O1csJke5ct4OGS",
+      "name": "IMG_20240917_114147813_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.282Z",
+      "size": 6889976,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "sitio",
+          "camping",
+          "arboles-nativos",
+          "infraestructura"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Motorhome Jayco Redhawk estacionado en sitio de camping entre árboles altos, con mesa de picnic y sillas plegables desplegadas alrededor; luz dura de mediodía con sombras marcadas."
+      },
+      "tagged_at": "2026-05-06T16:57:19.597Z"
+    },
+    {
+      "id": "1qg2kCOmdAGssy5y1jbbORXSqJynLVc-s",
+      "name": "IMG_20240917_114156288_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.235Z",
+      "size": 6855125,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "hamaca"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Motorhome clase C estacionado en sitio arbolado, con hamaca roja tendida entre pinos, sillas de camping y mesa pequeña en primer plano; luz cenital con sombras marcadas entre los troncos."
+      },
+      "tagged_at": "2026-05-06T16:57:25.632Z"
+    },
+    {
+      "id": "1qcAIy5qgppMMb_uyCBJwi2RX0-k39TdT",
+      "name": "IMG_20240917_114209500_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.199Z",
+      "size": 5531925,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Motorhome clase C estacionado en sitio boscoso con silla de camping en primer plano; persona parcialmente visible en borde izquierdo corta la composición, luz dura de mediodía con sombras marcadas."
+      },
+      "tagged_at": "2026-05-06T16:57:31.518Z"
+    },
+    {
+      "id": "1qaxSMhMl1qSPfHDdpHMp3IKwRm7SozZj",
+      "name": "IMG_20240917_114219302_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.156Z",
+      "size": 6277403,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "gente",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona abrigada con manta tomando algo en silla de camping junto a mesa de madera, con motorhome Jayco Redhawk estacionado entre árboles altos en sitio de camping"
+      },
+      "tagged_at": "2026-05-06T16:57:37.432Z"
+    },
+    {
+      "id": "1qa-YvLL_Y8hMaZdT0DG3P2qscHJf3IKK",
+      "name": "IMG_20240917_114234456_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.120Z",
+      "size": 6606891,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "gente",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona sentada en silla de camping frente a un motorhome tipo C, rodeada de árboles altos, con hamaca roja en primer plano y mesa de madera; luz de día contrastada entre sombra y cielo azul."
+      },
+      "tagged_at": "2026-05-06T16:57:43.989Z"
+    },
+    {
+      "id": "1qXFgijkH-AaZaP23bqKYZcYHn1p32cn5",
+      "name": "IMG_20240917_114344320_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.082Z",
+      "size": 6426762,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Hombre sentado en silla camping frente a motorhome Jayco estacionado entre árboles altos, con mesa de picnic y sillas plegables en sitio con suelo de tierra."
+      },
+      "tagged_at": "2026-05-06T16:57:49.327Z"
+    },
+    {
+      "id": "1qWTvHJpP-27ZbSbX_nqwBLkPTUAIcaGh",
+      "name": "IMG_20240917_114352356_HDR.jpg",
+      "modified": "2024-10-09T15:18:50.037Z",
+      "size": 5067705,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "gente",
+          "camping",
+          "sitio",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 62,
+          "y": 70
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Hombre abrigado sirviendo mate/termo sentado en silla de camping frente a un motorhome Jayco Redhawk estacionado entre árboles, con mesa de madera y bolso térmico al costado."
+      },
+      "tagged_at": "2026-05-06T16:57:54.619Z"
+    },
+    {
+      "id": "1qT16Ep4DwPMZt-JCiURBB2d3lTT2K91Q",
+      "name": "IMG_20240917_114425410.jpg",
+      "modified": "2024-10-09T15:18:49.992Z",
+      "size": 6192952,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "bosque",
+          "gente",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 65,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Motorhome Jayco blanco estacionado en sitio de camping rodeado de bosque nativo, con persona sentada en silla de camping y hamaca roja al fondo; luz filtrada entre los árboles."
+      },
+      "tagged_at": "2026-05-06T16:57:59.890Z"
+    },
+    {
+      "id": "1qIuBmCgNN-9R2TAK0wTLZ3qnKQjE3O8Q",
+      "name": "IMG_20240917_114440371_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.942Z",
+      "size": 6283852,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "bosque",
+          "lago",
+          "infraestructura",
+          "paisaje"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 65,
+          "y": 70
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Sitio de camping con mesa de picnic bajo pinos altos, con lago visible al fondo a través de los árboles; contraste duro entre sombras y luz solar directa."
+      },
+      "tagged_at": "2026-05-06T16:58:04.862Z"
+    },
+    {
+      "id": "1q4R3gtvKbOKOLEphwsWCHZEke__CeaAf",
+      "name": "IMG_20240917_114534922_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.826Z",
+      "size": 5784730,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "sitio",
+          "gente",
+          "camping",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Hombre relajado con termo sentado frente a un motorhome Jayco Redhawk en sitio de camping rodeado de árboles, con mesa de picnic y sillas plegables; luz de mediodía con sombras duras."
+      },
+      "tagged_at": "2026-05-06T16:58:10.552Z"
+    },
+    {
+      "id": "1q28KCqhYRO13YEqCEgj0osfggmFx4IHN",
+      "name": "IMG_20240917_114545986_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.762Z",
+      "size": 5543741,
+      "tags": {
+        "subjects": [
+          "camping",
+          "sitio",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Silla de camping marca Atakama y bolsa de basura en sitio de camping rodeado de árboles nativos con luz dura y sombras contrastadas; no hay motorhome visible."
+      },
+      "tagged_at": "2026-05-06T16:58:15.954Z"
+    },
+    {
+      "id": "1pwb_pQSfJLIbOdBOk9cCXj-BOlOyjhwN",
+      "name": "IMG_20240917_114627582_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.688Z",
+      "size": 6811432,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "bosque",
+          "sitio",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona descansando en hamaca roja entre árboles en primer plano, con motorhome clase C estacionado al fondo rodeado de sillas de camping en un sitio boscoso con luz de mediodía filtrándose entre los pinos."
+      },
+      "tagged_at": "2026-05-06T16:58:22.255Z"
+    },
+    {
+      "id": "1pjp2ZzwRd6gbPJDRekIwNT1-QFzMhgc8",
+      "name": "IMG_20240917_115209616_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.457Z",
+      "size": 4418748,
+      "tags": {
+        "subjects": [
+          "gente",
+          "bosque",
+          "lago",
+          "camping",
+          "hamaca"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 65,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "left"
+        ],
+        "quality": 7,
+        "notes": "POV desde una hamaca roja entre árboles nativos con lago turquesa visible al fondo, transmite descanso y vida de camping en la naturaleza patagónica."
+      },
+      "tagged_at": "2026-05-06T16:58:28.321Z"
+    },
+    {
+      "id": "1pfmhOiX9JzBdxkS-Y6-Mx8YeS3f9rVls",
+      "name": "IMG_20240917_115212455_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.382Z",
+      "size": 5532733,
+      "tags": {
+        "subjects": [
+          "gente",
+          "bosque",
+          "arboles-nativos",
+          "camping",
+          "hamaca"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 45,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 3,
+        "notes": "POV borroso de alguien en hamaca roja entre árboles nativos; imagen movida y sin nitidez suficiente para uso editorial."
+      },
+      "tagged_at": "2026-05-06T16:58:33.503Z"
+    },
+    {
+      "id": "1pUd0vPtQ2stNYEs2UHfLPVTLbd4blJhT",
+      "name": "IMG_20240917_115339101_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.245Z",
+      "size": 5183846,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "sitio",
+          "camping",
+          "infraestructura",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 40,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Motorhome clase C estacionado en sitio de camping rodeado de árboles, con mesa de picnic, termo, cooler y parrilla en primer plano; imagen nítida pero composición desordenada y luz dura con sombras marcadas."
+      },
+      "tagged_at": "2026-05-06T16:58:39.776Z"
+    },
+    {
+      "id": "1pUVw1-Lni3YetSwGcunFSZ2UA9HQvKRl",
+      "name": "IMG_20240917_115347490.jpg",
+      "modified": "2024-10-09T15:18:49.144Z",
+      "size": 6123650,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "camping",
+          "arboles-nativos",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 4,
+        "notes": "Sitio de camping con dos sillas plegables bajo árboles nativos, tomada desde ángulo picado con luz dura y tacho de basura visible en esquina; composición descuidada y sin vehículo."
+      },
+      "tagged_at": "2026-05-06T16:58:45.253Z"
+    },
+    {
+      "id": "1pK0WC1JABHBYg8SAwTh7fUy-rMfwweWg",
+      "name": "IMG_20240917_115453648_HDR.jpg",
+      "modified": "2024-10-09T15:18:49.005Z",
+      "size": 7335482,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "sitio",
+          "bosque",
+          "gente",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 60,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Motorhome Winnebago estacionado entre árboles altos en sitio de camping, persona de pie junto a sillas plegables y mesa, luz solar contrastada con sombras de troncos."
+      },
+      "tagged_at": "2026-05-06T16:58:50.983Z"
+    },
+    {
+      "id": "1p6W4xhavlGwn1vtlSf2vExd7mscdohYF",
+      "name": "IMG_20240917_115603234_HDR.jpg",
+      "modified": "2024-10-09T15:18:48.817Z",
+      "size": 6077239,
+      "tags": {
+        "subjects": [
+          "camping",
+          "bosque",
+          "lago",
+          "montaña",
+          "hamacas"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Dos hamacas coloridas (amarilla y burdeo) colgadas entre árboles nativos con vista al lago y montaña al fondo; imagen con buen encuadre natural pero alto contraste luz/sombra que recorta detalles."
+      },
+      "tagged_at": "2026-05-06T16:58:56.790Z"
+    },
+    {
+      "id": "1p2-6CoePRHyAUxVgRGGgUzLlqE2L-yCf",
+      "name": "IMG_20240917_115609626_HDR.jpg",
+      "modified": "2024-10-09T15:18:48.749Z",
+      "size": 4543532,
+      "tags": {
+        "subjects": [
+          "camping",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "montaña"
+        ],
+        "mood": "calm",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 4,
+        "notes": "Hamaca roja colgada entre árboles nativos con vista a un lago y montaña al fondo; imagen subexpuesta en primer plano y sobreexpuesta en el cielo, sin motorhome visible."
+      },
+      "tagged_at": "2026-05-06T16:59:02.710Z"
+    },
+    {
+      "id": "1ozC2I33kHE5SaZd6h6bOnC422cwJZ4pY",
+      "name": "IMG_20240917_115713046.jpg",
+      "modified": "2024-10-09T15:18:48.674Z",
+      "size": 7129590,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "camping",
+          "rio",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 70
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Dos sillas de camping plegables frente a un río entre árboles nativos, luz solar moteada sobre suelo de agujas de pino, ambiente tranquilo de sitio ribereño."
+      },
+      "tagged_at": "2026-05-06T16:59:07.522Z"
+    },
+    {
+      "id": "1oa2kroX1D-HK_BJf7NC9IdFGPrOSUvPn",
+      "name": "IMG_20240917_115746103_HDR.jpg",
+      "modified": "2024-10-09T15:18:48.615Z",
+      "size": 5433167,
+      "tags": {
+        "subjects": [
+          "gente",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "intimate",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 72
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona recostada en hamaca roja abrigada con manta gris, mirando hacia un lago calmo enmarcado por árboles nativos y una colina boscosa al fondo"
+      },
+      "tagged_at": "2026-05-06T16:59:12.790Z"
+    },
+    {
+      "id": "1oa0a9jiBsUZaH2oCaLoWcco3JGw4oeZl",
+      "name": "IMG_20240917_115803862_HDR.jpg",
+      "modified": "2024-10-09T15:18:48.551Z",
+      "size": 5442291,
+      "tags": {
+        "subjects": [
+          "gente",
+          "lago",
+          "bosque",
+          "arboles-nativos",
+          "camping"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 50,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona recostada en hamaca roja de espaldas contemplando un lago tranquilo enmarcado por árboles nativos y una montaña al fondo"
+      },
+      "tagged_at": "2026-05-06T16:59:17.602Z"
+    },
+    {
+      "id": "1o_FlUZpvkmdfT73_bn56qQ-cXpo_PGTq",
+      "name": "IMG_20240917_130309298.jpg",
+      "modified": "2024-10-09T15:18:48.477Z",
+      "size": 7386616,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 50
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Sitio de camping con dos motorhomes entre árboles altos y una persona sentada en mesa de picnic; luz dura con manchas de sol, composición fragmentada por troncos en primer plano."
+      },
+      "tagged_at": "2026-05-06T16:59:23.309Z"
+    },
+    {
+      "id": "1oRgR199WfFnmawTpuWYarZa0FVr6vwyf",
+      "name": "IMG_20240917_130315849_HDR.jpg",
+      "modified": "2024-10-09T15:18:48.362Z",
+      "size": 6757561,
+      "tags": {
+        "subjects": [
+          "bosque",
+          "sitio",
+          "lago",
+          "hamaca",
+          "arboles-nativos"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 75,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Sitio de camping entre árboles altos con hamaca naranja colgada, lago y montaña visibles al fondo; luz contrastada con sombras marcadas en el suelo."
+      },
+      "tagged_at": "2026-05-06T16:59:29.518Z"
+    },
+    {
+      "id": "1_iqtwbBDDFElGnwHG04sz3Humiy6_L0r",
+      "name": "IMG_20240917_112240162.jpg",
+      "modified": "2024-09-18T14:32:04.706Z",
+      "size": 5271583,
+      "tags": {
+        "subjects": [
+          "rio",
+          "arboles-nativos",
+          "bosque",
+          "paisaje",
+          "montaña"
+        ],
+        "mood": "calm",
+        "composition": "wide",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 5,
+        "notes": "Playa de arena y piedras volcánicas frente a un río rodeado de bosque nativo patagónico; foto tomada a plena luz del día con leve flare en la esquina superior izquierda y primer plano de suelo poco atractivo."
+      },
+      "tagged_at": "2026-05-06T16:59:35.461Z"
+    },
+    {
+      "id": "1_hZVAaX75nZ2hlTLSa61FQIcOMKrICoS",
+      "name": "IMG_20240917_112244051.jpg",
+      "modified": "2024-09-18T14:32:04.660Z",
+      "size": 5602741,
+      "tags": {
+        "subjects": [
+          "lago",
+          "montaña",
+          "arboles-nativos",
+          "paisaje",
+          "vacio"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Lago patagónico con orilla de ripio en primer plano, montañas cubiertas de bosque nativo reflejadas en agua calma, cielo despejado; imagen limpia pero sin sujeto focal atractivo ni luz especial."
+      },
+      "tagged_at": "2026-05-06T16:59:41.600Z"
+    },
+    {
+      "id": "1_YQn-_C9CIzAGSora_Cm05_VdOIK1lOt",
+      "name": "IMG_20240917_112252581.jpg",
+      "modified": "2024-09-18T14:32:04.608Z",
+      "size": 3945523,
+      "tags": {
+        "subjects": [
+          "volcan",
+          "lago",
+          "bosque",
+          "paisaje",
+          "nieve"
+        ],
+        "mood": "dramatic",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 38
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Volcán nevado reflejado en lago calmo con orilla pedregosa en primer plano; imagen nítida pero tomada con celular en luz dura de mediodía, sin vehículos de camping presentes."
+      },
+      "tagged_at": "2026-05-06T16:59:46.933Z"
+    },
+    {
+      "id": "1_RWTL7pb_bauasfbHcKBM0udz_JFcQqt",
+      "name": "IMG_20240917_114147813_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.513Z",
+      "size": 6889976,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "sitio",
+          "camping",
+          "arboles-nativos",
+          "vehiculo"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Motorhome Jayco Redhawk estacionado en sitio de camping entre árboles altos, con mesa de picnic y sillas plegables desplegadas en primer plano; luz dura de mediodía con sombras marcadas."
+      },
+      "tagged_at": "2026-05-06T16:59:52.606Z"
+    },
+    {
+      "id": "1_RCHDW8oPVz3LSoT0b5g15Q_ppnlXlif",
+      "name": "IMG_20240917_114156288_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.467Z",
+      "size": 6855125,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "hamaca"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 45,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Motorhome tipo clase C estacionado en sitio de camping entre árboles altos, con hamaca roja y sillas de camping en primer plano; luz de mediodía filtrada por el dosel crea contraste marcado."
+      },
+      "tagged_at": "2026-05-06T16:59:58.755Z"
+    },
+    {
+      "id": "1_Qr5ixz8O1aroDqZRplz_UWgb5Ydqv58",
+      "name": "IMG_20240917_114209500_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.406Z",
+      "size": 5531925,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 40
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Motorhome clase C estacionado en sitio de camping entre árboles altos; en primer plano una silla plegable y figura parcial de persona; luz dura de mediodía con sombras contrastadas y un posible lago visible al fondo."
+      },
+      "tagged_at": "2026-05-06T17:00:05.213Z"
+    },
+    {
+      "id": "1_Piza2iscBqv1AfGxz19RfjpUoNL4Hyl",
+      "name": "IMG_20240917_114219302_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.354Z",
+      "size": 6277403,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "gente",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona abrigada con poncho tomando mate frente a un motorhome Jayco Redhawk estacionado en sitio de camping rodeado de árboles altos, con mesa de picnic y utensilios de camping."
+      },
+      "tagged_at": "2026-05-06T17:00:11.069Z"
+    },
+    {
+      "id": "1_PhJU_Fj02CfFGT9CGUcQ-o_M01v9111",
+      "name": "IMG_20240917_114225005_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.309Z",
+      "size": 5923417,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona abrigada descansando en silla camping frente a motorhome Jayco estacionado en sitio arbolado con mesa de picnic y utensilios de mate."
+      },
+      "tagged_at": "2026-05-06T17:00:16.389Z"
+    },
+    {
+      "id": "1_GMpxAP89fpWZ5w3jJrj-dGpkU5TSGCS",
+      "name": "IMG_20240917_114226370_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.259Z",
+      "size": 5866638,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "gente",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Motorhome Jayco estacionado en sitio de camping rodeado de árboles; mujer envuelta en manta sentada en silla de camping junto a mesa de picnic con termo y cooler."
+      },
+      "tagged_at": "2026-05-06T17:00:22.537Z"
+    },
+    {
+      "id": "1_6Ul0gQIGawr0Kqb8Dx560bqQD86P9ZM",
+      "name": "IMG_20240917_114234456_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.191Z",
+      "size": 6606891,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "gente",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona sentada en silla de camping bajo árboles altos junto a un motorhome blanco, con hamaca roja en primer plano y luz solar filtrándose entre los troncos"
+      },
+      "tagged_at": "2026-05-06T17:00:28.098Z"
+    },
+    {
+      "id": "1_5N8ItMKE9PKuP-JUeIb9Yk1B5BhdkKu",
+      "name": "IMG_20240917_114236347_HDR.jpg",
+      "modified": "2024-09-18T14:32:04.139Z",
+      "size": 6672505,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "bosque",
+          "gente",
+          "sitio"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 52,
+          "y": 62
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona abrigada sentada en silla de camping junto a motorhome clase C estacionado entre árboles altos, con hamaca roja en primer plano y mesa de picnic; luz de mediodía con manchas de sol y sombra."
+      },
+      "tagged_at": "2026-05-06T17:00:34.227Z"
+    },
+    {
+      "id": "1ZrXGEsVJNQPR-V-AgmxeMeS31fFgfJY8",
+      "name": "IMG_20240917_114344320_HDR.jpg",
+      "modified": "2024-09-18T14:32:03.979Z",
+      "size": 6426762,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "gente",
+          "sitio",
+          "bosque",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Hombre relajado en silla de camping frente a un motorhome Jayco estacionado entre árboles de bosque nativo, con mesa y sillas dispersas en el sitio."
+      },
+      "tagged_at": "2026-05-06T17:00:40.358Z"
+    },
+    {
+      "id": "1Zpukk84gppi61JIQdkmi9TUzRGkZNFpf",
+      "name": "IMG_20240917_114352356_HDR.jpg",
+      "modified": "2024-09-18T14:32:03.914Z",
+      "size": 5067705,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "gente",
+          "camping",
+          "sitio",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 62,
+          "y": 68
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Hombre abrigado sirviendo mate en silla plegable frente a un motorhome Jayco Redhawk estacionado en un sitio de camping rodeado de árboles, con mesa de picnic y cooler al costado."
+      },
+      "tagged_at": "2026-05-06T17:00:46.364Z"
+    },
+    {
+      "id": "1ZgGw1eHDEjc-J_NkuUsu51mZZXsunR5Q",
+      "name": "IMG_20240917_114354659_HDR.jpg",
+      "modified": "2024-09-18T14:32:03.868Z",
+      "size": 5180629,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "gente",
+          "camping",
+          "sitio",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 65,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Hombre abrigado con termo sentado en silla de camping frente a un motorhome Jayco Redhawk estacionado entre árboles, con mesa de picnic y cooler al costado."
+      },
+      "tagged_at": "2026-05-06T17:00:51.938Z"
+    },
+    {
+      "id": "1ZevaDsPnavg_iWeDEB2D0k3d0bJNuY57",
+      "name": "IMG_20240917_114425410.jpg",
+      "modified": "2024-09-18T14:32:03.817Z",
+      "size": 6192952,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "bosque",
+          "sitio",
+          "gente",
+          "camping"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "overcast",
+        "focal_point": {
+          "x": 65,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Motorhome Jayco blanco estacionado en sitio de camping rodeado de bosque nativo, con persona sentada en silla de camping y hamaca roja al fondo; luz filtrada entre árboles, ambiente tranquilo y auténtico."
+      },
+      "tagged_at": "2026-05-06T17:00:58.451Z"
+    },
+    {
+      "id": "1ZcF9u5de_J0hCmV7kaS-SyiuHpGbw74z",
+      "name": "IMG_20240917_114432740.jpg",
+      "modified": "2024-09-18T14:32:03.701Z",
+      "size": 6933325,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "bosque",
+          "sitio",
+          "camping",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Motorhome Jayco blanco estacionado en sitio de camping rodeado de bosque con luz solar filtrada entre los árboles; se aprecia una persona sentada en hamaca al fondo izquierdo y conexiones visibles a la derecha."
+      },
+      "tagged_at": "2026-05-06T17:01:05.471Z"
+    },
+    {
+      "id": "1ZRbJaDto07H99kI1zEjvBHMCwqWcCYfL",
+      "name": "IMG_20240917_114536116_HDR.jpg",
+      "modified": "2024-09-18T14:32:03.452Z",
+      "size": 5492888,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "gente",
+          "bosque"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 60
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 6,
+        "notes": "Hombre relajado con termo junto a motorhome Jayco Redhawk estacionado en sitio de camping rodeado de árboles altos; mesa de picnic y silla plegable en primer plano, luz dura con sombras marcadas."
+      },
+      "tagged_at": "2026-05-06T17:01:27.816Z"
+    },
+    {
+      "id": "1ZMCztZmBjP__lh2nUrEF5e_xTeUnQyYi",
+      "name": "IMG_20240917_114545986_HDR.jpg",
+      "modified": "2024-09-18T14:32:03.370Z",
+      "size": 5543741,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "camping",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 75
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 5,
+        "notes": "Silla ultraliviana Atakama en sitio de camping rodeado de bosque nativo con luz dura de mediodía; sin motorhome visible y con marca de tercero prominente."
+      },
+      "tagged_at": "2026-05-06T17:01:33.449Z"
+    },
+    {
+      "id": "1ZKPALbPRGp1h0XuZRaJQbGmjfStrANFH",
+      "name": "IMG_20240917_114630501_HDR.jpg",
+      "modified": "2024-09-18T14:32:03.249Z",
+      "size": 6663467,
+      "tags": {
+        "subjects": [
+          "motorhome",
+          "camping",
+          "sitio",
+          "bosque",
+          "gente"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 35,
+          "y": 70
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 7,
+        "notes": "Persona descansando en hamaca roja entre árboles, con motorhome clase C y sillas de camping al fondo en un sitio arbolado con luz moteada."
+      },
+      "tagged_at": "2026-05-06T17:01:38.997Z"
+    },
+    {
+      "id": "1YwMU1Fo5dJMwvBLsuQe5XNlG1NiHC9Yy",
+      "name": "IMG_20240917_115347490.jpg",
+      "modified": "2024-09-18T14:32:02.326Z",
+      "size": 6123650,
+      "tags": {
+        "subjects": [
+          "sitio",
+          "camping",
+          "sillas-camping",
+          "bosque",
+          "arboles-nativos"
+        ],
+        "mood": "casual",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 65
+        },
+        "copy_friendly_zones": [
+          "top"
+        ],
+        "quality": 4,
+        "notes": "Sitio de camping con dos sillas plegables bajo árboles nativos; toma tomada desde arriba con ángulo inclinado, tacho de basura visible en esquina, luz dura con sombras fuertes y composición descuidada."
+      },
+      "tagged_at": "2026-05-06T17:01:45.071Z"
+    },
+    {
+      "id": "1Yd1RS18i2lSBB5HSxodBJwL6K-WsbVOf",
+      "name": "IMG_20240917_115603234_HDR.jpg",
+      "modified": "2024-09-18T14:32:02.109Z",
+      "size": 6077239,
+      "tags": {
+        "subjects": [
+          "camping",
+          "bosque",
+          "lago",
+          "montaña",
+          "hamacas"
+        ],
+        "mood": "calm",
+        "composition": "portrait-vertical",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 50,
+          "y": 55
+        },
+        "copy_friendly_zones": [
+          "top",
+          "bottom"
+        ],
+        "quality": 6,
+        "notes": "Dos hamacas coloridas colgadas entre árboles nativos con vista al lago y montaña al fondo; imagen con alto contraste por luz dura de mediodía."
+      },
+      "tagged_at": "2026-05-06T17:01:50.378Z"
+    },
+    {
+      "id": "1YUNYgRhdEV856qj6k2C_nxj1xB2OCPlm",
+      "name": "IMG_20240917_115609626_HDR.jpg",
+      "modified": "2024-09-18T14:32:02.025Z",
+      "size": 4543532,
+      "tags": {
+        "subjects": [
+          "camping",
+          "bosque",
+          "lago",
+          "montaña",
+          "hamaca"
+        ],
+        "mood": "calm",
+        "composition": "medium",
+        "lighting": "harsh-day",
+        "focal_point": {
+          "x": 55,
+          "y": 45
+        },
+        "copy_friendly_zones": [
+          "bottom"
+        ],
+        "quality": 4,
+        "notes": "Hamaca roja colgada entre árboles nativos con vista a lago y montaña al fondo; imagen muy contrastada con primer plano oscuro y cielo sobreexpuesto, ligero desenfoque."
+      },
+      "tagged_at": "2026-05-06T17:01:55.792Z"
+    }
+  ]
+}
