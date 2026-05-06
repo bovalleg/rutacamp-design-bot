@@ -44,7 +44,7 @@ async function main() {
         brief,
         spec.photo_keywords || [],
         photosNeeded,
-        { template: 'carrusel-cover' },
+        { template: 'carrusel-cover', destino: spec.destino },
       );
       console.log(`[2/5] Picked ${pickedFiles.length} of ${photosNeeded} photos requested`);
       for (let i = 0; i < pickedFiles.length; i++) {
@@ -89,7 +89,7 @@ async function main() {
         spec.drive_folder_id,
         brief,
         spec.photo_keywords || [],
-        { template: spec.template },
+        { template: spec.template, destino: spec.destino },
       );
       if (!file) {
         console.warn('[2/5] Vision found no fitting photo — falling back to -cream template');

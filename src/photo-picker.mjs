@@ -1,6 +1,13 @@
+import fs from 'node:fs/promises';
+import path from 'node:path';
+import { fileURLToPath } from 'node:url';
 import sharp from 'sharp';
 import { listImagesInFolder, downloadFileBuffer } from './drive.mjs';
 import { visionPickPhoto } from './claude.mjs';
+import { catalogPathForDestino } from './folders.mjs';
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+const ROOT = path.join(__dirname, '..');
 
 const MIN_SIZE = 200_000;
 const PREFERRED_SIZE = 500_000;
@@ -86,16 +93,90 @@ async function downloadCandidates(candidates) {
   return buffers.filter(Boolean);
 }
 
+// ---- Catalog-based pre-filter ----
+async function loadCatalog(destinoKey) {
+  if (!destinoKey) return null;
+  try {
+    const raw = await fs.readFile(path.join(ROOT, catalogPathForDestino(destinoKey)), 'utf8');
+    const cat = JSON.parse(raw);
+    return (cat?.photos || []).filter(p => p.tags); // skip un-tagged entries
+  } catch {
+    return null;
+  }
+}
+
+// Extract subject hints from a brief. Returns an array of normalized tokens.
+function subjectsFromBrief(brief) {
+  const lower = brief.toLowerCase();
+  const hints = new Set();
+  if (/motorhome|casa rodante|rodantero|camper|rv\b/.test(lower)) { hints.add('motorhome'); hints.add('casa-rodante'); }
+  if (/conex|enchufe|servic|agua.*luz|electric|infraestruct/.test(lower)) { hints.add('infraestructura'); hints.add('conexiones'); }
+  if (/fogón|fogon|fuego|noche/.test(lower)) { hints.add('fogon'); hints.add('noche'); }
+  if (/atardecer|golden|crepúsculo|crepusculo/.test(lower)) { hints.add('atardecer'); hints.add('golden-hour'); }
+  if (/lago|laguna|agua|río|rio/.test(lower)) { hints.add('lago'); hints.add('rio'); }
+  if (/bosque|árbol|arbol|nativo|coigüe|coigue|mañío|mañio/.test(lower)) { hints.add('bosque'); hints.add('arboles-nativos'); }
+  if (/cordillera|volcán|volcan|montaña|montaña|nieve/.test(lower)) { hints.add('montaña'); hints.add('volcan'); hints.add('cordillera'); }
+  if (/familia|niñ|grup|junto/.test(lower)) { hints.add('familia'); hints.add('gente'); }
+  if (/aérea|aerea|dron|sobrevuelo/.test(lower)) { hints.add('drone-shot'); hints.add('aerea'); }
+  return [...hints];
+}
+
+function scoreCatalogEntry(entry, subjectHints, keywords, template) {
+  const tags = entry.tags;
+  let score = 0;
+  // Quality is the spine
+  score += (tags.quality || 5);
+  // Subject matches
+  const subj = (tags.subjects || []).map(s => s.toLowerCase());
+  for (const h of subjectHints) if (subj.includes(h)) score += 5;
+  // Keyword matches (also try against notes)
+  const notes = (tags.notes || '').toLowerCase();
+  for (const kw of keywords) {
+    const k = kw.toLowerCase();
+    if (subj.includes(k)) score += 3;
+    if (notes.includes(k)) score += 1;
+  }
+  // Composition fit per template
+  if (template === 'post-photo' || template === 'carrusel-cover') {
+    if (tags.composition === 'aerial-wide' || tags.composition === 'wide') score += 2;
+  } else if (template === 'story-photo') {
+    if (tags.composition === 'portrait-vertical' || tags.composition === 'wide') score += 2;
+  } else if (template === 'post-split') {
+    if (tags.composition === 'wide' || tags.composition === 'medium') score += 1;
+    if ((tags.copy_friendly_zones || []).includes('right')) score += 3; // split has copy on the right
+  }
+  // Copy-friendly zones for typical bottom-copy layouts
+  if ((tags.copy_friendly_zones || []).includes('bottom')) score += 1;
+  return score;
+}
+
 // Vision picker: lets Claude look at the top-N candidates and choose + return focal_point.
 // Falls back to metadata-only pick if vision call fails.
 // alreadyChosen: array of previously-picked candidates (for diversity in multi-pick).
-export async function pickPhotoWithVision(folderId, brief, keywords = [], { template, excludeIds = [], alreadyChosen = [] } = {}) {
+// destino: if provided, will use catalog/<destino>.json to pre-filter (Nivel 2).
+export async function pickPhotoWithVision(folderId, brief, keywords = [], { template, excludeIds = [], alreadyChosen = [], destino } = {}) {
   if (!folderId) return null;
-  const all = await listImagesInFolder(folderId, { recursive: true, max: 200 });
-  const ranked = rankCandidates(all, keywords, excludeIds);
-  if (!ranked.length) return null;
 
-  const candidates = ranked.slice(0, VISION_CANDIDATE_COUNT);
+  // Try catalog-based pre-filter first (Nivel 2)
+  const catalog = await loadCatalog(destino);
+  let candidates;
+  if (catalog?.length) {
+    const subjectHints = subjectsFromBrief(brief);
+    const ranked = catalog
+      .filter(p => !excludeIds.includes(p.id))
+      .map(p => ({ ...p, _score: scoreCatalogEntry(p, subjectHints, keywords, template) }))
+      .sort((a, b) => b._score - a._score);
+    candidates = ranked.slice(0, VISION_CANDIDATE_COUNT);
+    console.log(`[vision] Catalog pre-filter: ${ranked.length} entries → top ${candidates.length} (subjects detected: ${subjectHints.join(',') || 'none'})`);
+  } else {
+    // Fallback: legacy metadata-only ranking over Drive listing
+    const all = await listImagesInFolder(folderId, { recursive: true, max: 200 });
+    const ranked = rankCandidates(all, keywords, excludeIds);
+    if (!ranked.length) return null;
+    candidates = ranked.slice(0, VISION_CANDIDATE_COUNT);
+    console.log(`[vision] No catalog for "${destino}" — sending ${candidates.length} metadata-ranked candidates`);
+  }
+
   console.log(`[vision] Sending ${candidates.length} candidates to vision (already-chosen: ${alreadyChosen.length})`);
 
   const usable = await downloadCandidates(candidates);
@@ -125,16 +206,17 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
   }
 }
 
-export async function pickMultiplePhotosWithVision(folderId, brief, keywords = [], n = 3, { template } = {}) {
+export async function pickMultiplePhotosWithVision(folderId, brief, keywords = [], n = 3, { template, destino } = {}) {
   if (!folderId || n <= 0) return [];
   const picked = [];
   const seenIds = [];
-  const alreadyChosen = []; // visual context for diversity prompt
+  const alreadyChosen = [];
   for (let i = 0; i < n; i++) {
     const p = await pickPhotoWithVision(folderId, brief, keywords, {
       template,
       excludeIds: seenIds,
       alreadyChosen,
+      destino,
     });
     if (!p) break;
     picked.push(p);
