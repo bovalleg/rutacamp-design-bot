@@ -39,8 +39,6 @@ async function main() {
     let downloadedPhotos = [];
     let pickedFiles = [];
     if (photosNeeded > 0 && spec.drive_folder_id) {
-      // For carrusel, the cover usually wants photo of destino mood; content slides may want detail shots.
-      // We pick all distinct photos with vision (using the cover template as the framing reference).
       pickedFiles = await pickMultiplePhotosWithVision(
         spec.drive_folder_id,
         brief,
@@ -48,7 +46,7 @@ async function main() {
         photosNeeded,
         { template: 'carrusel-cover' },
       );
-      console.log(`[2/5] Picked ${pickedFiles.length} photos with vision`);
+      console.log(`[2/5] Picked ${pickedFiles.length} of ${photosNeeded} photos requested`);
       for (let i = 0; i < pickedFiles.length; i++) {
         const f = pickedFiles[i];
         const dest = path.join(OUT_DIR, `photo_${i + 1}${path.extname(f.name || '.jpg')}`);
@@ -56,21 +54,27 @@ async function main() {
         downloadedPhotos.push({ path: dest, focal_point: f.focal_point });
       }
     }
-    // Map picked photos onto slides: each slide that wants a photo consumes one in order
+    // Map picked photos onto slides: each slide that wants a photo consumes one in order.
+    // If we got fewer photos than slots wanted (vision said "no fit" for some), the remaining
+    // photo slides will fall back to no-photo and we mutate the slide template accordingly.
     const photosByIndex = [];
     let pi = 0;
-    for (const want of photoSlots) {
-      if (want && downloadedPhotos[pi]) {
-        const ph = downloadedPhotos[pi++];
-        photosByIndex.push(ph);
-      } else {
+    const enrichedSlides = slides.map((s) => {
+      const wants = Boolean(s.use_photo && spec.drive_folder_id);
+      if (!wants) {
         photosByIndex.push(null);
+        return s;
       }
-    }
-    // Inject focal_point into each slide spec so render uses it
-    const enrichedSlides = slides.map((s, i) => {
-      const ph = photosByIndex[i];
-      return ph ? { ...s, focal_point: ph.focal_point } : s;
+      const ph = downloadedPhotos[pi++];
+      if (ph) {
+        photosByIndex.push(ph);
+        return { ...s, focal_point: ph.focal_point };
+      }
+      // No photo available — fall back to a no-photo template
+      console.warn(`[2/5] Slide "${s.template}" wanted a photo but vision didn't pick one — falling back to cream content`);
+      photosByIndex.push(null);
+      const fallback = (s.template === 'carrusel-cover') ? 'carrusel-content' : 'carrusel-content';
+      return { ...s, template: fallback, use_photo: false };
     });
     const enrichedSpec = { ...spec, slides: enrichedSlides };
     const photoPaths = photosByIndex.map(ph => ph ? ph.path : null);
@@ -88,10 +92,9 @@ async function main() {
         { template: spec.template },
       );
       if (!file) {
-        console.warn('[2/5] No photo found, falling back to -cream template');
+        console.warn('[2/5] Vision found no fitting photo — falling back to -cream template');
         spec.template = spec.format === 'story' ? 'story-cream' : 'post-cream';
       } else {
-        console.log('[2/5] Picked:', file.name);
         photoPath = path.join(OUT_DIR, 'photo' + path.extname(file.name || '.jpg'));
         await downloadFile(file.id, photoPath);
         spec.focal_point = file.focal_point;
@@ -120,10 +123,19 @@ async function main() {
   await fs.writeFile(captionPath, spec.caption || '');
   console.log('Caption written to', captionPath);
 
-  console.log('\nDONE');
-  for (const f of outFiles) console.log('PNG:', f);
-  console.log('Caption:', captionPath);
-  console.log('Rationale:', spec.rationale);
+  console.log('\n========================');
+  console.log('DONE — resumen');
+  console.log('========================');
+  console.log('Format:', spec.format);
+  if (spec.format === 'carrusel') {
+    console.log('Slides:', spec.slides.map(s => s.template).join(' → '));
+  } else {
+    console.log('Template:', spec.template);
+  }
+  console.log('Rationale del diseño:', spec.rationale);
+  console.log('---');
+  for (const f of outFiles) console.log('PNG:', path.basename(f));
+  console.log('Caption:', path.basename(captionPath));
 }
 
 main().catch(err => { console.error('FATAL:', err); process.exit(1); });

@@ -172,24 +172,41 @@ function normalizeSpec(spec) {
 
 // ---- Vision: choose best photo + focal point ----
 // candidates: [{ id, name, base64, mimeType }]
-// returns { chosen_index, focal_point: { x: 0-100, y: 0-100 }, rationale }
-export async function visionPickPhoto(brief, candidates, { template, model = 'claude-opus-4-7' } = {}) {
+// alreadyChosen: [{ id, name, base64, mimeType, rationale }] — para diversidad en multi-pick
+// returns { chosen_index, focal_point: { x: 0-100, y: 0-100 }, rationale } — chosen_index = -1 si NINGUNA es buena
+export async function visionPickPhoto(brief, candidates, { template, alreadyChosen = [], model = 'claude-opus-4-7' } = {}) {
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) throw new Error('ANTHROPIC_API_KEY env var not set');
   const client = new Anthropic({ apiKey });
 
-  // Compose copy-area hint per template so Claude knows where text will land
   const copyArea = {
     'post-photo': 'bottom 40% of the square (logo top-left, eyebrow top-right, title+body bottom-left, hand bottom-left, handle bottom-right)',
     'story-photo': 'bottom third of the vertical (logo+eyebrow top, title+body bottom; safe areas of 250-300px top and bottom for IG UI)',
-    'carrusel-cover': 'center horizontally + bottom-right swipe indicator (title is centered horizontally over the photo, gradient protection both ends)',
+    'carrusel-cover': 'center horizontally + bottom-right swipe indicator (title centered horizontally over the photo, gradient protection both ends)',
     'carrusel-content-photo': 'bottom 35% of the square (eyebrow + index top, title+body bottom)',
     'post-split': 'left half is photo only; the right half is cream with copy. Subject of the photo should NOT be in the right half — it gets cropped (the photo only fills 540px wide).',
   }[template] || 'bottom half (text overlays the bottom)';
 
-  const userBlocks = [
-    { type: 'text', text: `Brief del post: ${brief}\nTemplate destino: ${template}\nÁrea de copy: ${copyArea}\n\nMirá las ${candidates.length} fotos numeradas y elegí la que mejor calce con el brief y el área de copy. Devolvé EXCLUSIVAMENTE un objeto JSON: { "chosen_index": <0-based>, "focal_point": { "x": <0-100>, "y": <0-100> }, "rationale": "<una linea>" }. focal_point es donde está el sujeto principal en la foto elegida (50,50 = centro; 0,0 = esquina superior izquierda). Para que el sujeto NO quede tapado por el copy, mové el focal point hacia la zona OPUESTA al área de copy.` },
-  ];
+  // Detect subject hints in the brief: motorhome / casa rodante / fogón / lago / etc.
+  const briefLower = brief.toLowerCase();
+  const subjectHints = [];
+  if (/motorhome|casa rodante|rodantero|camper|rv|veh/.test(briefLower)) subjectHints.push('un motorhome / casa rodante / camper claramente visible');
+  if (/conex|enchufe|servic|agua.*luz|electric/.test(briefLower)) subjectHints.push('infraestructura del camping (sitios, conexiones, baños) visible');
+  if (/fogón|fogon|fuego|noche/.test(briefLower)) subjectHints.push('fogón, fuego, escena nocturna o de atardecer');
+  if (/lago|laguna|agua/.test(briefLower)) subjectHints.push('cuerpo de agua (lago, río, laguna) protagonista');
+  if (/bosque|árbol|nativo|cordillera|volcán/.test(briefLower)) subjectHints.push('vegetación / paisaje natural protagonista');
+  if (/familia|niñ|junto|grup/.test(briefLower)) subjectHints.push('escena humana / familiar (sin caer en stock)');
+
+  let intro = `Brief del post: ${brief}\nTemplate destino: ${template}\nÁrea de copy en la pieza: ${copyArea}\n`;
+  if (subjectHints.length) {
+    intro += `\n⚠️ El brief implica que el SUJETO IDEAL de la foto es: ${subjectHints.join(' / ')}. Si alguna candidata muestra ese sujeto, ELEGILA aunque haya otras "más bonitas" sin él. Si NINGUNA muestra el sujeto del brief, devolvé chosen_index: -1 con un rationale claro ("ninguna calza con el sujeto X") — el bot caerá a un layout sin foto.\n`;
+  }
+  if (alreadyChosen.length) {
+    intro += `\n⚠️ DIVERSIDAD: ya elegiste ${alreadyChosen.length} foto(s) anteriormente en este mismo carrusel. Las muestro al final como referencia. Elegí UNA VISUALMENTE DIFERENTE — distinto ángulo, distinto sujeto, distinta luz, distinto encuadre. NO repitas la misma escena aunque sea "la mejor candidata".\n`;
+  }
+  intro += `\nMirá las ${candidates.length} fotos numeradas (0 a ${candidates.length - 1}) y devolvé EXCLUSIVAMENTE un JSON:\n{\n  "chosen_index": <0-${candidates.length - 1} | -1 si ninguna calza>,\n  "focal_point": { "x": <0-100>, "y": <0-100> },\n  "rationale": "<una línea explicando el por qué>"\n}\nfocal_point = posición del sujeto principal en la foto elegida (50,50 = centro). Para que el sujeto NO quede tapado por el copy, movelo hacia la zona OPUESTA al área de copy.`;
+
+  const userBlocks = [{ type: 'text', text: intro }];
   for (let i = 0; i < candidates.length; i++) {
     const c = candidates[i];
     userBlocks.push({ type: 'text', text: `Foto ${i}:` });
@@ -198,11 +215,22 @@ export async function visionPickPhoto(brief, candidates, { template, model = 'cl
       source: { type: 'base64', media_type: c.mimeType || 'image/jpeg', data: c.base64 },
     });
   }
+  if (alreadyChosen.length) {
+    userBlocks.push({ type: 'text', text: `\n--- FOTOS YA ELEGIDAS (no repetir visualmente) ---` });
+    for (let i = 0; i < alreadyChosen.length; i++) {
+      const c = alreadyChosen[i];
+      userBlocks.push({ type: 'text', text: `Ya elegida ${i + 1} (${c.rationale || 'sin rationale'}):` });
+      userBlocks.push({
+        type: 'image',
+        source: { type: 'base64', media_type: c.mimeType || 'image/jpeg', data: c.base64 },
+      });
+    }
+  }
 
   const msg = await client.messages.create({
     model,
-    max_tokens: 400,
-    system: 'Sos un director de arte para Ruta Camp. Eligís fotos para posts de Instagram según composición, luz, mood y compatibilidad con el área de copy. Respondés SOLO con un JSON válido sin markdown.',
+    max_tokens: 500,
+    system: 'Sos director de arte de Ruta Camp, una red chilena de campings para motorhomes y casas rodantes. Tu prioridad cuando elegís fotos: (1) que el SUJETO calce con el brief — si el brief habla de motorhomes, la foto DEBE tener un motorhome visible; si habla del lago, el lago debe ser protagonista. (2) recién después: composición, luz, mood, compatibilidad con el área de copy. Si ninguna foto calza con el sujeto pedido, decilo: chosen_index = -1 es una respuesta válida y preferible a forzar una foto que no muestra lo que el brief pide. Respondés SOLO con un JSON válido sin markdown.',
     messages: [{ role: 'user', content: userBlocks }],
   });
 

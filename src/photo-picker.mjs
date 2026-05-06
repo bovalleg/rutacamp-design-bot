@@ -4,7 +4,7 @@ import { visionPickPhoto } from './claude.mjs';
 const MIN_SIZE = 200_000;
 const PREFERRED_SIZE = 500_000;
 // How many candidates to actually send to Claude vision (more = better choice but more tokens/$)
-const VISION_CANDIDATE_COUNT = 5;
+const VISION_CANDIDATE_COUNT = 8;
 // Max bytes per candidate sent to vision (downscale guard — Drive thumbnails are usually smaller, but protect against full-res anyway)
 const VISION_MAX_BYTES = 1_500_000;
 
@@ -59,22 +59,10 @@ export async function pickMultiplePhotos(folderId, keywords = [], n = 3) {
   return picked;
 }
 
-// Vision picker: lets Claude look at the top-N candidates and choose + return focal_point.
-// Falls back to metadata-only pick if vision call fails.
-export async function pickPhotoWithVision(folderId, brief, keywords = [], { template, excludeIds = [] } = {}) {
-  if (!folderId) return null;
-  const all = await listImagesInFolder(folderId, { recursive: true, max: 200 });
-  const ranked = rankCandidates(all, keywords, excludeIds);
-  if (!ranked.length) return null;
-
-  const candidates = ranked.slice(0, VISION_CANDIDATE_COUNT);
-  console.log(`[vision] Downloading ${candidates.length} candidates for vision pick`);
-
-  // Download buffers in parallel
+async function downloadCandidates(candidates) {
   const buffers = await Promise.all(candidates.map(async (c) => {
     try {
       const buf = await downloadFileBuffer(c.id);
-      // Guard: if buffer is huge and we can't easily downscale here, skip oversize candidates
       if (buf.length > VISION_MAX_BYTES) {
         console.warn(`[vision] Skipping oversize candidate ${c.name} (${buf.length} bytes)`);
         return null;
@@ -85,19 +73,42 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
       return null;
     }
   }));
+  return buffers.filter(Boolean);
+}
 
-  const usable = buffers.filter(Boolean);
+// Vision picker: lets Claude look at the top-N candidates and choose + return focal_point.
+// Falls back to metadata-only pick if vision call fails.
+// alreadyChosen: array of previously-picked candidates (for diversity in multi-pick).
+export async function pickPhotoWithVision(folderId, brief, keywords = [], { template, excludeIds = [], alreadyChosen = [] } = {}) {
+  if (!folderId) return null;
+  const all = await listImagesInFolder(folderId, { recursive: true, max: 200 });
+  const ranked = rankCandidates(all, keywords, excludeIds);
+  if (!ranked.length) return null;
+
+  const candidates = ranked.slice(0, VISION_CANDIDATE_COUNT);
+  console.log(`[vision] Sending ${candidates.length} candidates to vision (already-chosen: ${alreadyChosen.length})`);
+
+  const usable = await downloadCandidates(candidates);
   if (!usable.length) {
     console.warn('[vision] No usable candidates downloaded — falling back to metadata pick');
     return pickPhoto(folderId, keywords, { excludeIds });
   }
 
   try {
-    const result = await visionPickPhoto(brief, usable, { template });
+    const result = await visionPickPhoto(brief, usable, { template, alreadyChosen });
+    if (result.chosen_index === -1 || result.chosen_index === '-1') {
+      console.log(`[vision] ⚠️  Vision says NONE of the candidates fit: "${result.rationale}"`);
+      return null; // Caller should fall back to no-photo template
+    }
     const idx = Math.max(0, Math.min(usable.length - 1, Number(result.chosen_index) || 0));
-    const chosen = usable[idx].file;
-    console.log(`[vision] Chose photo ${idx} (${chosen.name}). focal_point=`, result.focal_point, '— rationale:', result.rationale);
-    return { ...chosen, focal_point: result.focal_point || null };
+    const chosen = usable[idx];
+    console.log(`[vision] ✓ ${chosen.file.name} | focal=${JSON.stringify(result.focal_point)} | "${result.rationale}"`);
+    return {
+      ...chosen.file,
+      focal_point: result.focal_point || null,
+      _visionBuffer: chosen, // keep buffer for diversity context in subsequent calls
+      _rationale: result.rationale,
+    };
   } catch (err) {
     console.warn('[vision] Vision pick failed:', err.message, '— falling back to metadata pick');
     return pickPhoto(folderId, keywords, { excludeIds });
@@ -107,12 +118,23 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
 export async function pickMultiplePhotosWithVision(folderId, brief, keywords = [], n = 3, { template } = {}) {
   if (!folderId || n <= 0) return [];
   const picked = [];
-  const seen = [];
+  const seenIds = [];
+  const alreadyChosen = []; // visual context for diversity prompt
   for (let i = 0; i < n; i++) {
-    const p = await pickPhotoWithVision(folderId, brief, keywords, { template, excludeIds: seen });
+    const p = await pickPhotoWithVision(folderId, brief, keywords, {
+      template,
+      excludeIds: seenIds,
+      alreadyChosen,
+    });
     if (!p) break;
     picked.push(p);
-    seen.push(p.id);
+    seenIds.push(p.id);
+    if (p._visionBuffer) {
+      alreadyChosen.push({
+        ...p._visionBuffer,
+        rationale: p._rationale,
+      });
+    }
   }
   return picked;
 }
