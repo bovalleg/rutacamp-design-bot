@@ -29,30 +29,29 @@
     );
   }
 
-  /* Safe frame: respects IG UI areas (top 250 for header, bottom 280 for actions). */
+  /* Safe frame: tight margins so the layout uses the canvas. The 3 blocks are absolutely
+     positioned inside this frame — header pinned to top, footer pinned to bottom, title
+     centered vertically. No drift from extra whitespace. */
   .safe-frame {
     position:absolute;
-    top:250px; left:90px; right:90px; bottom:280px;
-    display:flex; flex-direction:column;
-    justify-content:space-between;
+    top:120px; left:90px; right:90px; bottom:140px;
     z-index:3;
   }
 
-  .block-top { display:flex; flex-direction:column; align-items:flex-start; gap:30px; padding-top:20px; }
-  .block-top img { height:150px; filter:brightness(0) invert(1); }
-  .block-top .eyebrow { font-size:38px; color:var(--rc-amber); }
+  .block-top { position:absolute; top:0; left:0; right:0; display:flex; flex-direction:column; align-items:flex-start; gap:22px; }
+  .block-top img { height:160px; filter:brightness(0) invert(1); }
+  .block-top .eyebrow { font-size:36px; color:var(--rc-amber); }
 
-  .block-mid { display:flex; flex-direction:column; }
-  /* Title gets its own shadow so it stays legible over photo without needing the protect overlay */
+  .block-mid { position:absolute; left:0; right:0; top:50%; transform:translateY(-50%); display:flex; flex-direction:column; }
   .block-mid h1 { font-size:{{TITLE_SIZE}}px; margin:0; color:var(--rc-cream); text-shadow:0 4px 24px rgba(30,28,24,.55), 0 1px 2px rgba(30,28,24,.6); }
   .eyebrow-row { display:flex; align-items:center; gap:30px; margin-top:42px; }
   .eyebrow-row .rule { width:110px; height:2px; background:var(--rc-amber); }
-  .eyebrow-row .sub { font-size:38px; color:var(--rc-amber); text-shadow:0 1px 6px rgba(30,28,24,.5); }
-  .block-mid p { font-size:46px; line-height:1.35; margin:46px 0 0; max-width:900px; color:rgba(243,236,221,.94); text-shadow:0 1px 6px rgba(30,28,24,.5); }
+  .eyebrow-row .sub { font-size:36px; color:var(--rc-amber); text-shadow:0 1px 6px rgba(30,28,24,.5); }
+  .block-mid p { font-size:44px; line-height:1.35; margin:44px 0 0; max-width:900px; color:rgba(243,236,221,.94); text-shadow:0 1px 6px rgba(30,28,24,.5); }
 
-  .block-bot { display:flex; flex-direction:column; gap:42px; align-items:stretch; padding-bottom:10px; }
-  .block-bot .tag { font-family:var(--font-hand); font-size:96px; color:var(--rc-amber); line-height:.95; align-self:flex-start; }
-  .block-bot .handle { font-size:32px; letter-spacing:.24em; color:var(--rc-cream); opacity:.85; align-self:flex-end; padding-top:18px; border-top:1px solid rgba(243,236,221,.4); width:100%; text-align:right; }
+  .block-bot { position:absolute; bottom:0; left:0; right:0; display:flex; flex-direction:column; gap:22px; }
+  .block-bot .tag { font-family:var(--font-hand); font-size:88px; color:var(--rc-amber); line-height:.95; align-self:flex-start; }
+  .block-bot .handle { font-size:28px; letter-spacing:.24em; color:var(--rc-cream); opacity:.85; padding-top:14px; border-top:1px solid rgba(243,236,221,.4); width:100%; text-align:right; }
 </style>
 </head>
 <body>
