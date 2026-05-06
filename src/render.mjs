@@ -41,12 +41,14 @@ function focalPointToCss(fp) {
 }
 
 function defaultVars(spec, photoLocalPath, extraVars = {}) {
+  const subtitle = spec.subtitle || '';
+  const body = spec.body || '';
   return {
     EYEBROW: spec.eyebrow || '',
     TITLE: spec.title || '',
     TITLE_SIZE: spec.title_size || 128,
-    SUBTITLE: spec.subtitle || '',
-    BODY: spec.body || '',
+    SUBTITLE: subtitle,
+    BODY: body,
     HAND: spec.hand || '¡vive la aventura!',
     HANDLE: spec.handle || '@RUTA.CAMP · RUTACAMP.CL',
     CTA: spec.cta || 'RESERVAS · LINK EN BIO',
@@ -57,8 +59,20 @@ function defaultVars(spec, photoLocalPath, extraVars = {}) {
       : '<div class="ink-fill"></div>',
     SLIDE_INDEX: extraVars.SLIDE_INDEX || '01',
     SLIDE_TOTAL: extraVars.SLIDE_TOTAL || '01',
+    // Conditional blocks: if subtitle/body are empty the markup is omitted entirely
+    // (so they don't reserve vertical space and the scrim band stays thin).
+    SUBTITLE_BLOCK: subtitle
+      ? `<div class="eyebrow-row"><div class="rule"></div><span class="ig-eyebrow sub">${escapeHtml(subtitle)}</span></div>`
+      : '',
+    BODY_BLOCK: body
+      ? `<p class="ig-body">${escapeHtml(body)}</p>`
+      : '',
     ...extraVars,
   };
+}
+
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
 }
 
 async function renderOne(browser, templateName, vars, outPath) {

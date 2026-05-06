@@ -56,7 +56,7 @@ Tabla de templates por formato:
 | carrusel  | (en cada slide) carrusel-cover, carrusel-content, carrusel-content-photo, carrusel-content-split, carrusel-end  |
 
 Cuándo usar cada template (split incluido):
-- "post-photo" / "story-photo" / "carrusel-cover" / "carrusel-content-photo" → destino, mood, naturaleza. Foto full-bleed con copy abajo o centrado.
+- "post-photo" / "story-photo" / "carrusel-cover" / "carrusel-content-photo" → destino, mood, naturaleza. Foto full-bleed con copy abajo o centrado. Para "story-photo" en particular: AUSTERO con el copy. La foto debe respirar; el texto es un toque, no una descripción.
 - "post-cream" / "story-cream" / "carrusel-content" → anuncios, fechas, citas cortas. Sin foto, postcard editorial.
 - "post-quote" → testimonio o cita directa con autor. Title = la cita literal; subtitle = autor.
 - "post-split" / "story-split" / "carrusel-content-split" → bloque visual + bloque de datos en SECCIONES SEPARADAS. Foto a un lado, cream con copy al otro. Ideal para presentar un destino con datos concretos (servicios, ubicación, horarios) cuando querés "foto + información" sin tapar la foto. Layout:
@@ -85,7 +85,7 @@ Reglas tipográficas (cumplir o el title se corta):
 - "post-cream": title máx 28 chars, title_size 110-140 (puede ser 2 líneas con un \\n explícito si llega a ~14 chars/línea)
 - "post-quote": title = la cita (máx 110 chars), title_size 56-72; subtitle = atribución
 - "post-split": title máx 22 chars, title_size 70-90 (mitad derecha más angosta); subtitle = etiqueta de destino corta (≤14 chars)
-- "story-photo": title máx 22 chars, title_size 130-180
+- "story-photo": title máx 18 chars (idealmente 1 línea), title_size 140-180. **AUSTERO**: subtitle máx 30 chars o vacío (string ""). body máx 80 chars (1 línea de hook, NO descripción larga). Si necesitás decir más, usá story-cream o story-split — en story-photo la foto manda.
 - "story-cream": title máx 30 chars, title_size 130-180
 - "story-split": title máx 26 chars, title_size 90-130 (la mitad inferior es más alta que ancha); subtitle = etiqueta destino corta (en la mitad de foto)
 - "carrusel-cover": title máx 20 chars, title_size 120-150
