@@ -3,9 +3,10 @@ import path from 'node:path';
 import { fileURLToPath } from 'node:url';
 
 import { briefToSpec } from './claude.mjs';
-import { pickPhotoWithVision, pickMultiplePhotosWithVision } from './photo-picker.mjs';
+import { pickPhotoWithVision } from './photo-picker.mjs';
 import { downloadFile, uploadFile } from './drive.mjs';
 import { renderSpec, renderCarrusel, templateNeedsPhoto } from './render.mjs';
+import { folderIdForDestino } from './folders.mjs';
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const ROOT = path.join(__dirname, '..');
@@ -38,50 +39,56 @@ async function main() {
     for (const s of slides) {
       if (templateNeedsPhoto(s.template) && s.use_photo === undefined) s.use_photo = true;
     }
-    const photoSlots = slides.map(s => Boolean(s.use_photo && spec.drive_folder_id));
-    const photosNeeded = photoSlots.filter(Boolean).length;
-    let downloadedPhotos = [];
-    let pickedFiles = [];
-    if (photosNeeded > 0 && spec.drive_folder_id) {
-      pickedFiles = await pickMultiplePhotosWithVision(
-        spec.drive_folder_id,
-        brief,
-        spec.photo_keywords || [],
-        photosNeeded,
-        { template: 'carrusel-cover', destino: spec.destino },
-      );
-      console.log(`[2/5] Picked ${pickedFiles.length} of ${photosNeeded} photos requested`);
-      for (let i = 0; i < pickedFiles.length; i++) {
-        const f = pickedFiles[i];
-        const dest = path.join(OUT_DIR, `photo_${i + 1}${path.extname(f.name || '.jpg')}`);
-        await downloadFile(f.id, dest);
-        downloadedPhotos.push({ path: dest, focal_point: f.focal_point });
+
+    // Resolve per-slide destino + folder. Slide-level destino overrides spec-level.
+    // Slides whose destino has no Drive folder (e.g. malalcahuello) are downgraded to -content.
+    const resolved = slides.map((s) => {
+      const slideDestino = s.destino || spec.destino || null;
+      const folderId = folderIdForDestino(slideDestino) || (slideDestino === spec.destino ? spec.drive_folder_id : null);
+      if (s.use_photo && !folderId) {
+        console.warn(`[2/5] Slide "${s.template}" (destino: ${slideDestino || 'none'}) wants a photo but no Drive folder available — downgrading to carrusel-content`);
+        return { slide: { ...s, template: 'carrusel-content', use_photo: false }, slideDestino, folderId: null };
+      }
+      return { slide: s, slideDestino, folderId };
+    });
+
+    // Pick photos slide-by-slide so each slide pulls from its own destino's folder/catalog.
+    const seenIds = [];
+    const alreadyChosen = [];
+    const downloadedByIndex = new Array(resolved.length).fill(null);
+    for (let i = 0; i < resolved.length; i++) {
+      const { slide, slideDestino, folderId } = resolved[i];
+      if (!slide.use_photo || !folderId) continue;
+
+      const slideContext = [slide.eyebrow, slide.title, slide.subtitle, slide.body].filter(Boolean).join(' · ');
+      console.log(`[2/5] Slide ${i + 1}/${resolved.length}: picking photo (destino: ${slideDestino}, folder: ${folderId})`);
+      const file = await pickPhotoWithVision(folderId, brief, spec.photo_keywords || [], {
+        template: 'carrusel-cover',
+        destino: slideDestino,
+        excludeIds: seenIds,
+        alreadyChosen,
+        slideContext,
+      });
+      if (!file) {
+        console.warn(`[2/5] Slide ${i + 1}: vision didn't pick a photo — downgrading to carrusel-content`);
+        resolved[i].slide = { ...slide, template: 'carrusel-content', use_photo: false };
+        continue;
+      }
+      const dest = path.join(OUT_DIR, `photo_${i + 1}${path.extname(file.name || '.jpg')}`);
+      await downloadFile(file.id, dest);
+      downloadedByIndex[i] = { path: dest, focal_point: file.focal_point };
+      seenIds.push(file.id);
+      if (file._visionBuffer) {
+        alreadyChosen.push({ ...file._visionBuffer, rationale: file._rationale });
       }
     }
-    // Map picked photos onto slides: each slide that wants a photo consumes one in order.
-    // If we got fewer photos than slots wanted (vision said "no fit" for some), the remaining
-    // photo slides will fall back to no-photo and we mutate the slide template accordingly.
-    const photosByIndex = [];
-    let pi = 0;
-    const enrichedSlides = slides.map((s) => {
-      const wants = Boolean(s.use_photo && spec.drive_folder_id);
-      if (!wants) {
-        photosByIndex.push(null);
-        return s;
-      }
-      const ph = downloadedPhotos[pi++];
-      if (ph) {
-        photosByIndex.push(ph);
-        return { ...s, focal_point: ph.focal_point };
-      }
-      // No photo available — fall back to a no-photo template
-      console.warn(`[2/5] Slide "${s.template}" wanted a photo but vision didn't pick one — falling back to cream content`);
-      photosByIndex.push(null);
-      const fallback = (s.template === 'carrusel-cover') ? 'carrusel-content' : 'carrusel-content';
-      return { ...s, template: fallback, use_photo: false };
+
+    const enrichedSlides = resolved.map(({ slide }, i) => {
+      const ph = downloadedByIndex[i];
+      return ph ? { ...slide, focal_point: ph.focal_point } : slide;
     });
     const enrichedSpec = { ...spec, slides: enrichedSlides };
-    const photoPaths = photosByIndex.map(ph => ph ? ph.path : null);
+    const photoPaths = downloadedByIndex.map(ph => ph ? ph.path : null);
     console.log('[4/5] Rendering carrusel');
     outFiles = await renderCarrusel(enrichedSpec, photoPaths, OUT_DIR, baseName);
   } else {

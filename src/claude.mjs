@@ -18,7 +18,7 @@ A) Si format = "post" o "story":
 {
   "format": "post" | "story",
   "template": "<ver tabla abajo>",
-  "destino": "puerto-fuy" | "conguillio" | "tagua-tagua" | "malalcahuello" | "villarrica" | "red",
+  "destino": "puerto-fuy" | "melipeuco" | "tagua-tagua" | "malalcahuello" | "villarrica" | "red",
   "drive_folder_id": string | null,
   "photo_keywords": string[],
   "eyebrow": string,
@@ -35,11 +35,11 @@ A) Si format = "post" o "story":
 B) Si format = "carrusel":
 {
   "format": "carrusel",
-  "destino": "<...>",
+  "destino": "<destino principal o 'red' si es multi-destino>",
   "drive_folder_id": string | null,
   "photo_keywords": string[],
   "slides": [
-    { "template": "carrusel-cover", "eyebrow": "...", "title": "...", "title_size": 132, "subtitle": "...", "use_photo": true|false },
+    { "template": "carrusel-cover", "destino": "<override opcional>", "eyebrow": "...", "title": "...", "title_size": 132, "subtitle": "...", "use_photo": true|false },
     { "template": "carrusel-content", "eyebrow": "...", "title": "...", "title_size": 90, "body": "..." },
     ...
     { "template": "carrusel-end", "eyebrow": "...", "title": "Vive la aventura.", "title_size": 132, "body": "...", "cta": "RESERVAS · LINK EN BIO" }
@@ -47,6 +47,14 @@ B) Si format = "carrusel":
   "caption": "...",
   "rationale": "..."
 }
+
+CARRUSELES MULTI-DESTINO (CRÍTICO):
+Si el brief menciona varios destinos / "ubicaciones" / "la red" / "todos los lugares" / o el carrusel recorre varios sitios distintos:
+- destino top-level = "red"
+- CADA slide que hable de un destino específico DEBE incluir su propio campo "destino" (ej: "puerto-fuy", "melipeuco", "tagua-tagua", "malalcahuello").
+- El destino del slide manda — es lo que decide de qué carpeta de Drive sacar la foto. Sin destino por slide, la foto sale de un pool mezclado y termina mostrando un lugar equivocado.
+- Slides que NO sean de un destino específico (cover genérico, end, slide de servicios generales) → omití el campo destino del slide (cae al destino top-level).
+- Si un slide es de "malalcahuello" o "villarrica" (sin folder de Drive) → forzar use_photo:false y template "-content" o "-cream". Nunca uses "-cover" o "-photo" en slides de destinos sin folder.
 
 Tabla de templates por formato:
 | format    | templates disponibles                                                                                           |
@@ -77,7 +85,7 @@ Reglas duras de copy y diseño:
 4. Vocabulario PROHIBIDO (palabras): glamping, luxury, premium, exclusive, crew, hub
 5. **Español Chile (CRÍTICO)**: el público es 100% chileno. Tuteo informal: "tú vives", "tú recorres", "tú llegas". NUNCA voseo rioplatense (vivís/recorrés/sos/querés/podés/tenés/sabés/llegás/decís/hacés). NUNCA "usted". Si dudas, usá tercera persona impersonal ("se vive", "se recorre"). Modismos chilenos suaves OK ("po", "weón" → NO; "harto", "rico", "bacán" → con cuidado y solo si calzan con el tono editorial).
 6. Tagline literal preferida: "Vive la aventura." (con punto, imperativo tú). Variante hand/script: "¡vive la aventura!" (la única exclamación permitida si la usás en hand).
-7. Hashtags al final del caption, lowercase, separados por espacio: #rutacamp #vivelaaventura #motorhome #casarodante #campingchile #patagonia #araucania + 1-2 del destino (#puertofuy #conguillio #huilohuilo #taguatagua #losrios #losrios)
+7. Hashtags al final del caption, lowercase, separados por espacio: #rutacamp #vivelaaventura #motorhome #casarodante #campingchile #patagonia #araucania + 1-2 del destino (#puertofuy #huilohuilo #losrios #melipeuco #conguillio #taguatagua #cochamó #malalcahuello)
 8. **Fotos en carrusel**: si hay drive_folder_id válido, marcá use_photo:true en al menos 2 slides — el cover SIEMPRE, y 1-2 content slides cuando el tema sea visual ("paisaje", "mood", "atardecer", "destino", "cerca de"). Los content slides puramente informativos (servicios, datos, instrucciones, fechas) van sin foto (use_photo:false) para mantener legibilidad. Apuntá a un carrusel mixto: cover-foto + 2 cream + end-ink, o cover-foto + 1 content-foto + 1 cream + end.
 
 Reglas tipográficas (cumplir o el title se corta):
@@ -101,12 +109,14 @@ Decisión format/template (si el brief no dice):
 
 Folder IDs de Drive (úsalos directo en drive_folder_id):
 - puerto-fuy: 1glVvj18UBe1k1lRy42MVtTbkhiBFHscX
-- conguillio (Llaima Domo, Melipeuco): 1WM4XE_0B46dAwuqMjDmhzY6qG6R7CdBw
+- melipeuco (Llaima Domo): 1WM4XE_0B46dAwuqMjDmhzY6qG6R7CdBw
 - tagua-tagua (Base Puelo): 13imQqhX1PpSw47Yx2jhn3UPUfEKjlLQO
-- malalcahuello: null  (no hay fotos compartidas → usar template -cream)
-- villarrica: null  (próximamente → usar template -cream)
+- malalcahuello: null  (no hay fotos compartidas → usar template -cream / -content)
+- villarrica: null  (próximamente → usar template -cream / -content)
 - red: 1OEpCeITp2DsjlbOjWB2GKeDbZeIWH-qh
 - aéreas/dron: 1T_Fe0qnpDyJqK6e77oVo7-BbWr59DL6-
+
+OJO: Conguillío NO es destino de Ruta Camp — el sitio cerca del parque es "Llaima Domo" en Melipeuco. Si el brief menciona "Conguillío" como referencia geográfica, mapealo a destino "melipeuco" (el hashtag #conguillio sí se puede usar en el caption porque es referencia turística conocida).
 
 photo_keywords: 3-6 palabras clave en minúsculas que ayuden a elegir foto (ej: ["atardecer","lago","motorhome"]). Pensá en lo que el brief evoca, no metas palabras genéricas como "naturaleza".
 
@@ -198,8 +208,10 @@ function normalizeSpec(spec) {
 // ---- Vision: choose best photo + focal point ----
 // candidates: [{ id, name, base64, mimeType }]
 // alreadyChosen: [{ id, name, base64, mimeType, rationale }] — para diversidad en multi-pick
+// slideContext: texto del slide (title/eyebrow/body) para que vision elija según el tema del slide
+// destino: nombre del destino actual (ej "puerto-fuy") — vision lo usa para confirmar que la foto representa ese lugar
 // returns { chosen_index, focal_point: { x: 0-100, y: 0-100 }, rationale } — chosen_index = -1 si NINGUNA es buena
-export async function visionPickPhoto(brief, candidates, { template, alreadyChosen = [] } = {}) {
+export async function visionPickPhoto(brief, candidates, { template, alreadyChosen = [], slideContext, destino } = {}) {
   const client = makeClient();
 
   const copyArea = {
@@ -221,6 +233,12 @@ export async function visionPickPhoto(brief, candidates, { template, alreadyChos
   if (/familia|niñ|junto|grup/.test(briefLower)) subjectHints.push('escena humana / familiar (sin caer en stock)');
 
   let intro = `Brief del post: ${brief}\nTemplate destino: ${template}\nÁrea de copy en la pieza: ${copyArea}\n`;
+  if (destino) {
+    intro += `\n📍 DESTINO específico de esta foto: ${destino}. Las candidatas ya están pre-filtradas a fotos de este destino — tu trabajo es elegir la que mejor lo represente visualmente.\n`;
+  }
+  if (slideContext) {
+    intro += `\n🎯 CONTEXTO del slide: "${slideContext}". La foto debe encajar con este copy específico, no solo con el brief general.\n`;
+  }
   if (subjectHints.length) {
     intro += `\n👉 SUJETO IDEAL según el brief: ${subjectHints.join(' / ')}. Si alguna candidata lo muestra claramente, preferila. Si solo lo muestra parcialmente (de fondo, contexto), igual elegila — es mejor que una perfecta-pero-fuera-de-tema.\n`;
   }
