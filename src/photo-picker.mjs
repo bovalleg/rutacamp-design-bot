@@ -185,7 +185,8 @@ function scoreCatalogEntry(entry, subjectHints, keywords, template) {
 // Falls back to metadata-only pick if vision call fails.
 // alreadyChosen: array of previously-picked candidates (for diversity in multi-pick).
 // destino: if provided, will use catalog/<destino>.json to pre-filter (Nivel 2).
-export async function pickPhotoWithVision(folderId, brief, keywords = [], { template, excludeIds = [], alreadyChosen = [], destino } = {}) {
+// slideContext: extra text describing the specific slide (title/eyebrow/body) — passed to vision so it picks based on slide topic, not just the global brief.
+export async function pickPhotoWithVision(folderId, brief, keywords = [], { template, excludeIds = [], alreadyChosen = [], destino, slideContext } = {}) {
   if (!folderId) return null;
 
   // Try catalog-based pre-filter first (Nivel 2)
@@ -217,7 +218,7 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
   }
 
   try {
-    const result = await visionPickPhoto(brief, usable, { template, alreadyChosen });
+    const result = await visionPickPhoto(brief, usable, { template, alreadyChosen, slideContext, destino });
     if (result.chosen_index === -1 || result.chosen_index === '-1') {
       console.log(`[vision] ⚠️  Vision dijo -1 ("${result.rationale}") — fallback a metadata pick para no quedarnos sin foto`);
       return pickPhoto(folderId, keywords, { excludeIds });
@@ -237,27 +238,3 @@ export async function pickPhotoWithVision(folderId, brief, keywords = [], { temp
   }
 }
 
-export async function pickMultiplePhotosWithVision(folderId, brief, keywords = [], n = 3, { template, destino } = {}) {
-  if (!folderId || n <= 0) return [];
-  const picked = [];
-  const seenIds = [];
-  const alreadyChosen = [];
-  for (let i = 0; i < n; i++) {
-    const p = await pickPhotoWithVision(folderId, brief, keywords, {
-      template,
-      excludeIds: seenIds,
-      alreadyChosen,
-      destino,
-    });
-    if (!p) break;
-    picked.push(p);
-    seenIds.push(p.id);
-    if (p._visionBuffer) {
-      alreadyChosen.push({
-        ...p._visionBuffer,
-        rationale: p._rationale,
-      });
-    }
-  }
-  return picked;
-}

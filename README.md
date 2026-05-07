@@ -29,11 +29,11 @@ También se puede correr local:
 ```bash
 npm install
 npm run install-browser
-BRIEF="post para Conguillío, anuncio temporada, sin foto" \
+BRIEF="post para Llaima Domo (Melipeuco), anuncio temporada, sin foto" \
 ANTHROPIC_API_KEY=sk-ant-... \
 GOOGLE_SERVICE_ACCOUNT_JSON="$(cat sa.json)" \
 node src/index.mjs
-# → out/rutacamp_conguillio_2026-XX-XX.png
+# → out/rutacamp_melipeuco_2026-XX-XX.png
 ```
 
 ---

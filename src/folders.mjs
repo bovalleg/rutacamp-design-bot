@@ -7,8 +7,8 @@ export const DESTINOS = {
     region: 'Huilo-Huilo · Los Ríos',
     drive_folder_id: '1glVvj18UBe1k1lRy42MVtTbkhiBFHscX',
   },
-  'conguillio': {
-    label: 'Conguillío (Llaima Domo)',
+  'melipeuco': {
+    label: 'Melipeuco (Llaima Domo)',
     region: 'Melipeuco · Araucanía',
     drive_folder_id: '1WM4XE_0B46dAwuqMjDmhzY6qG6R7CdBw',
   },

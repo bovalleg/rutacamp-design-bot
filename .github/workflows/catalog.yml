@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       destino:
-        description: 'Destino especifico (puerto-fuy, conguillio, tagua-tagua, red, aereas) o vacio para todos'
+        description: 'Destino especifico (puerto-fuy, melipeuco, tagua-tagua, red, aereas) o vacio para todos'
         required: false
         type: string
         default: ''
