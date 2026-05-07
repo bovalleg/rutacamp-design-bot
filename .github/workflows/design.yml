@@ -17,6 +17,17 @@ on:
           - post
           - story
           - carrusel
+      count:
+        description: 'Cantidad de piezas a generar (1-5). Si > 1, se activa el batch planner que genera N piezas con temáticas distintas.'
+        required: false
+        type: choice
+        default: '1'
+        options:
+          - '1'
+          - '2'
+          - '3'
+          - '4'
+          - '5'
       upload_to_drive:
         description: 'Subir el PNG a la carpeta Drive de outputs'
         required: false
@@ -26,7 +37,7 @@ on:
 jobs:
   design:
     runs-on: ubuntu-latest
-    timeout-minutes: 12
+    timeout-minutes: 30
     steps:
       - uses: actions/checkout@v4
 
@@ -45,6 +56,7 @@ jobs:
         env:
           BRIEF: ${{ inputs.brief }}
           FORMAT: ${{ inputs.format }}
+          COUNT: ${{ inputs.count }}
           ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
           GOOGLE_SERVICE_ACCOUNT_JSON: ${{ secrets.GOOGLE_SERVICE_ACCOUNT_JSON }}
           OUTPUT_DRIVE_FOLDER_ID: ${{ inputs.upload_to_drive && secrets.OUTPUT_DRIVE_FOLDER_ID || '' }}

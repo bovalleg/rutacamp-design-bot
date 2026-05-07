@@ -24,6 +24,29 @@ El workflow:
 4. Sube el PNG al folder de outputs en Drive (opcional) y lo expone como artifact del workflow.
 5. Escribe un `.caption.txt` paralelo con el caption sugerido para IG.
 
+### Batch — varias piezas de un solo brief
+
+Pasando `count > 1`, un planner desglosa el brief padre en N sub-briefs con temáticas distintas y corre el pipeline N veces. Todas las piezas del batch comparten un solo formato (todas posts, todas stories o todas carruseles). Cap máx: 5.
+
+```bash
+# 5 historias variadas para Ruta Camp (el planner asigna destinos automáticamente)
+gh workflow run design.yml \
+  -f brief="5 historias con temáticas diferentes para Ruta Camp, modo aventurero" \
+  -f format=story \
+  -f count=5
+
+# 3 posts solo para Fuy y Melipeuco (el planner respeta los destinos del brief)
+gh workflow run design.yml \
+  -f brief="3 posts mood golden hour, solamente para Puerto Fuy y Melipeuco" \
+  -f format=post \
+  -f count=3
+```
+
+Reglas del planner:
+- Si el brief no menciona destinos → reparte entre los destinos con folder de fotos (puerto-fuy, melipeuco, tagua-tagua) + algunos genéricos "red".
+- Si el brief restringe destinos ("solo Fuy", "para Tagua y Melipeuco") → respeta esa restricción.
+- Cada sub-brief es independiente — si uno falla, el resto sigue.
+
 También se puede correr local:
 
 ```bash
@@ -34,6 +57,14 @@ ANTHROPIC_API_KEY=sk-ant-... \
 GOOGLE_SERVICE_ACCOUNT_JSON="$(cat sa.json)" \
 node src/index.mjs
 # → out/rutacamp_melipeuco_2026-XX-XX.png
+
+# Batch local (5 stories variadas):
+BRIEF="5 historias con temáticas distintas para Ruta Camp" \
+FORMAT=story \
+COUNT=5 \
+ANTHROPIC_API_KEY=sk-ant-... \
+GOOGLE_SERVICE_ACCOUNT_JSON="$(cat sa.json)" \
+node src/index.mjs
 ```
 
 ---

@@ -145,6 +145,65 @@ async function callWithFallback(fn) {
   }
 }
 
+// ---- Batch planner ----
+// Recibe un brief que pide N piezas y devuelve N sub-briefs, cada uno con tema/destino distinto.
+// Cada sub_brief.brief es un string self-contained que se le pasa tal cual a briefToSpec.
+const BATCH_SYSTEM = `Eres el Ruta Camp Batch Planner. Recibes un brief que pide VARIAS piezas (posts, historias o carruseles) y devuelves un plan con N sub-briefs distintos pero coherentes con el brief padre.
+
+Devuelves SOLO un JSON con esta estructura (sin markdown, sin texto extra):
+{
+  "format": "post" | "story" | "carrusel",
+  "count": <number, máx 5>,
+  "sub_briefs": [
+    {
+      "destino": "puerto-fuy" | "melipeuco" | "tagua-tagua" | "malalcahuello" | "villarrica" | "red",
+      "theme": "<una línea describiendo el ángulo>",
+      "brief": "<brief completo en español que el design bot va a procesar tal cual>"
+    },
+    ...
+  ]
+}
+
+REGLAS:
+1. **Un solo formato por batch**: todas las piezas son post, o todas story, o todas carrusel. El campo "format" top-level manda.
+2. **count máx 5**. Si el usuario pide más de 5, capeá a 5 y mencionalo en alguno de los themes.
+3. **Diferenciación de temas**: cada sub-brief debe tener un ÁNGULO DISTINTO (mood, momento del día, sujeto, mensaje, audiencia). No repitas la misma idea con palabras distintas.
+4. **Asignación automática de destinos**:
+   - Si el brief NO restringe destinos (ej: "5 posts genéricos para Ruta Camp", "5 historias variadas") → distribuilos entre los 4 destinos con folder de fotos: puerto-fuy, melipeuco, tagua-tagua + 1-2 piezas con destino "red" (multi-destino o tema general). Evitá destinos sin folder de Drive (malalcahuello, villarrica) salvo que el brief los pida explícito — en ese caso, en el sub_brief mencioná "sin foto" o "anuncio" para que el design bot use template cream.
+   - Si el brief MENCIONA destinos específicos (ej: "5 historias para Fuy y Melipeuco", "posts solo para Tagua Tagua") → usá EXCLUSIVAMENTE esos destinos, repartiendo las N piezas entre ellos.
+   - Si el brief pide "uno por destino" o similar → 1 pieza por destino mencionado (o por todos los con-folder si no especifica).
+5. **Sub-briefs autocontenidos**: cada \`brief\` debe ser un string que el design bot pueda procesar SOLO, sin contexto del padre. Incluí destino, mood, mensaje y CTA. Ej: "post para Puerto Fuy mood golden hour atardecer sobre el lago, mensaje 'el día se cierra acá', CTA reservas en bio". NO uses pronombres referenciales como "el mismo lugar" o "como antes".
+6. **Variedad de moods/templates**: dentro de un mismo formato, mezclá moods (golden hour, noche, invierno, familiar, aventura, anuncio, cita) para que las 5 piezas no se sientan iguales.
+7. **Carruseles en batch**: si format="carrusel", cada sub_brief debe pedir un carrusel completo (ej: "carrusel para Puerto Fuy contando los 4 servicios principales con fotos del lugar"). Cada sub_brief generará un carrusel independiente.
+
+Devolvé SOLO el JSON.`;
+
+export async function briefToBatchPlan(brief, { count, format } = {}) {
+  const client = makeClient();
+  const cap = Math.min(Math.max(Number(count) || 1, 1), 5);
+
+  const userContent = `Cantidad pedida: ${cap}\nFormato: ${format && format !== 'auto' ? format : 'que decidas según el brief'}\n\nBrief padre:\n${brief}`;
+
+  const msg = await callWithFallback((model) => client.messages.create({
+    model,
+    max_tokens: 2000,
+    system: BATCH_SYSTEM,
+    messages: [{ role: 'user', content: userContent }],
+  }));
+
+  const text = msg.content.find(c => c.type === 'text')?.text ?? '';
+  const jsonMatch = text.match(/\{[\s\S]*\}/);
+  if (!jsonMatch) throw new Error('Batch planner no devolvió JSON parseable. Output:\n' + text);
+  const plan = JSON.parse(jsonMatch[0]);
+
+  if (!Array.isArray(plan.sub_briefs) || plan.sub_briefs.length === 0) {
+    throw new Error('Batch planner devolvió plan vacío: ' + JSON.stringify(plan));
+  }
+  plan.sub_briefs = plan.sub_briefs.slice(0, cap);
+  plan.count = plan.sub_briefs.length;
+  return plan;
+}
+
 export async function briefToSpec(brief, { format } = {}) {
   const client = makeClient();
 
